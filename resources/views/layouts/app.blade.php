@@ -52,7 +52,7 @@
                             <a class="dropdown-item d-flex align-items-center js_title1 @if(Request::segment(1) == 'template1') active @endif" href="{{ route('template1') }}">Договор Юр. Лица</a>
                         </li>
                         <li>
-                            {{-- <a class="dropdown-item d-flex align-items-center js_title2 @if(Request::segment(1) == 'template2') active @endif" href="{{ route('template2')  }}">Contract 2 (ДОГОВОР ПОДРЯДА)</a>--}}
+                             <a class="dropdown-item d-flex align-items-center js_title2 @if(Request::segment(1) == 'template2') active @endif" href="{{ route('template2')  }}">Договор Подряда</a>
                         </li>
                         <li>
                             <a class="dropdown-item d-flex align-items-center js_title3 @if(Request::segment(1) == 'template3') active @endif" href="{{ route('template3') }}">Договор На Уступки</a>

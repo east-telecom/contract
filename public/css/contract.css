@@ -32,6 +32,10 @@ span.text_edit {
     text-decoration: underline;
 }
 
+.text-bold{
+    font-weight: bold;
+}
+
 .inn {
     margin-top: 45px !important;
 }
