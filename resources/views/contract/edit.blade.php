@@ -147,8 +147,6 @@
 
 
                 console.log('number: ', number)
-                console.log('data: ', data)
-
                 $.ajax({
                     url: '{{ route('contract.update', [$contract->id]) }}',
                     type: 'POST',

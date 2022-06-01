@@ -20,6 +20,18 @@ h4 {
     font-family: 'Times New Roman', Times, serif;
     color: black;
 }
+
+.horizontal-list {
+    text-align: justify;
+    padding: 10px 30px;
+    width: 1400px;
+    margin: 20px auto;
+    font-size: 18px;
+    word-spacing: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
 .contract-text:first-child {
     margin-top: 0;
 }
@@ -80,3 +92,49 @@ section {
 .card {
     background: white !important;
 }
+
+/* contract 2 */
+
+.contract2-list3-table td, th, tr {
+    border: 1px solid black !important;
+}
+.contract2-list3-table tr:nth-child(1) th:nth-child(2),
+.contract2-list3-table tr:nth-child(2) td:nth-child(2) {
+    width: 45%;
+}
+.contract2-list3-table tr:nth-child(1) th:nth-child(3),
+.contract2-list3-table tr:nth-child(2) td:nth-child(3) {
+    width: 10%;
+}
+.contract2-list3-table tr:nth-child(1) th:nth-child(4),
+.contract2-list3-table tr:nth-child(2) td:nth-child(4) {
+    width: 15%;
+}
+
+/* contract 2 */
+
+
+/* contract 4 */
+
+.horizontal-list .table tr:first-child th:nth-child(1),
+.horizontal-list .table tr:nth-child(2) td:nth-child(1),
+.horizontal-list .table tr:first-child th:nth-child(2),
+.horizontal-list .table tr:nth-child(2) td:nth-child(2) {
+    width: 4%;
+    text-align: center;
+}
+.horizontal-list .table tr:first-child th:nth-child(3),
+.horizontal-list .table tr:first-child td:nth-child(3) {
+    width: 30%;
+}
+
+.horizontal-list .table tr th, .table tr td {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.horizontal-list .table {
+    margin-top: 20px;
+}
+
+/* contract 4 */

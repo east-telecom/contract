@@ -102,6 +102,8 @@
         $(document).ready(function() {
 
             $('#contract_datatable').DataTable({
+                scrollY: '70vh',
+                scrollCollapse: true,
                 paging: true,
                 pageLength: 50,
                 lengthChange: false,
@@ -113,6 +115,7 @@
                     search: "",
                     searchPlaceholder: " Search...",
                 },
+
                 {{--processing: true,--}}
                 {{--serverSide: true,--}}
                 {{--ajax: {--}}

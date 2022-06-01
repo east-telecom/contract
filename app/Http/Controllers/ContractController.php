@@ -122,10 +122,10 @@ class ContractController extends Controller
     public function update(Request $request, $id)
     {
         try {
-//            $user_id = Auth::user()->id;
             $product = Contract::findOrFail($id);
             $product->fill([
-                'data' => $request->data,
+                'number' => $request->number,
+                'data'   => $request->data,
                 'status' => 0,
                 'jurist_id' => null
             ]);

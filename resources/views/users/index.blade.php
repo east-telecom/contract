@@ -99,6 +99,8 @@
             var modal = $('#user_add_edit_modal')
 
             $('#user_datatable').DataTable({
+                scrollY: '70vh',
+                scrollCollapse: true,
                 paging: true,
                 pageLength: 50,
                 lengthChange: false,
