@@ -39,7 +39,7 @@
 
                         <div class="col-md-6 form-group">
                             <label for="prefix">Phone</label>
-                            <input type="text" name="phone" class="form-control js_phone phone-mask" id="prefix" placeholder="+998" />
+                            <input type="text" name="phone" class="form-control js_phone phone-mask" id="prefix" placeholder="+998901234567" />
                             <div class="invalid-feedback">The phone field is required.</div>
                         </div>
 

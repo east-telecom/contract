@@ -11,18 +11,21 @@ $(document).ready(function() {
 
         select_date_month_fun_edit()
 
-        let list3_tr4_p_div = $('.js_list3_tr4_p_div')
-        list3_tr4_p_div.addClass('d-none')
 
-        let list3_tr4_radio_div = $('.js_list3_tr4_radio_div')
-        list3_tr4_radio_div.removeClass('d-none')
+        // contract 1
+        let list3_tr4_select2_text1 = $('.js_list3_tr4_select2_text1')
+        list3_tr4_select2_text1.addClass('d-none')
 
-        //
-        let list3_tr4_select2_text = $('.js_list3_tr4_select2_text')
-        list3_tr4_select2_text.addClass('d-none')
+        let list3_tr4_select2_div1 = $('.js_list3_tr4_select2_div1')
+        list3_tr4_select2_div1.removeClass('d-none')
 
-        let list3_tr4_select2_div = $('.js_list3_tr4_select2_div')
-        list3_tr4_select2_div.removeClass('d-none')
+        // contract 1 select 2
+        let list3_tr4_select2_text2 = $('.js_list3_tr4_select2_text2')
+        list3_tr4_select2_text2.addClass('d-none')
+
+        let list3_tr4_select2_div2 = $('.js_list3_tr4_select2_div2')
+        list3_tr4_select2_div2.removeClass('d-none')
+
     });
 
     // save btn
@@ -31,9 +34,27 @@ $(document).ready(function() {
         $(this).siblings('.js_text_cancel_btn').addClass('d-none')
         $(this).addClass('d-none');
 
+        // contract 1
+        let list3_tr4_select2_text1 = $('.js_list3_tr4_select2_text1')
+        list3_tr4_select2_text1.removeClass('d-none')
+
+        let list3_tr4_select2_div1 = $('.js_list3_tr4_select2_div1')
+        list3_tr4_select2_div1.addClass('d-none')
+
+        // contract 1 select 2
+        let list3_tr4_select2_text2 = $('.js_list3_tr4_select2_text2')
+        list3_tr4_select2_text2.removeClass('d-none')
+
+        let list3_tr4_select2_div2 = $('.js_list3_tr4_select2_div2')
+        list3_tr4_select2_div2.addClass('d-none')
+
+
         $('.js_div_form').addClass('d-none')
 
         $('.text_edit').attr('contenteditable', false)
+
+
+
 
         select_date_month_fun_save()
 

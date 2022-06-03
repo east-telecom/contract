@@ -61,5 +61,21 @@ function create_div(number, response) {
 
 }
 
+function sum_text_ajax(url, data, sum_text) {
+
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: data,
+        dataType: 'JSON',
+        success: (response) => {
+            console.log('res: ', response)
+            // sum_text.html(response.res)
+        },
+        error: (response) => {
+            console.log('error: ', response)
+        }
+    })
+}
 //  ################## templates ####################
 

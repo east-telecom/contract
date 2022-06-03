@@ -61,7 +61,7 @@
                              <a class="dropdown-item d-flex align-items-center js_title4 @if(Request::segment(1) == 'template4') active @endif" href="{{ route('template4')  }}">Дговор На Аренду</a>
                         </li>
                         <li>
-{{--                            <a class="dropdown-item d-flex align-items-center js_title5 @if(Request::segment(1) == 'template5') active @endif" href="{{ route('template5') }}">Договор Бюджет</a>--}}
+                            <a class="dropdown-item d-flex align-items-center js_title5 @if(Request::segment(1) == 'template5') active @endif" href="{{ route('template5') }}">Договор Бюджет</a>
                         </li>
                     </ul>
                 </li>
@@ -72,6 +72,15 @@
                     </a>
                 </li>
             </ul>
+
+
+            @if(Request::segment(3) == "edit")
+                <ul class="c-header-nav ml-auto mr-5">
+                    <li class="c-header-nav-item">
+                        <p class="text-primary mb-0">Edit contract</p>
+                    </li>
+                </ul>
+            @endif
 
             <ul class="c-header-nav ml-auto mr-4">
                 @php

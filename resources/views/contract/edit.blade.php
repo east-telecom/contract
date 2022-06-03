@@ -9,6 +9,7 @@
 @section('content')
 
     <a href="{{ route('contract.index') }}" class="back-btn-icon" title="go back"><i class="fas fa-long-arrow-alt-left"></i></a>
+
     <section class="app-user-list js_data_all">
 
         @php echo $contract->data; @endphp
@@ -136,6 +137,30 @@
                     alert('Tin error!')
                 }
             })
+
+            /* summa  */
+            $(document).on('focusout', '.js_sum', function () {
+
+                let token = $('meta[name="csrf-token"]').attr('content');
+                let sum = $(this).html()
+                sum = sum.replaceAll(' ', '')
+                let sum_text = $('.js_sum_text')
+
+                $.ajax({
+                    url: '{{ route("sum_text") }}',
+                    type: 'POST',
+                    data: { '_token': token, 'sum': sum },
+                    dataType: 'JSON',
+                    success: (response) => {
+                        console.log('res: ', response)
+                        sum_text.html(response.many_text)
+                    },
+                    error: (response) => {
+                        console.log('error: ', response)
+                    }
+                })
+            });
+            /* ./summa  */
 
 
             $(document).on('click', '.js_text_save_btn', function (e) {

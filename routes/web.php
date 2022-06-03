@@ -34,6 +34,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template5', [TemplateController::class, 'template5'])->name('template5');
 
         Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
+
+        Route::post('/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');
     });
     /******************** ./Template *********************/
 

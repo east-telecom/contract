@@ -66,7 +66,7 @@
                                     <a class="text-danger js_delete_btn" href="javascript:void(0);"
                                        data-toggle="modal"
                                        data-target="#deleteModal"
-                                       data-name="{{ $c->number }}"
+                                       data-name="{{ $c->title.' '.$c->number }}"
                                        data-url="{{ route('contract.destroy', [$c->id]) }}" title="Delete">
                                         <i class="far fa-trash-alt mr-50"></i>
                                     </a>
