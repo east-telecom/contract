@@ -23,7 +23,10 @@
             </div>
         @endif
 
-        @php echo $contract->data; @endphp
+
+        <div class="js_data_all_pdf">
+            @php echo $contract->data; @endphp
+        </div>
 
     </section>
 
@@ -44,7 +47,6 @@
                 let status = $(this).data('status')
                 let token = $('meta[name="csrf-token"]').attr('content');
 
-
                 $.ajax({
                     url: '{{ route('contract.update_status') }}',
                     type: 'POST',
@@ -61,6 +63,33 @@
                     }
                 })
             });
+
+
+            // create pdf
+            $(document).on('click', '.js_create_pdf_btn', function() {
+
+                let url = '{{ route('contract.create_pdf') }}'
+                let id = "{{ Request::segment(2) }}";
+                let data = $('.js_data_all_pdf').html()
+                let token = $('meta[name="csrf-token"]').attr('content');
+
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: { '_token': token, 'id': id, 'data': data },
+                    dataType: 'JSON',
+                    success: (response) => {
+
+                        console.log('res: ', response)
+                    },
+                    error: (response) => {
+                        console.log('error: ', response)
+                    }
+                })
+            });
+
+
+
         })
 
     </script>

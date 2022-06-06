@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Helpers\Helper;
 use App\Models\Contract;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -182,5 +183,18 @@ class ContractController extends Controller
                 'errors' => $exception->getMessage()
             ]);
         }
+    }
+
+
+
+
+    public function create_pdf(Request $request)
+    {
+        return response()->jons(['tt' => 123]);
+        $contract = Contract::findOrFail($request->id);
+
+
+        Helper::pdf($request->name, $request->data);
+
     }
 }

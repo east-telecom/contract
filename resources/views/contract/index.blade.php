@@ -20,8 +20,8 @@
             </thead>
             <tbody>
             @php
-                $u = \Auth::user();
-                $u->load('section');
+                $user = \Auth::user();
+                $user->load('section');
             @endphp
             @foreach($contracts as $c)
 
@@ -44,11 +44,12 @@
 
                     <td class="text-right">
                         <div class="d-flex justify-content-around">
+                            
                             <a href="{{ route('contract.show', [$c->id]) }}" class="text-info" title="Show">
                                 <i class="fas fa-eye mr-50"></i>
                             </a>
 
-                            @if($u->section->rule != 'JURIST')
+                            @if($user->section->rule != 'JURIST')
 
                                 @if($c->status != 1)
                                     <a href="{{ route('contract.edit', [$c->id]) }}" class="text-primary"

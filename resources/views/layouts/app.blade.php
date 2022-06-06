@@ -73,6 +73,16 @@
                 </li>
             </ul>
 
+            @if(Request::segment(3) == 'create-pdf')
+                <ul class="c-header-nav ml-auto mr-5">
+                    <li class="c-header-nav-item">
+                        <a href="javascript:void(0);" class="js_create_pdf_btn btn btn-outline-success">
+                            <i class="fa-solid fa-download mr-50"></i> Save pdf
+                        </a>
+                    </li>
+                </ul>
+            @endif
+
 
             @if(Request::segment(3) == "edit")
                 <ul class="c-header-nav ml-auto mr-5">

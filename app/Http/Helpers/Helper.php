@@ -3,8 +3,8 @@
 namespace App\Http\Helpers;
 
 
-use App\Models\UserPriv;
-use Illuminate\Support\Facades\Auth;
+use Dompdf\Dompdf;
+
 
 class Helper {
 
@@ -26,12 +26,23 @@ class Helper {
     }
 
 
+    public static function pdf($file_name, $data)
+    {
+        $dompdf = new Dompdf();
 
+        $dompdf->loadHtml($data);
 
-//    public static function sumFormat($sum)
-//    {
-//        return number_format($sum,2,", "," ");
-//    }
+        $dompdf->setPaper('A4', 'landscape');
+
+        // Render the HTML as PDF
+        $dompdf->render();
+
+        // $dompdf->stream();
+        $dompdf->stream('contract', array('Attachment' => 0));
+
+        exit();
+    }
+
 
 
 }

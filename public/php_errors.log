@@ -1,0 +1,62 @@
+[06-Jun-2022 16:18:38 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:18:38 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:19:02 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:19:02 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:19:05 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:19:05 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:19:07 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:19:07 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:31:59 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:31:59 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../app/http/helpers/helper.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[06-Jun-2022 16:47:31 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[06-Jun-2022 16:47:39 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[06-Jun-2022 16:48:43 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[06-Jun-2022 16:48:47 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[06-Jun-2022 16:51:31 Asia/Karachi] PHP Parse error:  syntax error, unexpected ')' in /home/ismoil/contract/vendor/composer/platform_check.php on line 25
+[06-Jun-2022 16:51:40 Asia/Tashkent] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/ismoil/contract/vendor/psr/log/src/LoggerInterface.php on line 30
+[06-Jun-2022 16:51:40 Asia/Tashkent] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Jun-2022 16:51:42 Asia/Tashkent] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/ismoil/contract/vendor/psr/log/src/LoggerInterface.php on line 30
+[06-Jun-2022 16:51:42 Asia/Tashkent] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/ismoil/contract/vendor/psr/log/src/LoggerInterface.php on line 30
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/ismoil/contract/vendor/psr/log/src/LoggerInterface.php on line 30
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/ismoil/contract/vendor/psr/log/src/LoggerInterface.php on line 30
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home/ismoil/contract/vendor/psr/log/src/LoggerInterface.php on line 30
+[06-Jun-2022 16:51:43 Asia/Tashkent] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Jun-2022 16:52:05 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/platform_check.php): failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 25
+[06-Jun-2022 16:52:05 Asia/Karachi] PHP Fatal error:  require(): Failed opening required '/home/ismoil/contract/vendor/composer/platform_check.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php on line 25
+[06-Jun-2022 16:52:14 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[06-Jun-2022 16:52:16 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[06-Jun-2022 16:52:20 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
