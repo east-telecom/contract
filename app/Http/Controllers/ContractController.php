@@ -186,15 +186,23 @@ class ContractController extends Controller
     }
 
 
+    public static function checkApproved($id) {
+        try {
+            $c = Contract::findOrfail($id);
+            return $c->status;
+        }
+        catch(\Exception $exception) {
+            return $exception->getMessage();
+        }
+    }
 
 
-    public function create_pdf(Request $request)
+    public function create_pdf($id)
     {
-        return response()->jons(['tt' => 123]);
-        $contract = Contract::findOrFail($request->id);
+        $contract = Contract::findOrFail($id);
 
+        Helper::pdf($contract->title, $contract->data);
 
-        Helper::pdf($request->name, $request->data);
-
+        return $contract->status;
     }
 }

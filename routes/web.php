@@ -47,7 +47,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 //        Route::get('/contract/one-contract/{id}', [ContractController::class, 'oneContract'])->name('contract.oneContract');
 
         Route::post('/contract/update-status/', [ContractController::class, 'update_status'])->name('contract.update_status');
-        Route::post('/create-pdf/', [ContractController::class, 'create_pdf'])->name('contract.create_pdf');
+        Route::get('/contract/create-pdf/{id}', [ContractController::class, 'create_pdf'])->name('contract.create_pdf');
     });
     /******************** ./Contract *********************/
 

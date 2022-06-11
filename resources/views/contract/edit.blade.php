@@ -1,10 +1,6 @@
 @extends('layouts.app')
 
 
-@section('style')
-    <link rel="stylesheet" href="{{ asset('css/contract.css') }}">
-@endsection
-
 
 @section('content')
 

@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
-
 @section('style')
-    <link rel="stylesheet" href="{{ asset('css/contract.css') }}">
-@endsection
+    @php
+        use App\Http\Controllers\ContractController;
+        $id = Request::segment(2);
+    @endphp
 
+    @if(Request::segment(3) == 'create-pdf' && (ContractController::checkApproved($id) == 1))
+        <style>
+            .js_data_all_pdf *{
+                color: black !important;
+            }
+        </style>
+    @endif
+@endsection
 
 @section('content')
 
@@ -16,7 +25,7 @@
             $u->load('section');
         @endphp
         @if($u->section->rule == 'JURIST' && $contract->status == '0')
-            <div class="alert alert-primary text-center js_check_div" style="width: 1000px; margin: 10px auto;" data-id="{{ $contract->id }}">
+            <div class="alert alert-primary text-center js_check_div" style="width: 794px; margin: 10px auto;" data-id="{{ $contract->id }}">
                 <h3>Check the document !</h3>
                 <a href="#" class="btn btn-success mr-2 js_accept_or_decline_btn" data-status="1"><i class="fas fa-check-double"></i> Accept</a>
                 <a href="#" class="btn btn-danger ml-2 js_accept_or_decline_btn" data-status="-1"><i class="fa-solid fa-xmark"></i> Decline</a>
@@ -34,6 +43,7 @@
 
 
 @section('script')
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>--}}
 
     <script>
 
@@ -65,28 +75,12 @@
             });
 
 
-            // create pdf
-            $(document).on('click', '.js_create_pdf_btn', function() {
-
-                let url = '{{ route('contract.create_pdf') }}'
-                let id = "{{ Request::segment(2) }}";
-                let data = $('.js_data_all_pdf').html()
-                let token = $('meta[name="csrf-token"]').attr('content');
-
-                $.ajax({
-                    url: url,
-                    type: 'POST',
-                    data: { '_token': token, 'id': id, 'data': data },
-                    dataType: 'JSON',
-                    success: (response) => {
-
-                        console.log('res: ', response)
-                    },
-                    error: (response) => {
-                        console.log('error: ', response)
-                    }
-                })
-            });
+            // // create pdf
+            // $(document).on('click', '.js_create_pdf_btn', function() {
+            //
+            //     let content = $('.js_data_all_pdf').html()
+            //     html2pdf(content);
+            // });
 
 
 

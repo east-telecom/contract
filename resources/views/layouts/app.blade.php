@@ -18,13 +18,23 @@
     <link rel="stylesheet" href="{{ asset('/css/form-validation.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/datatable.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('css/contract.css?'.time()) }}">
+    @yield('style')
+
     <style>
         .active {
             color: #fff !important;
             background: #5b4dd9 !important;
         }
+
+        /*.js_data_all_pdf *{*/
+        /*    color: black !important;*/
+        /*}*/
+
     </style>
-    @yield('style')
+
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -72,11 +82,15 @@
                     </a>
                 </li>
             </ul>
+           @php
+               use App\Http\Controllers\ContractController;
+               $id = Request::segment(2);
+           @endphp
 
-            @if(Request::segment(3) == 'create-pdf')
+            @if(Request::segment(3) == 'create-pdf' && (ContractController::checkApproved($id) == 1))
                 <ul class="c-header-nav ml-auto mr-5">
                     <li class="c-header-nav-item">
-                        <a href="javascript:void(0);" class="js_create_pdf_btn btn btn-outline-success">
+                        <a href="javascript:void(0)" class="js_create_pdf_btn btn btn-outline-success">
                             <i class="fa-solid fa-download mr-50"></i> Save pdf
                         </a>
                     </li>
@@ -214,8 +228,38 @@
 
 <script src="{{ asset('/js/functionDelete.js') }}"></script>
 <script src="{{ asset('/js/functions.js') }}"></script>
+<script src="{{ asset('js/html2pdf.bundle.min.js') }}"></script>
+
 
 @yield('script')
 
+    <script>
+        function createPdf() {
+            window.scrollTo(0, 0)
+
+            let content = $('.js_data_all_pdf div').html()
+            html2pdf(content, {
+                // pagebreak :   { after : ['.card'] },
+                margin: [7.5, 0],
+                filename: 'contract.pdf',
+                html2canvas: {scale: 3, logging: false, dpi: 96, letterRendering: true},
+                jsPDF: {unit: 'mm', formant: 'letter', orientation: 'portrait'},
+                // pagebreak: {mode: ['css', 'legacy']}
+                // portrait, landscape
+            });
+        }
+
+        $(document).ready(function() {
+
+            // create pdf
+            $(document).on('click', '.js_create_pdf_btn', function () {
+
+                createPdf()
+
+            });
+
+
+        });
+    </script>
 </body>
 </html>
