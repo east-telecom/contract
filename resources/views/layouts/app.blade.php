@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/contract.css?'.time()) }}">
+
     @yield('style')
 
     <style>
@@ -27,11 +28,6 @@
             color: #fff !important;
             background: #5b4dd9 !important;
         }
-
-        /*.js_data_all_pdf *{*/
-        /*    color: black !important;*/
-        /*}*/
-
     </style>
 
 
@@ -226,35 +222,32 @@
 <script src="{{ asset('/js/numeral.js') }}"></script>
 <script src="{{ asset('/js/form-validation.js') }}"></script>
 
-<script src="{{ asset('/js/functionDelete.js') }}"></script>
-<script src="{{ asset('/js/functions.js') }}"></script>
 <script src="{{ asset('js/html2pdf.bundle.min.js') }}"></script>
+<script src="{{ asset('/js/functionDelete.js') }}"></script>
+<script src="{{ asset('/js/functions.js?'.time()) }}"></script>
 
+<script src="{{ asset('js/template_function.js?'.time()) }}"></script>
 
 @yield('script')
 
     <script>
-        function createPdf() {
-            window.scrollTo(0, 0)
-
-            let content = $('.js_data_all_pdf div').html()
-            html2pdf(content, {
-                // pagebreak :   { after : ['.card'] },
-                margin: [7.5, 0],
-                filename: 'contract.pdf',
-                html2canvas: {scale: 3, logging: false, dpi: 96, letterRendering: true},
-                jsPDF: {unit: 'mm', formant: 'letter', orientation: 'portrait'},
-                // pagebreak: {mode: ['css', 'legacy']}
-                // portrait, landscape
-            });
-        }
 
         $(document).ready(function() {
 
             // create pdf
             $(document).on('click', '.js_create_pdf_btn', function () {
+                window.scrollTo(0, 0)
 
-                createPdf()
+                let content = $('.js_data_all_pdf div').html()
+                html2pdf(content, {
+                    // pagebreak :   { after : ['.card'] },
+                    margin: [7.5, 0],
+                    filename: 'contract.pdf',
+                    html2canvas: {scale: 3, logging: false, dpi: 96, letterRendering: true},
+                    jsPDF: {unit: 'mm', formant: 'letter', orientation: 'portrait'},
+                    // pagebreak: {mode: ['css', 'legacy']}
+                    // portrait, landscape
+                });
 
             });
 

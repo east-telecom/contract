@@ -7,25 +7,9 @@ $(document).ready(function() {
         $(this).siblings('.btn').removeClass('d-none')
         $(this).addClass('d-none');
 
-        $('.text_edit').attr('contenteditable', true)
+        $('.text_edit').attr('contenteditable', true).css('color', 'red');
 
         select_date_month_fun_edit()
-
-
-        // contract 1
-        let list3_tr4_select2_text1 = $('.js_list3_tr4_select2_text1')
-        list3_tr4_select2_text1.addClass('d-none')
-
-        let list3_tr4_select2_div1 = $('.js_list3_tr4_select2_div1')
-        list3_tr4_select2_div1.removeClass('d-none')
-
-        // contract 1 select 2
-        let list3_tr4_select2_text2 = $('.js_list3_tr4_select2_text2')
-        list3_tr4_select2_text2.addClass('d-none')
-
-        let list3_tr4_select2_div2 = $('.js_list3_tr4_select2_div2')
-        list3_tr4_select2_div2.removeClass('d-none')
-
     });
 
     // save btn
@@ -34,30 +18,11 @@ $(document).ready(function() {
         $(this).siblings('.js_text_cancel_btn').addClass('d-none')
         $(this).addClass('d-none');
 
-        // contract 1
-        let list3_tr4_select2_text1 = $('.js_list3_tr4_select2_text1')
-        list3_tr4_select2_text1.removeClass('d-none')
-
-        let list3_tr4_select2_div1 = $('.js_list3_tr4_select2_div1')
-        list3_tr4_select2_div1.addClass('d-none')
-
-        // contract 1 select 2
-        let list3_tr4_select2_text2 = $('.js_list3_tr4_select2_text2')
-        list3_tr4_select2_text2.removeClass('d-none')
-
-        let list3_tr4_select2_div2 = $('.js_list3_tr4_select2_div2')
-        list3_tr4_select2_div2.addClass('d-none')
-
-
         $('.js_div_form').addClass('d-none')
 
-        $('.text_edit').attr('contenteditable', false)
-
-
-
+        $('.text_edit').attr('contenteditable', false);
 
         select_date_month_fun_save()
-
     });
 
 
@@ -100,6 +65,64 @@ $(document).ready(function() {
             alert('Tin error!')
         }
     })
+
+
+
+    /******************************************** templates ********************************************/
+
+    $(document).on('focusout', '.js_number', function() {
+        let number = $(this).html()
+        $('.js_number2').html(number)
+    });
+
+    /** date **/
+    $(document).on('focusout', '.js_date_day', function() {
+        let val = $(this).html()
+        date_day_month_year_change('day', val)
+    })
+
+    $(document).on('change', '.js_date_month', function() {
+        let val = $(this).val()
+        date_day_month_year_change('month', val)
+    })
+
+    $(document).on('focusout', '.js_date_year', function() {
+        let val = $(this).html()
+        date_day_month_year_change('year', val)
+    })
+
+
+
+    /** director name edit **/
+    $(document).on('focusout', '.js_director_text', function() {
+        let text = $(this).html().split(' ');
+
+        console.log('t: ', text);
+        $('.js_director_position').html(text.shift())
+
+        let name = ''
+        $.each(text, function(i, index) {
+            name += index+' ';
+        });
+        $('.js_director_name').html(name)
+    })
+
+
+    /** summa 1  **/
+    $(document).on('focusout', '.js_sum', function () {
+        let sum = $(this).html()
+        let sum_text = $('.js_sum_text')
+        get_sum_text_ajax(sum, sum_text)
+    });
+
+    /** summa 2 **/
+    $(document).on('focusout', '.js_sum2', function () {
+        let sum2 = $(this).html()
+        let sum_text2 = $('.js_sum_text2')
+        get_sum_text_ajax(sum2, sum_text2)
+    });
+
+
 
 });
 

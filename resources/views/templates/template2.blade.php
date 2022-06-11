@@ -3,6 +3,13 @@
 
 @section('content')
 
+    <div class="btn-group-vertical contract-number-btn-group d-none" role="group" aria-label="lists btn">
+        <button type="button" class="btn btn-outline-primary">№ &nbsp; 1</button>
+        <button type="button" class="btn btn-outline-primary">№ &nbsp; 2</button>
+        <button type="button" class="btn btn-outline-primary">№ &nbsp; 3</button>
+    </div>
+
+
     <section class="app-user-list js_data_all js_data_all_pdf">
 
         <div class="contract2">
@@ -35,7 +42,7 @@
                 </div>
                 <div>
 
-                    <span class="text_edit"><b>ООО "Food City Tashkent"</b></span> именуемое в дальнейшем «Заказчик», в лице <span class="text_edit">Директора Самигова Д.</span>,
+                    <span class="text_edit"><b>ООО "Food City Tashkent"</b></span> именуемое в дальнейшем «Заказчик», в лице <span class="text_edit js_director_text">Директора Самигова Д.</span>,
                     действующего на основании ___________________, с одной стороны, и <b>СП ООО «Ist Telekom»</b>, именуемое в дальнейшем «Подрядчик», в лице Генерального директора
                     <b>Lee Baek Hee,</b> действующего на основании устава, с другой стороны, далее именуемые «Стороны», заключили настоящий договор о нижеследующем: <br>
 
@@ -73,10 +80,11 @@
                     4.1. Общая стоимость работ по настоящему Договору является договорной и определена на основании Протокола согласования единичных расценок (Приложение № 1),
                     которая является неотъемлемой частью настоящего Договора, и <span class="text_edit" contenteditable="false">составляет</span>
                     <span class="text_edit text-bold js_sum" contenteditable="false">14 000 000</span> <span class="text_edit" contenteditable="false">сум</span>
-                    (<span class="text-info js_sum_text">четырнадцать миллионов</span>) <span class="text_edit" contenteditable="false">с учётом НДС.</span> <br>
+                    (<span class="js_sum_text">четырнадцать миллионов</span>) <span class="text_edit" contenteditable="false">с учётом НДС.</span> <br>
 
                     <p class="text-center text-bold mb-0">5. ПОРЯДОК И УСЛОВИЯ ПЛАТЕЖЕЙ</p>
-                    5.1. Заказчик обязуется произвести предоплату по данному Договору в размере 15 % от суммы Договора в течение 5 (пяти) банковских дней после подписания Договора.
+                    5.1. Заказчик обязуется произвести предоплату по данному Договору в размере <span class="text_edit">15</span> % от суммы Договора в течение
+                    <span class="text_edit js_sum2">5</span> (<span class="js_sum_text2">пяти</span>) банковских дней после подписания Договора.
                     Оплата производится путём перечисления
                 </div>
 
@@ -162,8 +170,8 @@
                             <p>РКННДС:</p>
 
                             <br>
-                            <p>Директор</p>
-                            <p><span class="text_edit text-bold js_director" contenteditable="false">Самигов Д.</span></p>
+                            <p class="js_director_position">Директор</p>
+                            <p class="js_director_name text-bold">Самигов Д.</p>
                             <p>_________________________________</p>
                             <p>М.П.</p>
                         </div>
@@ -200,11 +208,9 @@
 
             <div class="text-right" style="line-height: 1;">
                 <p class="text-bold mb-0">Приложение № 1</p>
-                <p class="text-bold mb-0">
-                    <span class="text_edit">к договору № <span class="js_number2">900-1195</span></span>
-                </p>
+                <p class="mb-0">к договору № <span class="js_number2">900-1195</span></p>
                 <p class="mb-0">
-                    <span class="text_edit">от</span>
+                    <span>от</span>
                     «<span class="js_date_day_static">17</span>»
                     <span class="js_date_month_static">мая</span>
                     <span class="js_date_year_static">2021</span>г.<br>
@@ -214,7 +220,7 @@
             <p class="text-center text-bold mt-1 mb-2">Протокол согласования договорных единичных расценок</p>
 
             Мы, нижеподписавшиеся, от <b>Заказчика</b> - <span class="text_edit text-bold" contenteditable="false">ООО "Food City Tashkent"</span> в лице
-            <span class="text_edit text-bold" contenteditable="false">Директора</span> <span class="text_edit text-bold" contenteditable="false">Самигова Д.</span>,
+            <span class="js_director_position">Директора</span> <span class="js_director_name">Самигова Д.</span>,
             действующего на основании ____________________, с одной стороны, и от <span class="text-bold">Подрядчика – СП OOO «Ist Теlеkom»</span>, в лице Генерального
             директора <b>Lee Baek Hee</b>, действующего на основании устава, с другой стороны, удостоверяем, что сторонами принят Протокол согласования договорных единичных
             расценок на выполняемые работы по организации новой абонентской линии связи до объекта Заказчика. <br>
@@ -236,6 +242,7 @@
                             <span class="text-bold text_edit" contenteditable="false">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>
                         </td>
                         <td class="align-middle text-center">линия</td>
+                        <td class="align-middle text-center">1</td>
                         <td class="align-middle text-center">14 000 000,00</td>
                     </tr>
                     <tr>
@@ -251,8 +258,8 @@
                     <div class="col-md-5 offset-1">
                         <p class="text-bold">ЗАКАЗЧИК</p>
                         <p>
-                            <span class="text_edit">Директор</span> <br>
-                            <span class="text_edit text-bold" contenteditable="false">Самигов Д.</span>
+                            <span class="js_director_position">Директор</span> <br>
+                            <span class="js_director_name text-bold">Самигов Д.</span>
                         </p>
                         <p>________________</p>
                         <p>М.П.</p>
@@ -268,7 +275,7 @@
                     </div>
                 </div>
             </div>
-            <i class="i-number">3</i>
+
 
         </div><!--./card -->
 
@@ -281,59 +288,9 @@
 
 @section('script')
 
-    <script src="{{ asset('js/template_function.js') }}"></script>
     <script>
 
         $(document).ready(function() {
-
-            $(document).on('focusout', '.js_number', function() {
-               let number = $(this).html()
-                $('js_number2').html(number)
-            });
-
-
-            $(document).on('focusout', '.js_date_day', function() {
-                let val = $(this).html()
-                date_day_month_year_change('day', val)
-            })
-
-            $(document).on('change', '.js_date_month', function() {
-                let val = $(this).val()
-                date_day_month_year_change('month', val)
-            })
-
-            $(document).on('focusout', '.js_date_year', function() {
-                let val = $(this).html()
-                date_day_month_year_change('year', val)
-            })
-
-
-            /* summa  */
-            $(document).on('focusout', '.js_sum', function () {
-
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let sum = $(this).html()
-                sum = sum.replaceAll(' ', '')
-                let sum_text = $('.js_sum_text')
-
-                $.ajax({
-                    url: '{{ route("sum_text") }}',
-                    type: 'POST',
-                    data: { '_token': token, 'sum': sum },
-                    dataType: 'JSON',
-                    success: (response) => {
-                        // console.log('res: ', response)
-                        sum_text.html(response.many_text)
-                    },
-                    error: (response) => {
-                        console.log('error: ', response)
-                    }
-                })
-
-            });
-            /* ./summa  */
-
-
 
             $(document).on('click', '.js_text_save_btn', function (e) {
                 e.preventDefault();

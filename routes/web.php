@@ -34,7 +34,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template5', [TemplateController::class, 'template5'])->name('template5');
 
         Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
-        Route::post('/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');
+        Route::post('/template/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');
     });
     /******************** ./Template *********************/
 
@@ -42,12 +42,9 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     /******************** Contract *************************/
     Route::group(['prefix' => '/'], function() {
         Route::resource('/contract', ContractController::class)->except(['create', 'store', 'show']);
-        Route::get('/contract/get-contracts/', [ContractController::class, 'getContracts'])->name('contract.getContracts');
         Route::get('/contract/{contract}/create-pdf', [ContractController::class, 'show'])->name('contract.show');
-//        Route::get('/contract/one-contract/{id}', [ContractController::class, 'oneContract'])->name('contract.oneContract');
 
         Route::post('/contract/update-status/', [ContractController::class, 'update_status'])->name('contract.update_status');
-        Route::get('/contract/create-pdf/{id}', [ContractController::class, 'create_pdf'])->name('contract.create_pdf');
     });
     /******************** ./Contract *********************/
 

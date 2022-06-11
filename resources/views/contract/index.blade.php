@@ -8,10 +8,11 @@
     <table class="table table-striped w-100 table_hover" id="contract_datatable">
             <thead class="table-light">
                 <tr>
-                    <th>№</th>
+                    <th style="width: 3%;">№</th>
                     <th>Name</th>
                     <th>Number</th>
                     <th>Status</th>
+                    <th style="max-width: 20%;">Comment</th>
                     <th>Date</th>
                     <th>Employees</th>
                     <th>Jurist</th>
@@ -38,6 +39,7 @@
                             <sapn class="badge badge-success p-1" style="font-size: 12px;">Approved</sapn>
                         @endif
                     </td>
+                    <td>{{ $c->comment }}</td>
                     <td>{{ date('d.m.Y H:i', strtotime($c->created_at)) }}</td>
                     <td>{{ optional($c->user)->full_name }}</td>
                     <td>{{ optional($c->jurist)->full_name }}</td>

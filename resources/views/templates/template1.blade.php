@@ -3,9 +3,15 @@
 
 @section('content')
 
+    <div class="btn-group-vertical contract-number-btn-group d-none" role="group" aria-label="lists btn">
+        <button type="button" class="btn btn-outline-primary">№ &nbsp; 1</button>
+        <button type="button" class="btn btn-outline-primary">№ &nbsp; 2</button>
+        <button type="button" class="btn btn-outline-primary">№ &nbsp; 3</button>
+    </div>
+
     <section class="app-user-list js_data_all js_data_all_pdf">
 
-        <div class="contract1">
+        <div class="contract1 div_pdf">
 
             <!-- 1 - list -->
             <div class="card contract-text">
@@ -40,7 +46,7 @@
                     <b>СП ООО «Ist Telekom»</b>, именуемое в дальнейшем <b>«Оператор»</b>, действующее на основании Лицензий: Серия АА №0008087 от 31.03.2020г., Серия АА №0008088 от 31.03.2020г.,
                     Серия АА №0008089 от 31.03.2020г., Серия АА №0008090 от 31.03.2020г.., в лице <b>Генерального директора Lee Baek Hee</b>, действующего на основании
                     <span class="text_edit" contenteditable="false">Устава</span>, с одной стороны, и <b><span class="text_edit" contenteditable="false">СП ООО “BIR CAPITAL FUND I”</span></b>именуемое
-                    в дальнейшем «<b><span class="text_edit" contenteditable="false">Абонент</span></b>», в лице <b><span class="text_edit" contenteditable="false">Директора  Султонходжаева  С.А.</span></b>
+                    в дальнейшем «<b><span class="text_edit" contenteditable="false">Абонент</span></b>», в лице <b><span class="text_edit js_director_text" contenteditable="false">Директора  Султонходжаева  С.А.</span></b>
                     дей-ствующего на основании Устава, с другой стороны, вместе именуемые «Стороны», заключили настоящий Договор на предоставление телекоммуникационных услуг юридическим
                     лицам (далее – «Договор») на нижеследующих условиях. <br/>
                     <b>1.	Предмет договора</b> <br>
@@ -164,8 +170,7 @@
             </div><!-- ./card -->
 
 
-
-            <!-- 3 - list -->
+            <!-- 4 - list -->
             <div class="card contract-text">
                 <div class="inn">
                     <b>8.	Конфиденциальность</b> <br/>
@@ -228,8 +233,8 @@
                             <p>Телефон: <span class="text_edit js_phone" contenteditable="false"><b>712026116</b></span></p>
                             <p>РКННДС: <span class="text_edit js_pkinnds" contenteditable="false"><b>3260 1010 0433</b></span></p>
 
-                            <p style="margin-top: 45px;"><span class="text_edit" contenteditable="false">Директор</span></p>
-                            <p><span class="text_edit" contenteditable="false"><b>Султонходжаев  С.А</b></span></p>
+                            <p class="js_director_position" style="margin-top: 45px;">Директор</p>
+                            <p class="js_director_name text-bold">Султонходжаев  С.А</p>
 
                             <p class="mt-2">_____________________________________</p>
                             <p class="ml-5 pl-5">М.П.</p>
@@ -238,13 +243,14 @@
                 </div>
             </div><!-- ./card -->
 
-            <!-- 4 - list -->
+
+            <!-- 5 - list -->
             <div class="card contract-text">
                 <div>
                     <div class="d-flex flex-column">
                         <div class="text-right"><b>Приложение №1</b></div>
                         <div class="text-right">
-                            <span>к договору  № <span class="js_contract_number_static">800-11713</span> от</span>
+                            <span>к договору  № <span class="js_number2">800-11713</span> от</span>
                             «<span class="js_date_day_static">27</span>»
                             <span class="js_date_month_static">декабря</span>
                             <span class="js_date_year_static">2021</span>г.<br>
@@ -301,17 +307,8 @@
                                     (нужное подчеркнуть)
                                 </td>
                                 <td>
-                                    <div class="js_list3_tr4_select2_text1--">
-                                        <span class="text_edit">широкополосный</span> <br>
-                                        <span class="text_edit">другое</span>
-                                    </div>
-                                    <div class="js_list3_tr4_select2_div2-- d-none">
-                                        <select class="js_list3_tr4_select2_select" style="width: 75%;" name="multi1[]" multiple="multiple">
-                                            <option>широкополосный</option>
-                                            <option>другое</option>
-                                            <option>test uchun</option>
-                                        </select>
-                                    </div>
+                                    <span class="text_edit">широкополосный</span> <br>
+                                    <span class="text_edit">другое</span>
                                 </td>
                             </tr>
                             <tr class="tr-empty">
@@ -339,18 +336,9 @@
                                     (нужное подчеркнуть)
                                 </td>
                                 <td>
-                                    <div class="js_list3_tr4_select2_text2--">
-                                        <p class="mb-0"><span class="text_edit">предоставлены Абонентом</span></p>
-                                        <p class="mb-0"><span class="text_edit"><b>предоставлены СП ООО «Ist Telekom»</b></span></p>
-                                        <p><span class="text-underline text_edit">другое:</span></p>
-                                    </div>
-                                    <div class="js_list3_tr4_select2_div2-- d-none">
-                                        <select class="js_list3_tr4_select2_select" style="width: 75%;" name="multi2[]" multiple="multiple">
-                                            <option>предоставлены Абонентом</option>
-                                            <option><b>предоставлены СП ООО «Ist Telekom»</b></option>
-                                            <option><span class="text-underline">другое:</span></option>
-                                        </select>
-                                    </div>
+                                    <p class="mb-0"><span class="text_edit">предоставлены Абонентом</span></p>
+                                    <p class="mb-0"><span class="text_edit text-bold">предоставлены СП ООО «Ist Telekom»</span></p>
+                                    <p><span class="text-underline text_edit">другое:</span></p>
                                 </td>
                             </tr>
                             <tr class="tr-empty">
@@ -427,6 +415,7 @@
             </div><!-- ./card -->
 
 
+            <!-- 6 - list -->
             <div class="card contract-text">
                 <div class="inn">
                     Кабинета Абонента на сайте <b>СП ООО «Ist Telekom»</b> и своевременно информировать
@@ -452,23 +441,24 @@
                         </div>
                         <div class="col-md-6">
                             <p class="ml-5 mb-0"><b>Абонент</b></p>
-                            <p class="mb-0"><span class="text_edit js_name" contenteditable="false">Директор</span></p>
+                            <p class="mb-0 js_director_position">Директор</p>
                             <p class="mb-0">
-                                <b><span class="text_edit js_name" contenteditable="false">Султонходжаев С.А.</span></b> ______________
+                                <span class="js_director_name text-bold">Султонходжаев С.А.</span> ______________
                             </p>
-                            <p class="ml-5 pl-5"><span class="text_edit ml-5 pl-2" contenteditable="false">М. П.</span></p>
+                            <p class="ml-5 pl-5"><span class="ml-5">М. П.</span></p>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div><!-- ./card -->
 
-            <!-- 5 - list -->
+
+            <!-- 7 - list -->
             <div class="card contract-text">
                 <div>
                     <div class="d-flex flex-column">
                         <div class="text-right"><b>Приложение №2</b></div>
                         <div class="text-right">
-                            <span>к договору  № <span class="js_contract_number_static">800-11713</span> от</span>
+                            <span>к договору  № <span class="js_number2">800-11713</span> от</span>
                             «<span class="js_date_day_static">27</span>»
                             <span class="js_date_month_static">декабря</span>
                             <span class="js_date_year_static">2021</span>г.<br>
@@ -481,7 +471,7 @@
                     и от  Оператора – СП OOO «Ist Telekom», в лице Генерального директора Lee Baek Hee,  действующего на основании Устава, с другой стороны, удостоверяем,
                     что сторонами принят Протокол согласования договорной цены на предоставляемые работы и услуги с учетом НДС, согласно перечня услуг (Приложение № 1)
                     к договору №
-                    <span class="text_edit" contenteditable="false">800-11713</span> от
+                    <span class="js_number2">800-11713</span> от
                     «<span class="text_edit" contenteditable="false">27</span>»
                     <select name="month2" class="js_select_data_month2 d-none">
                         <option>Январь</option>
@@ -606,24 +596,24 @@
                     </div>
                     <div class="col-md-6">
                         <p class="ml-5 mb-0"><b>Абонент</b></p>
-                        <p class="mb-0"><span class="text_edit js_name" contenteditable="false">Директор</span></p>
+                        <p class="mb-0 js_director_position">Директор</p>
                         <p class="mb-0">
-                            <b><span class="text_edit js_name" contenteditable="false">Султонходжаев С.А.</span></b> ______________
+                            <span class="js_director_name text-bold">Султонходжаев С.А.</span> ______________
                         </p>
-                        <p class="ml-5 pl-5"><span class="text_edit ml-5 pl-2" contenteditable="false">М. П.</span></p>
+                        <p class="ml-5 pl-5"><span class="ml-5">М. П.</span></p>
                     </div>
                 </div>
 
-                <i class="i-number">4</i>
             </div><!-- ./card -->
 
-            <!-- 6 - list -->
+
+            <!-- 8 - list -->
             <div class="card contract-text">
                 <div>
                     <div class="d-flex flex-column">
                         <div class="text-right"><b>Приложение №3</b></div>
                         <div class="text-right">
-                            <span>к договору  № <span class="js_contract_number_static">800-11713</span> от</span>
+                            <span>к договору  № <span class="js_number2">800-11713</span> от</span>
                             «<span class="js_date_day_static">27</span>»
                             <span class="js_date_month_static">декабря</span>
                             <span class="js_date_year_static">2021</span>г.<br>
@@ -667,7 +657,8 @@
                 </div>
             </div><!--./card -->
 
-            <!-- 7 -->
+
+            <!-- 9 -->
             <div class="card contract-text">
                 <div>уведом-лением Сторон о принимаемых мерах.
                     3.4.	По итогам работы за месяц Сторонами составляется Акт простоев связи (при их наличии).
@@ -694,16 +685,16 @@
                         </div>
                         <div class="col-md-6">
                             <p class="ml-5 mb-0"><b>Абонент</b></p>
-                            <p class="mb-0"><span class="text_edit js_name" contenteditable="false">Директор</span></p>
+                            <p class="mb-0 js_director_position">Директор</p>
                             <p class="mb-0">
-                                <b><span class="text_edit js_name" contenteditable="false">Султонходжаев С.А.</span></b> ______________
+                                <span class="js_director_name text-bold">Султонходжаев С.А.</span> ______________
                             </p>
-                            <p class="ml-5 pl-5"><span class="text_edit ml-5 pl-2" contenteditable="false">М. П.</span></p>
+                            <p class="ml-5 pl-5"><span class="ml-5">М. П.</span></p>
                         </div>
                     </div>
 
                 </div>
-            </div>
+            </div><!-- ./card -->
 
         </div><!--./contract1 -->
 
@@ -713,40 +704,17 @@
 
 
 @section('script')
-
-    <script src="{{ asset('js/template_function.js') }}"></script>
     <script>
 
         $(document).ready(function() {
 
-            $(document).on('focusout', '.js_date_day', function() {
-                let val = $(this).html()
-                date_day_month_year_change('day', val)
-            })
-
-            $(document).on('change', '.js_date_month', function() {
-                let val = $(this).val()
-                date_day_month_year_change('month', val)
-            })
-
-            $(document).on('focusout', '.js_date_year', function() {
-                let val = $(this).html()
-                date_day_month_year_change('year', val)
-            })
-
-
-            $(document).ready(function() {
-                $('.js_list3_tr4_select2_select').select2();
-            });
-
-
             $(document).on('click', '.js_text_save_btn', function (e) {
                 e.preventDefault();
 
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html()
-                let title = 'Договор Юр. Лица';
-                let data = $('.js_data_all').html()
+                let token   = $('meta[name="csrf-token"]').attr('content');
+                let number  = $('.js_number').html()
+                let title   = $('.js_title1').html();
+                let data    = $('.js_data_all').html()
 
                 $.ajax({
                     url: '{{ route('templates.store') }}',

@@ -2,6 +2,13 @@
     background: #cecdcf;
 }
 
+.contract-number-btn-group {
+    position: fixed;
+    top: 18%;
+
+}
+
+
 h4 {
     color: black !important;
     font-weight: 600;
@@ -11,7 +18,6 @@ h4 {
     text-align: justify;
     padding: 15px 55px 15px 70px !important;
     max-width: 794px !important;
-    /*height: 1058px !important;*/
     height: 1123px !important;
     margin: 15px auto;
     font-size: 14px!important;
@@ -20,13 +26,9 @@ h4 {
     border: none !important;
 }
 
-.contract-text div {
-    /*border: 1px solid black !important;*/
-}
 
 .contract-text:first-child {
     margin: 0 auto !important;
-    /*padding-top: 20px !important;*/
 }
 
 .horizontal-list {
@@ -42,8 +44,7 @@ h4 {
 }
 
 span.text_edit {
-    color: red;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .text-underline {
@@ -72,15 +73,6 @@ span.text_edit {
     margin-left: 10% !important;
 }
 
-section {
-    line-height: 1.5;
-}
-.i-number {
-    text-align: center;
-    color: gray;
-    font-style: italic;
-    font-size: 12px;
-}
 .contract1 table,
 .contract2 table,
 .contract3 table,
@@ -166,6 +158,12 @@ section {
     font-size: 13px !important;
 }
 
+.contract1 .table tr th,
+.contract1 .table tr td {
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid black;
+}
 /** contract 1 **/
 
 
@@ -173,8 +171,8 @@ section {
 
 /* contract 2 */
 
-.app-user-list .contract2-list3-table td,
-.app-user-list th, tr {
+.contract2 .table td,
+.contract2 .table th, tr {
     border: 1px solid black !important;
     font-size: 14px !important;
 }
@@ -218,7 +216,7 @@ section {
 }
 
 .horizontal-list .table tr th,
-.app-user-list .table tr td {
+.horizontal-list .table tr td {
     font-size: 14px;
     padding: 10px;
     border: 1px solid black;

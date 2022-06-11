@@ -61,16 +61,19 @@ function create_div(number, response) {
 
 }
 
-function sum_text_ajax(url, data, sum_text) {
 
+/** summa so'z bilan chiqarish uchun ajax **/
+function get_sum_text_ajax(sum, sum_text) {
+    let url = window.location.protocol + "//" + window.location.host + "/template/sum_text";
+    let token = $('meta[name="csrf-token"]').attr('content');
+    sum = sum.replaceAll(' ', '')
     $.ajax({
         url: url,
         type: 'POST',
-        data: data,
+        data: { '_token': token, 'sum': sum },
         dataType: 'JSON',
         success: (response) => {
-            console.log('res: ', response)
-            // sum_text.html(response.res)
+            sum_text.html(response.many_text)
         },
         error: (response) => {
             console.log('error: ', response)

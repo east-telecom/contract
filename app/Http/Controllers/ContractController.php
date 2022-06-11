@@ -58,34 +58,7 @@ class ContractController extends Controller
         return view('contract.index', compact('contracts'));
     }
 
-    public function getContracts()
-    {
-        $contracts = self::contracts();
 
-        return DataTables::of($contracts)
-            ->addIndexColumn()
-            ->addColumn('action', function ($c) {
-                $btn = '<div class="text-right">
-                            <a href="javascript:void(0);" class="text-primary js_edit_btn"
-                                data-update_url=""
-                                data-one_data_url="123"
-                                title="Edit">
-                                <i class="fas fa-pen mr-50"></i>
-                            </a>
-                            <a class="text-danger js_delete_btn" href="javascript:void(0);"
-                                data-toggle="modal"
-                                data-target="#deleteModal">
-                                <i class="far fa-trash-alt mr-50"></i>
-                            </a>
-                        </div>';
-                return $btn;
-            })
-            ->rawColumns(['action'])
-            ->editColumn('id', '{{$id}}')
-            ->setRowClass('js_this_tr')
-            ->setRowAttr(['data-id' => '{{ $id }}'])
-            ->make(true);
-    }
 
     /**
      * Display the specified resource.
@@ -146,11 +119,12 @@ class ContractController extends Controller
             $product = Contract::findOrFail($request->id);
             $product->fill([
                 'status' => $request->status,
-                'jurist_id' => $user_id
+                'jurist_id' => $user_id,
+                'comment' => $request->comment
             ]);
             $product->save();
 
-            return response()->json(['status' => true, 'msg' => 'ok']);
+            return response()->json(['status' => true, 'msg' => 'ok', 'contract_status' => $request->status]);
         }
         catch (\Exception $exception) {
             return response()->json(['status' => false, 'errors' => $exception->getMessage()]);
@@ -197,12 +171,4 @@ class ContractController extends Controller
     }
 
 
-    public function create_pdf($id)
-    {
-        $contract = Contract::findOrFail($id);
-
-        Helper::pdf($contract->title, $contract->data);
-
-        return $contract->status;
-    }
 }

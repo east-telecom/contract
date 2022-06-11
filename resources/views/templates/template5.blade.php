@@ -23,7 +23,7 @@
                     1.1. Оператор предоставляет, а Абонент получает и оплачивает услуги сети СП ООО «Ist Telekom» (далее «Услуги») в соответствии с условиями и порядком,
                     указанными в настоящем Договоре и Приложениях к нему.
                     1.2. Стоимость услуг на период <span class="text_edit">с 01 января 2022г. до 31 декабря 2022г</span>. составляет
-                    <span class="text_edit js_sum">5 556 000</span> (<span class="text-info js_sum_text">пять миллионов пятьсот  пятьдесят шесть тысяч</span>) сум.
+                    <span class="text_edit js_sum">5 556 000</span> (<span class="js_sum_text">пять миллионов пятьсот  пятьдесят шесть тысяч</span>) сум.
                     Из них сумма в размере _____________ (_______________________________________________) сум находится в пределах утверждённой на момент заключения настоящего
                     договора сметы расходов Абонента из государственного бюджета и подлежит оплате через соответствующее  отделение Казначейства Министерства Финансов
                     Республики Узбекистан. Сумма в размере ___________ (_________________________________________________________) сум подлежит оплате по расчетному
@@ -300,7 +300,7 @@
             <div class="card contract-text">
                 <div>
                     <div class="text-right">
-                        <p><b>Приложение №1</b><br> к договору <span class="text_edit">19А01№0440/2022 от «__» _____________ 2022г.</span></p>
+                        <p><b>Приложение №1</b><br> к договору <span class="js_number2">19А01№0440/2022 от «__» _____________ 2022г.</span></p>
                     </div>
                     <p class="font-weight-bold text-center mb-0">Перечень сведений и телекоммуникационных средств,</p>
                     <p class="font-weight-bold text-center">используемых для подключения Абонента к сети  СП OOO «Ist Теlеkom»</p>
@@ -464,7 +464,7 @@
             <!-- 4 - list -->
             <div class="card contract-text">
                 <div class="text-right">
-                    <p><b>Приложение №2</b><br> к договору <span class="text_edit">19А01№0440/2022 от «__» _____________ 2022г.</span></p>
+                    <p><b>Приложение №2</b><br> к договору <span class="js_number2">19А01№0440/2022 от «__» _____________ 2022г.</span></p>
                 </div>
                 <p class="text-center mb-0"><b>Протокол</b></p>
                 <p class="font-weight-bold text-center"><b>согласования договорной цены на предоставляемые работы и услуги</b></p>
@@ -474,7 +474,7 @@
                     <span class="text_edit" contenteditable="false">директора  Олимова С.</span>, действующего на основании  <span class="text_edit">устава</span>,
                     с одной стороны, и от <b>Оператора – СП OOO «Ist Telekom»</b>, в лице <b>Генерального директора  Lee Baek Hee</b>, действующего на основании устава,
                     с другой стороны, удостоверяем, что сторонами принят Протокол согласования договорной цены на предоставляемые работы и услуги с учетом НДС,
-                    согласно, перечня услуг (Приложение № 1) к договору  <span class="text_edit" contenteditable="false">19А01№0440/2022 от «___» ____________ 2022г.</span>
+                    согласно, перечня услуг (Приложение № 1) к договору  <span class="js_number2">19А01№0440/2022 от «___» ____________ 2022г.</span>
                 </div>
 
                 <p class="text-center mt-2"><b>Ежемесячные платежи за услуги *</b></p>
@@ -543,7 +543,7 @@
             <div class="card contract-text">
                 <div>
                     <div class="text-right">
-                        <p><b>Приложение №3</b><br> к договору <span class="text_edit">19А01№0440/2022   от «___» ___________ 2022г</span></p>
+                        <p><b>Приложение №3</b><br> к договору <span class="js_number2">19А01№0440/2022   от «___» ___________ 2022г</span></p>
                     </div>
                     <p class="text-center mt-2 mb-1"><b>Регламент организационно-технического взаимодействия</b></p>
 
@@ -630,7 +630,7 @@
             <div class="card contract-text">
                 <div>
                     <div class="text-right">
-                        <p><b>Приложение №4</b><br> к договору <span class="text_edit">19А01№0440/2022   от «___» ___________ 2022г.</span></p>
+                        <p><b>Приложение №4</b><br> к договору <span class="js_number2">19А01№0440/2022   от «___» ___________ 2022г.</span></p>
                     </div>
                     <p class="text-center text-bold mt-2">согласования расчетной суммы для оплаты через казначейство на период c <span class="text_edit">01.01.2022 до 31.12.2022г.</span></p>
 
@@ -639,7 +639,7 @@
                     с одной стороны, и от Оператора – CП OOO «Ist Теlеkom», в лице  Генерального директора  Lee Baek Hee, действующего на основании устава, с другой стороны, удостоверяем,
                     что Сторонами принят Протокол согласования расчетной суммы для оплаты через казначейство в сумах с учетом НДС на период c
                     <span class="text_edit" contenteditable="false">01.01.2022 до 31.12.2022г</span>., который является неотъемлемой частью Протокола согласования
-                    Договорной цены (Приложение№2) к договору <span class="text_edit">19А01№0440/2022 от  «____» _______________ 2022г.</span>
+                    Договорной цены (Приложение№2) к договору <span class="js_number2">19А01№0440/2022 от  «____» _______________ 2022г.</span>
 
 
                     <p class="text_edit text-center text-bold mt-3 mb-3">
@@ -804,7 +804,7 @@
 
                     * Все цены указаны в сумах с учетом НДС <br>
                     ** Расчетная сумма выплат за период с <span class="text_edit">01.01.2022г. по 31.12.2022г</span>. составляет
-                    <span class="text-bold text_edit js_sum2" contenteditable="false">5 556 000</span> (<span class="js_sum_text2 text-info">пять  миллионов пятьсот  пятьдесят шесть тысяч</span>)  сум,
+                    <span class="text-bold text_edit js_sum2" contenteditable="false">5 556 000</span> (<span class="js_sum_text2">пять  миллионов пятьсот  пятьдесят шесть тысяч</span>)  сум,
                     где сумма _________ (____________________________________________________________) сум предназначена для оплаты через казначейство по счету:
                     _____________________________________, а сумма ________________ (___________________________________________________) сум подлежит оплате из
                     внебюджетных средств по счету:  ______________________________________________. <br>
@@ -847,46 +847,10 @@
 
 @section('script')
 
-
-    <script src="{{ asset('js/template_function.js') }}"></script>
     <script>
-        function get_sum_text_ajax(token, sum, sum_text) {
-            sum = sum.replaceAll(' ', '')
-            $.ajax({
-                url: '{{ route("sum_text") }}',
-                type: 'POST',
-                data: { '_token': token, 'sum': sum },
-                dataType: 'JSON',
-                success: (response) => {
-                    // console.log('res: ', response)
-                    sum_text.html(response.many_text)
-                },
-                error: (response) => {
-                    console.log('error: ', response)
-                }
-            })
-        }
-
         $(document).ready(function() {
 
             var token = $('meta[name="csrf-token"]').attr('content');
-
-            /** summa 1  **/
-            $(document).on('focusout', '.js_sum', function () {
-                let sum = $(this).html()
-                let sum_text = $('.js_sum_text')
-                get_sum_text_ajax(token, sum, sum_text)
-            });
-
-            /** summa 2 **/
-            $(document).on('focusout', '.js_sum2', function () {
-                let sum2 = $(this).html()
-                let sum_text2 = $('.js_sum_text2')
-                get_sum_text_ajax(token, sum2, sum_text2)
-            });
-
-
-
 
             $(document).on('click', '.js_text_save_btn', function (e) {
                 e.preventDefault();
@@ -901,7 +865,6 @@
                     data: { '_token': token, 'number': number, 'title': title, 'data': data },
                     dataType: 'JSON',
                     success: (response) => {
-                        // console.log('res: ', response)
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
                     },
                     error: (response) => {
@@ -911,6 +874,5 @@
             });
 
         });
-
     </script>
 @endsection
