@@ -91,6 +91,10 @@ $(document).ready(function() {
         date_day_month_year_change('year', val)
     })
 
+    $(document).on('focusout', '.js_date_month_html', function() {
+        let val = $(this).html()
+        date_day_month_year_change('month_html', val)
+    })
 
 
     /** director name edit **/

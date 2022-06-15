@@ -5,20 +5,21 @@
 .contract-number-btn-group {
     position: fixed;
     top: 18%;
-
 }
-
 
 h4 {
     color: black !important;
     font-weight: 600;
     font-size: 14px;
 }
+
 .contract-text {
     text-align: justify;
-    padding: 15px 55px 15px 70px !important;
+    padding: 0 25px !important;
     max-width: 794px !important;
-    height: 1123px !important;
+    /*max-width: 1000px !important;*/
+    max-height: 1123px !important;
+    /*max-height: 1500px !important;*/
     margin: 15px auto;
     font-size: 14px!important;
     font-family: 'Times New Roman', Times, serif;
@@ -29,6 +30,7 @@ h4 {
 
 .contract-text:first-child {
     margin: 0 auto !important;
+    padding-top: 5px !important;
 }
 
 .horizontal-list {
@@ -54,9 +56,13 @@ span.text_edit {
 .text-bold{
     font-weight: bold;
 }
+.inn {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
 
 .inn .row{
-    margin-top: 30px !important;
+    margin-top: 10px !important;
 }
 .inn p {
     margin-bottom: 3px !important;
@@ -66,7 +72,7 @@ span.text_edit {
     line-height: 1.2 !important;
 }
 .inn p:first-child {
-    margin-bottom: 15px !important;
+    margin-bottom: 10px !important;
 }
 
 .inn p:last-child {
@@ -155,7 +161,7 @@ span.text_edit {
 }
 
 .contract1 .contract-text *{
-    font-size: 13px !important;
+    font-size: 10px !important;
 }
 
 .contract1 .table tr th,
@@ -189,14 +195,20 @@ span.text_edit {
     width: 15%;
 }
 
+.contract2 .contract-text {
+    padding: 15px 30px 15px 45px !important;
+    font-size: 12px!important;
+}
 /* contract 2 */
 
 
 /** contract 3 **/
 
-.contract3 .contract-text *{
-    font-size: 15px !important;
+.contract3 .contract-text {
+    padding: 20px 30px 20px 50px !important;
+    font-size: 15px!important;
 }
+
 
 /** contract 3 **/
 
@@ -217,25 +229,35 @@ span.text_edit {
 
 .horizontal-list .table tr th,
 .horizontal-list .table tr td {
-    font-size: 14px;
+    font-size: 13px;
     padding: 10px;
     border: 1px solid black;
 }
 .horizontal-list .table {
     margin-top: 20px;
 }
+h4 {
+    font-size: 13px !important;
+}
 
+.contract4 .contract-text {
+    padding: 20px 45px 20px 70px !important;
+    font-size: 12px !important;
+}
 /* contract 4 */
 
 
 /* contract5 */
 
-.contract5 .contract-text {
-    font-size: 13px !important;
+
+.contract5 h4 {
+    font-size: 12px !important;
 }
 
-.contract5 .contract-text * {
-    font-size: 13px !important;
+
+.contract5 .contract-text {
+    padding: 20px 35px 20px 50px !important;
+    font-size: 9px !important;
 }
 
 .contract5 .contract-text .table tr td {

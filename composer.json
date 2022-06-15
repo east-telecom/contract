@@ -28,7 +28,7 @@
     "autoload": {
         "files": [
             "/home/ismoil/contract/app/Http/Helpers/Helper.php",
-            "/home/ismoil/contract/public/dompdf/vendor/autoload.php"
+            "/home/ismoil/contract/public/html2pdf/vendor/autoload.php"
         ],
         "psr-4": {
             "App\\": "app/",

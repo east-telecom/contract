@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\DataTables;
+use function Couchbase\defaultDecoder;
 
 class ContractController extends Controller
 {
@@ -170,5 +171,14 @@ class ContractController extends Controller
         }
     }
 
+
+    public function create_pdf($contract_id)
+    {
+        $contract = Contract::findOrFail($contract_id);
+
+//        dd($contract->data);
+
+        Helper::create_pdf($contract->data);
+    }
 
 }

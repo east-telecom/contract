@@ -32,6 +32,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template3', [TemplateController::class, 'template3'])->name('template3');
         Route::get('/template4', [TemplateController::class, 'template4'])->name('template4');
         Route::get('/template5', [TemplateController::class, 'template5'])->name('template5');
+        Route::get('/template6', [TemplateController::class, 'template6'])->name('template6');
 
         Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
         Route::post('/template/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');
@@ -43,6 +44,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::group(['prefix' => '/'], function() {
         Route::resource('/contract', ContractController::class)->except(['create', 'store', 'show']);
         Route::get('/contract/{contract}/create-pdf', [ContractController::class, 'show'])->name('contract.show');
+
+        Route::get('/contract/pdf/{id}', [ContractController::class, 'create_pdf'])->name('contract.pdf');
 
         Route::post('/contract/update-status/', [ContractController::class, 'update_status'])->name('contract.update_status');
     });

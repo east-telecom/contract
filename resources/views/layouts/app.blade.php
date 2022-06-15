@@ -69,6 +69,9 @@
                         <li>
                             <a class="dropdown-item d-flex align-items-center js_title5 @if(Request::segment(1) == 'template5') active @endif" href="{{ route('template5') }}">Договор Бюджет</a>
                         </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center js_title6 @if(Request::segment(1) == 'template6') active @endif" href="{{ route('template6') }}">Дополнительное Соглашение</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -93,6 +96,13 @@
                 </ul>
             @endif
 
+{{--            <ul class="c-header-nav ml-auto mr-5">--}}
+{{--                <li class="c-header-nav-item">--}}
+{{--                    <a href="{{ route('contract.pdf', [58]) }}" class="js_create_pdf_btn btn btn-outline-danger">--}}
+{{--                        <i class="fa-solid fa-download mr-50"></i> Save pdf--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            </ul>--}}
 
             @if(Request::segment(3) == "edit")
                 <ul class="c-header-nav ml-auto mr-5">
@@ -110,38 +120,40 @@
 
                 @if($user->section->rule != 'JURIST')
                     @if(Request::segment(1) == 'template1' || Request::segment(1) == 'template2' || Request::segment(1) == 'template3' ||
-                    Request::segment(1) == 'template4' || Request::segment(1) == 'template5' || Request::segment(3) == 'edit')
+                    Request::segment(1) == 'template4' || Request::segment(1) == 'template5' || Request::segment(1) == 'template6' || Request::segment(3) == 'edit')
 
-                        <li class="nav-item d-flex align-content-center" style="height: 39px;">
-                            <div class="row js_div_form d-none" style="margin-top: 5px;">
-                                @if(Request::segment(1) == 'template3')
-                                    <div class="col-md-5">
-                                        <select name="number" class="form-control form-control-sm js_tin_number" style="border: 1px solid #7367f0;">
-                                            <option value="1">Принимающая сторона</option>
-                                            <option value="2">Дебитор</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-7 pl-0">
-                                        <div class="input-group input-group-sm">
-                                            <input type="text" name="tin" class="form-control js_tin_input" placeholder="TIN" aria-describedby="button-addon2" style="border: 1px solid #7367f0;">
-                                            <div class="input-group-append js_tin_icon" id="button-addon2">
-                                                <button class="btn btn-outline-primary waves-effect js_tin_btn" type="button">Send</button>
+                        @if(Request::segment(1) != 'template6')
+                            <li class="nav-item d-flex align-content-center" style="height: 39px;">
+                                <div class="row js_div_form d-none" style="margin-top: 5px;">
+                                    @if(Request::segment(1) == 'template3')
+                                        <div class="col-md-5">
+                                            <select name="number" class="form-control form-control-sm js_tin_number" style="border: 1px solid #7367f0;">
+                                                <option value="1">Принимающая сторона</option>
+                                                <option value="2">Дебитор</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-7 pl-0">
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" name="tin" class="form-control js_tin_input" placeholder="TIN" aria-describedby="button-addon2" style="border: 1px solid #7367f0;">
+                                                <div class="input-group-append js_tin_icon" id="button-addon2">
+                                                    <button class="btn btn-outline-primary waves-effect js_tin_btn" type="button">Send</button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @else
-                                    <div class="col-md-12 pl-0">
-                                        <div class="input-group input-group-sm">
-                                            <input type="hidden" name="number" value="1" class="js_tin_number"/>
-                                            <input type="text" name="tin" class="form-control js_tin_input" placeholder="TIN" aria-describedby="button-addon2" style="border: 1px solid #7367f0;">
-                                            <div class="input-group-append js_tin_icon" id="button-addon2">
-                                                <button class="btn btn-outline-primary waves-effect js_tin_btn" type="button">Send</button>
+                                    @else
+                                        <div class="col-md-12 pl-0">
+                                            <div class="input-group input-group-sm">
+                                                <input type="hidden" name="number" value="1" class="js_tin_number"/>
+                                                <input type="text" name="tin" class="form-control js_tin_input" placeholder="TIN" aria-describedby="button-addon2" style="border: 1px solid #7367f0;">
+                                                <div class="input-group-append js_tin_icon" id="button-addon2">
+                                                    <button class="btn btn-outline-primary waves-effect js_tin_btn" type="button">Send</button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                @endif
-                            </div>
-                        </li>
+                                    @endif
+                                </div>
+                            </li>
+                        @endif
 
                         <li class="c-header-nav-item mx-md-5 mx-2 nav-item mr-2">
                             <a href="javascript:void(0);" class="btn btn-primary btn-sm js_text_edit_btn"><i class="fas fa-pen"></i> edit</a>
@@ -232,23 +244,39 @@
 
     <script>
 
+        function contract() {
+
+        }
+
         $(document).ready(function() {
 
             // create pdf
             $(document).on('click', '.js_create_pdf_btn', function () {
                 window.scrollTo(0, 0)
 
-                let content = $('.js_data_all_pdf div').html()
-                html2pdf(content, {
-                    // pagebreak :   { after : ['.card'] },
-                    margin: [7.5, 0],
-                    filename: 'contract.pdf',
-                    html2canvas: {scale: 3, logging: false, dpi: 96, letterRendering: true},
-                    jsPDF: {unit: 'mm', formant: 'letter', orientation: 'portrait'},
-                    // pagebreak: {mode: ['css', 'legacy']}
-                    // portrait, landscape
-                });
+                let html = $('.js_data_all_pdf div');
+                html.css({'font-size': '7pt'})
+                html.find('.text_edit').css('color', 'black')
+                html = html.html()
 
+                // html2pdf(html, {
+                //     pagebreak :   { after : ['.card'] },
+                //     margin: [7.5, 0],
+                //     filename: 'contract.pdf',
+                //     html2canvas: {scale: 2, logging: true, dpi: 96, letterRendering: true},
+                //     jsPDF: {unit: 'mm', formant: 'letter', orientation: 'portrait'},
+                //     // pagebreak: {mode: ['css', 'legacy']}
+                //     // portrait, landscape
+                // });
+
+                let opt = {
+                    margin: 0,
+                    filename: 'contract.pdf',
+                    html2canvas: {scale: 3, logging: true, dpi: 96, letterRendering: true},
+                    jsPDF: {unit: 'mm', formant: 'a4', orientation: 'portrait'},
+                }
+
+                html2pdf().set(opt).from(html).save();
             });
 
 

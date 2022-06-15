@@ -87,6 +87,7 @@
 
                     8. Настоящий договор составлен в трех экземплярах, имеющий равную юридическую силу, по одному экземпляру для каждой из сторон. <br>
                     <br>
+                    <br>
                     <div class="inn js_tin_div1">
                         <p><b>Принимающая сторона:</b></p>
                         <p><span class="text_edit js_name" contenteditable="false"><b>ООО «FASHION CORNER» 11</b></span></p>
@@ -100,7 +101,7 @@
                         <p>РКННДС: _______________________</p>
                         <p>Телефон: <span class="text_edit js_phone" contenteditable="false">+998951424451</span></p>
 
-                        <p><span class="text_edit js_director" contenteditable="false">Директор</span></p>
+                        <p class="mt-3"><span class="text_edit js_director">Директор</span></p>
                         <p><span class="text_edit" contenteditable="false">Пулатов У.С.</span></p>
                         <p>_________________________________</p>
                         <p>М.П.</p>
@@ -110,7 +111,7 @@
 
             <!-- 2 - list -->
             <div class="card contract-text">
-                <div class="inn js_tin_div2">
+                <div class="inn js_tin_div2 mb-5">
                     <p><b>Дебитор:</b></p>
                     <p><span class="text_edit js_name" contenteditable="false"><b>ООО «NOWADAY»</b></span></p>
                     <p><span class="text_edit js_address" contenteditable="false">100060, г.Ташкент, Мирабадский р-н, ул. Тарас Шевченко д.36</span></p>
@@ -124,7 +125,7 @@
                     <p>РКННДС: _______________________</p>
                     <p>Телефон: <span class="text_edit js_phone" contenteditable="false">+998951424451</span></p>
 
-                    <p><span class="text_edit js_director" contenteditable="false">Директор</span></p>
+                    <p class="mt-3"><span class="text_edit js_director" contenteditable="false">Директор</span></p>
                     <p><span class="text_edit" contenteditable="false">Ахмедов Ж.А</span></p>
                     <p>_________________________________</p>
                     <p>М.П.</p>
@@ -141,7 +142,7 @@
                     <p>МФО: 00842 ИНН: 204663354 ОКЭД: 61100</p>
                     <p>Регистрационный код: 326010005625</p>
 
-                    <p>Генеральный директор</p>
+                    <p class="mt-3">Генеральный директор</p>
                     <p>Lee Baek Hee</p>
                     <p>_________________________________</p>
                     <p>М.П.</p>
