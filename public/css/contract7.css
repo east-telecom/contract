@@ -1,0 +1,79 @@
+
+.contract7 h4 {
+    font-size: 13px !important;
+    margin-top: 20px;
+}
+
+.contract7 .contract-text {
+    padding: 20px 35px 20px 50px !important;
+    font-size: 13px !important;
+    max-width: 794px !important;
+    height: 1123px !important;
+}
+
+.contract7 .contract-text:nth-child(2) {
+    font-size: 12px !important;
+}
+
+.contract7 .contract-text:nth-child(2) .div-font-small {
+    font-size: 10px !important;
+}
+
+.contract7 .table tr th,
+.contract7 .table tr td {
+    border: 1px solid black;
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 12px;
+    color: black;
+}
+.contract7 .table tr td ul{
+    margin-bottom: 0;
+}
+
+.contract7 .contract-text:nth-child(3)  {
+    font-size: 10px;
+}
+
+.contract7 .contract-text:nth-child(3) .table tr td:nth-child(2)  {
+    width: 55%;
+}
+.contract7 .contract-text:nth-child(3) .table tr td:nth-child(3)  {
+    text-align: center;
+}
+.contract7 .contract-text:nth-child(3) .table tr td:nth-child(4)  {
+    text-align: center;
+}
+.contract7 .contract-text:nth-child(3) .table tr td:nth-child(5)  {
+    text-align: center;
+}
+.contract7 .contract-text:nth-child(3) .table tr td:nth-child(6)  {
+    width: 10%;
+    text-align: center;
+}
+
+.contract7 .contract-text:nth-child(3) .table tr:nth-child(2) td  {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.contract7 .table tr td:first-child {
+    width: 10px;
+    text-align: center;
+}
+
+.contract7 .table tr td:nth-child(2) {
+    width: 35%;
+}
+
+/** 2 - list **/
+.contract7 .last-table tr td:first-child {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+/** 4 -list **/
+.contract7 .contract-text:nth-child(4) {
+    font-size: 10px !important;
+}

@@ -70,6 +70,14 @@ $(document).ready(function() {
 
     /******************************************** templates ********************************************/
 
+
+    // № 4, 5, ...
+    $(document).on('focusout', '.js_number_n', function() {
+        let number = $(this).html()
+        $('.js_number_n_static').html(number)
+    });
+
+    // contract number 106 ..
     $(document).on('focusout', '.js_number', function() {
         let number = $(this).html()
         $('.js_number2').html(number)
@@ -78,23 +86,41 @@ $(document).ready(function() {
     /** date **/
     $(document).on('focusout', '.js_date_day', function() {
         let val = $(this).html()
-        date_day_month_year_change('day', val)
+        $('.js_date_day_static').html(val)
     })
 
     $(document).on('change', '.js_date_month', function() {
         let val = $(this).val()
-        date_day_month_year_change('month', val)
+        $('.js_date_month_static').html(val)
     })
 
     $(document).on('focusout', '.js_date_year', function() {
         let val = $(this).html()
-        date_day_month_year_change('year', val)
+        $('.js_date_year_static').html(val)
     })
 
     $(document).on('focusout', '.js_date_month_html', function() {
         let val = $(this).html()
-        date_day_month_year_change('month_html', val)
+        $('.js_date_month_html_static').html(val)
     })
+
+    // year2 <__> ____ 20121 yili uchun
+    $(document).on('focusout', '.js_date_year2', function() {
+        let val = $(this).html()
+        $('.js_date_year2_static').html(val)
+    })
+
+
+    $(document).on('focusout', '.js_director_position_dynamic', function() {
+        let val = $(this).html()
+        $('.js_position_static').html(val)
+    })
+
+    $(document).on('focusout', '.js_director_name_dynamic', function() {
+        let val = $(this).html()
+        $('.js_name_static').html(val)
+    })
+
 
 
     /** director name edit **/

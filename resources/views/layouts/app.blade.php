@@ -70,7 +70,10 @@
                             <a class="dropdown-item d-flex align-items-center js_title5 @if(Request::segment(1) == 'template5') active @endif" href="{{ route('template5') }}">Договор Бюджет</a>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center js_title6 @if(Request::segment(1) == 'template6') active @endif" href="{{ route('template6') }}">Дополнительное Соглашение</a>
+                            <a class="dropdown-item d-flex align-items-center js_title6 @if(Request::segment(1) == 'template6') active @endif" href="{{ route('template6') }}">Доп Cогл №4 Аренда Канала</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center js_title7 @if(Request::segment(1) == 'template7') active @endif" href="{{ route('template7') }}">Доп Соглашение №5</a>
                         </li>
                     </ul>
                 </li>
@@ -120,9 +123,10 @@
 
                 @if($user->section->rule != 'JURIST')
                     @if(Request::segment(1) == 'template1' || Request::segment(1) == 'template2' || Request::segment(1) == 'template3' ||
-                    Request::segment(1) == 'template4' || Request::segment(1) == 'template5' || Request::segment(1) == 'template6' || Request::segment(3) == 'edit')
+                        Request::segment(1) == 'template4' || Request::segment(1) == 'template5' || Request::segment(1) == 'template6' ||
+                        Request::segment(1) == 'template7' || Request::segment(3) == 'edit')
 
-                        @if(Request::segment(1) != 'template6')
+                        @if(Request::segment(1) != 'template6' and Request::segment(1) != 'template7')
                             <li class="nav-item d-flex align-content-center" style="height: 39px;">
                                 <div class="row js_div_form d-none" style="margin-top: 5px;">
                                     @if(Request::segment(1) == 'template3')

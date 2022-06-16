@@ -33,6 +33,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template4', [TemplateController::class, 'template4'])->name('template4');
         Route::get('/template5', [TemplateController::class, 'template5'])->name('template5');
         Route::get('/template6', [TemplateController::class, 'template6'])->name('template6');
+        Route::get('/template7', [TemplateController::class, 'template7'])->name('template7');
 
         Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
         Route::post('/template/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');

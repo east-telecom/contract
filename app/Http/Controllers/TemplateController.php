@@ -48,6 +48,12 @@ class TemplateController extends Controller
         return view('templates.template6');
     }
 
+    public function template7()
+    {
+        return view('templates.template7');
+    }
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -70,7 +76,6 @@ class TemplateController extends Controller
         }
         else {
             try {
-
                 // send jurist 2
 
                 Contract::create([

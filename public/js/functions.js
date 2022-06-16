@@ -9,11 +9,6 @@ function number_format(number) {
 
 //  ################## templates ####################
 
-// day = day, month, year;
-function date_day_month_year_change(day, val) {
-    $('.js_date_'+day+'_static').html(val)
-}
-
 
 function select_date_month_fun_edit() {
     // 1
