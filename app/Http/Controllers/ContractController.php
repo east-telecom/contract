@@ -8,7 +8,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\MailController;
 use Yajra\DataTables\DataTables;
+
 use function Couchbase\defaultDecoder;
 
 class ContractController extends Controller
@@ -74,6 +76,7 @@ class ContractController extends Controller
         return view('contract.show', compact('contract'));
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -86,6 +89,7 @@ class ContractController extends Controller
 
         return view('contract.edit', compact('contract'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -119,11 +123,15 @@ class ContractController extends Controller
             $user_id = Auth::user()->id;
             $product = Contract::findOrFail($request->id);
             $product->fill([
-                'status' => $request->status,
+                'status'    => $request->status,
                 'jurist_id' => $user_id,
-                'comment' => $request->comment
+                'comment'   => $request->comment
             ]);
             $product->save();
+
+            // send mail to employee
+            $id = (int)$request->id;
+            MailController::sendMail('i.maxmudov@etc.uz', $id, 'Tekshirildi');
 
             return response()->json(['status' => true, 'msg' => 'ok', 'contract_status' => $request->status]);
         }
@@ -171,14 +179,6 @@ class ContractController extends Controller
         }
     }
 
-
-    public function create_pdf($contract_id)
-    {
-        $contract = Contract::findOrFail($contract_id);
-
-//        dd($contract->data);
-
-        Helper::create_pdf($contract->data);
-    }
+    
 
 }

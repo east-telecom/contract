@@ -6,6 +6,7 @@ use App\Models\Contract;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use App\Http\Controllers\MailController;
 
 class TemplateController extends Controller
 {
@@ -53,6 +54,16 @@ class TemplateController extends Controller
         return view('templates.template7');
     }
 
+    public function template8()
+    {
+        return view('templates.template8');
+    }
+
+    public function template9()
+    {
+        return view('templates.template9');
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -76,15 +87,17 @@ class TemplateController extends Controller
         }
         else {
             try {
-                // send jurist 2
-
-                Contract::create([
+                $id = Contract::insertGetId([
                     'user_id' => Auth::user()->id,
                     'number'  => $request->number,
                     'title'   => $request->title,
                     'data'    => $request->data,
                     'status'  => 0,
+                    'class'   => $request->class,
                 ]);
+
+                // send mail to Jurist
+                MailController::sendMail('i.maxmudov@etc.uz', $id, 'Tekshirib bering iltimos!');
 
                 return response()->json(['status' => true, 'msg' => 'ok']);
 

@@ -7,22 +7,21 @@
     top: 18%;
 }
 
+.card * {
+    line-height: 1.2!important;
+}
 h4 {
     color: black !important;
     font-weight: 600;
-    font-size: 14px;
 }
 
 .contract-text {
     text-align: justify;
-    padding: 0 25px !important;
+    padding: 5px 25px !important;
     max-width: 794px !important;
-    /*max-width: 1000px !important;*/
-    max-height: 1123px !important;
-    /*max-height: 1500px !important;*/
+    /*max-height: 1123px !important;*/
     margin: 15px auto;
-    font-size: 14px!important;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif!important;
     color: black;
     border: none !important;
 }
@@ -30,23 +29,20 @@ h4 {
 
 .contract-text:first-child {
     margin: 0 auto !important;
-    padding-top: 5px !important;
 }
 
 .horizontal-list {
-    text-align: justify;
     padding: 10px 30px;
     max-width: 1123px !important;
-    max-height: 794px !important;
     margin: 10px auto;
-    font-size: 12px;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif!important;
     color: black;
     border: none !important;
 }
 
 span.text_edit {
-    line-height: 1.4;
+    line-height: 1;
 }
 
 .text-underline {
@@ -56,6 +52,7 @@ span.text_edit {
 .text-bold{
     font-weight: bold;
 }
+
 .inn {
     padding-top: 0 !important;
     margin-top: 0 !important;
@@ -64,13 +61,16 @@ span.text_edit {
 .inn .row{
     margin-top: 10px !important;
 }
+
 .inn p {
     margin-bottom: 3px !important;
-    line-height: 1.2;
+    line-height: 1;
 }
+
 .inn p .text_edit {
-    line-height: 1.2 !important;
+    line-height: 1 !important;
 }
+
 .inn p:first-child {
     margin-bottom: 10px !important;
 }
@@ -79,189 +79,31 @@ span.text_edit {
     margin-left: 10% !important;
 }
 
-.contract1 table,
-.contract2 table,
-.contract3 table,
-.contract4 table,
-.contract5 table {
-    background: white !important;
-}
-.contract1 .table th,
-.contract2 .table th,
-.contract3 .table th,
-.contract4 .table th,
-.contract5 .table th {
-    text-align: center;
-    padding: 5px;
-    line-height: 1.2;
-    color: black !important;
-}
-.contract1 .table td,
-.contract2 .table td,
-.contract3 .table td,
-.contract4 .table td,
-.contract5 .table td {
-    color: black !important;
-    padding: 3px 5px !important;
-}
 
 .card {
     background: white !important;
 }
 
-.contract5 .contract-text .table tr th,
-.contract5 .contract-text .table tr td {
-    vertical-align: middle;
+.table tr th, .table tr td {
+    vertical-align: middle !important;
 }
 
-
-
-/** contract 1 **/
-
-.contract1 h5 {
-    color: black !important;
-    font-weight: bold;
-}
-.contract1 span.text_edit {
-    line-height: 1.2;
-}
-.contract1 .text-bold{
-    font-weight: bold;
-}
-.contract1 .mt_1 {
-    margin-top: 8px;
-}
-.contract1 .tr-empty {
-    height: 20px;
-}
-.contract1 .tr-empty td:last-child {
-    padding: 0;
-    line-height: 1;
-}
-.contract1 .contract1-list3-table1 {
-    line-height: 1.2;
+.horizontal-table tr:nth-child(1) td {
+    font-weight: 500;
 }
 
-.contract1 .contract1-list3-table1 tr td:nth-child(2) {
-    width: 35%;
-}
-.contract1 .contract1-list4-table2 tr td:nth-child(1) {
-    text-align: left;
-    padding-left: 15px;
-}
-.contract1 .contract1-list4-table2 tr td:nth-child(3),
-.contract1 .contract1-list4-table2 tr td:nth-child(4),
-.contract1 .contract1-list4-table2 tr td:nth-child(5) {
-    text-align: center;
-    line-height: 1;
-}
-.contract1 .contract1-list4-table2 tr td:nth-child(6)  {
-    text-align: center;
-    font-weight: bold;
+.horizontal-table .tr-kvartl td {
+    font-style: italic;
+    font-weight: 600;
+    background: lightgray;
 }
 
-.contract1 .contract-text *{
-    font-size: 10px !important;
+.horizontal-table .tr-footer-all-sum td {
+    background: lightgray;
+    font-weight: 600;
+    font-style: italic;
 }
 
-.contract1 .table tr th,
-.contract1 .table tr td {
-    font-size: 14px;
-    padding: 10px;
-    border: 1px solid black;
+.horizontal-table tr:last-child td:first-child {
+    font-style: normal !important;
 }
-/** contract 1 **/
-
-
-
-
-/* contract 2 */
-
-.contract2 .table td,
-.contract2 .table th, tr {
-    border: 1px solid black !important;
-    font-size: 14px !important;
-}
-.contract2-list3-table tr:nth-child(1) th:nth-child(2),
-.contract2-list3-table tr:nth-child(2) td:nth-child(2) {
-    width: 45%;
-}
-.contract2-list3-table tr:nth-child(1) th:nth-child(3),
-.contract2-list3-table tr:nth-child(2) td:nth-child(3) {
-    width: 10%;
-}
-.contract2-list3-table tr:nth-child(1) th:nth-child(4),
-.contract2-list3-table tr:nth-child(2) td:nth-child(4) {
-    width: 15%;
-}
-
-.contract2 .contract-text {
-    padding: 15px 30px 15px 45px !important;
-    font-size: 12px!important;
-}
-/* contract 2 */
-
-
-/** contract 3 **/
-
-.contract3 .contract-text {
-    padding: 20px 30px 20px 50px !important;
-    font-size: 15px!important;
-}
-
-
-/** contract 3 **/
-
-
-/* contract 4 */
-
-.horizontal-list .table tr:first-child th:nth-child(1),
-.horizontal-list .table tr:nth-child(2) td:nth-child(1),
-.horizontal-list .table tr:first-child th:nth-child(2),
-.horizontal-list .table tr:nth-child(2) td:nth-child(2) {
-    width: 4%;
-    text-align: center;
-}
-.horizontal-list .table tr:first-child th:nth-child(3),
-.horizontal-list .table tr:first-child td:nth-child(3) {
-    width: 30%;
-}
-
-.horizontal-list .table tr th,
-.horizontal-list .table tr td {
-    font-size: 13px;
-    padding: 10px;
-    border: 1px solid black;
-}
-.horizontal-list .table {
-    margin-top: 20px;
-}
-h4 {
-    font-size: 13px !important;
-}
-
-.contract4 .contract-text {
-    padding: 20px 45px 20px 70px !important;
-    font-size: 12px !important;
-}
-/* contract 4 */
-
-
-/* contract5 */
-
-
-.contract5 h4 {
-    font-size: 12px !important;
-}
-
-
-.contract5 .contract-text {
-    padding: 20px 35px 20px 50px !important;
-    font-size: 9px !important;
-}
-
-.contract5 .contract-text .table tr td {
-    line-height: 1; !important;
-}
-
-/* contract5 */

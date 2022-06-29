@@ -75,5 +75,21 @@ function get_sum_text_ajax(sum, sum_text) {
         }
     })
 }
+
+
+    /** list number **/
+
+    function list_show_(list) {
+        let card = $('.card:nth-child('+list+')')
+
+        if(card) {
+            window.scrollTo(0, 0);
+            console.log('222')
+        }
+
+        console.log('test')
+    }
+
+
 //  ################## templates ####################
 

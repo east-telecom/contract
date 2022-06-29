@@ -1,0 +1,54 @@
+
+
+
+.contract8 table {
+    background: white !important;
+    border: 1px solid darkgray;
+    color: black;
+}
+
+.contract8 .table th {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    color: black !important;
+    border: 1px solid darkgray !important;
+}
+
+.contract8 .table tr td {
+    color: black !important;
+    padding: 3px 5px !important;
+    border: 1px solid darkgray !important;
+}
+
+
+.contract8 .contract-text .table tr th,
+.contract8 .contract-text .table tr td {
+    vertical-align: middle;
+}
+
+
+.contract8 h4 {
+    font-size: 9pt !important;
+}
+
+
+.contract8 .contract-text {
+    padding: 20px 35px 20px 50px !important;
+    font-size: 7.65pt!important;
+    line-height: 1!important;
+}
+
+
+.contract8 .inn .row {
+    margin-top: 5px !important;
+}
+
+.contract8 .card div .row .inn p {
+    margin-bottom: 1px !important;
+    line-height: 1!important;
+}
+
+.contract8 .inn p:first-child {
+    margin-bottom: 0 !important;
+}

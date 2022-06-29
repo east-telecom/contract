@@ -1,0 +1,53 @@
+
+
+.contract4 table {
+    background: white !important;
+}
+
+.contract4 .table th {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    color: black !important;
+}
+
+.contract4 .table td {
+    color: black !important;
+    padding: 3px 5px !important;
+}
+
+.contract4 .horizontal-list .table {
+   width: 99% !important;
+}
+
+.contract4 .horizontal-list div.text-right,
+.contract4 .horizontal-list p.text-right {
+    width: 90% !important;
+}
+
+
+.contract4 .horizontal-list .table tr:first-child th:nth-child(1),
+.contract4 .horizontal-list .table tr:nth-child(2) td:nth-child(1),
+.contract4 .horizontal-list .table tr:first-child th:nth-child(2),
+.contract4 .horizontal-list .table tr:nth-child(2) td:nth-child(2) {
+    text-align: center;
+}
+
+
+.contract4 .horizontal-list .table tr th,
+.contract4 .horizontal-list .table tr td {
+    font-size: 10.5pt;
+    border: 1px solid darkgray;
+}
+.contract4 .horizontal-list .table {
+    margin-top: 20px;
+}
+h4 {
+    font-size: 13px !important;
+}
+
+.contract4 .contract-text {
+    padding: 20px 45px 20px 70px !important;
+    font-size: 10.5pt !important;
+    line-height: 1.2;
+}

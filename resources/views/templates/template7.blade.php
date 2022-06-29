@@ -1,18 +1,15 @@
 @extends('layouts.app')
 
-@section('style')
-    <link rel="stylesheet" href="{{ asset('css/contract7.css?'.time()) }}">
-@endsection
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf">
+    <section class="app-user-list js_data_all js_data_all_pdf template7">
 
         <div class="contract7">
 
             <!-- 1 - list -->
             <div class="card contract-text">
-                <h4 class="text-center">Дополнительное соглашение №<span class="text_edit js_number_n">5</span> <br/>
+                <h4 class="text-center"><span class="js_title mt-2">Дополнительное соглашение</span> №<span class="text_edit js_number_n">5</span> <br/>
                     к договору <span class="text_edit js_number">19А01№0498/2019</span>г от
                     «<span class="text_edit js_date_day" contenteditable="false">21</span>»
                     <select name="month1" class="js_date_month js_select_data_month1 d-none">
@@ -34,7 +31,7 @@
                     <span class="text_edit js_date_year">2019</span>г.
                 </h4>
 
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between mt-2 mb-2">
                     <span>г. Ташкент</span>
                     <div>
                         «<span>_____</span>» <span>________</span> <span class="text_edit js_date_year2">2021</span>г. <br>
@@ -52,59 +49,69 @@
                     <span class="js_director_position_static">председателя областного совета</span>  <span class="js_director_name_static">Бобокулова У.</span>,
                     действующего на основании <span class="text_edit">устава</span>, с другой стороны, вместе именуемые «Стороны»,
                     пришли к соглашению о нижеследующем:<br/>
-                    1. Признать утратившими юридическую силу Приложения № 1,2,3 к дополнительному соглашению №<span class="text_edit">4</span> от
-                    «<span class="text_edit">11</span>»
-                    <select name="month2" class="js_date_month js_select_data_month2 d-none">
-                        <option>Январь</option>
-                        <option>Февраль</option>
-                        <option>Март</option>
-                        <option>Апрель</option>
-                        <option>Май</option>
-                        <option>Июнь</option>
-                        <option>Июль</option>
-                        <option>Август</option>
-                        <option>Сентябрь</option>
-                        <option>Октябрь</option>
-                        <option>Ноябрь</option>
-                        <option>Ноябрь</option>
-                        <option>декабря</option>
-                    </select>
-                    <span class="js_span_date_month2">июня</span>
-                    <span class="text_edit">2021</span>г
+                    <br/>
+                    <br/>
 
-                    договору <span class="js_number2">19А01№0498/2019</span> г
-                    от «<span class="js_date_day_static">09</span>» <span class="js_date_month_static">декабря</span>
-                    <span class="js_date_year_static">2019</span>г.
-                    <br>
-                    2. Принять Приложения №1,2,3 к настоящему дополнительному соглашению
-                    №<span class="js_number_n_static">5</span> от «___» ________ <span class="js_date_year2_static">2022</span> г.
-                    в следующей редакции (прилагается). <br/>
-                    3. Остальные пункты договора сохраняют свою силу в прежней редакции. <br/>
-                    4. Дополнительное соглашение №<span class="js_number_n_static">5</span> является неотъемлемой частью
-                    договора <span class="js_number2">19А01№0498/2019</span> г
-                    от «<span class="js_date_day_static">09</span>» <span class="js_date_month_static">декабря</span>
-                    <span class="js_date_year_static">2019</span>г.
-                    и вступает в силу с момента его подписания.
-                    <br>
+                    <p class="ml-3 mb-1">
+                        1.&emsp; Признать утратившими юридическую силу Приложения № 1,2,3 к дополнительному соглашению №<span class="text_edit">4</span> от
+                        «<span class="text_edit">11</span>»
+                        <select name="month2" class="js_date_month js_select_data_month2 d-none">
+                            <option>Январь</option>
+                            <option>Февраль</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Июнь</option>
+                            <option>Июль</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                            <option>Октябрь</option>
+                            <option>Ноябрь</option>
+                            <option>Ноябрь</option>
+                            <option>декабря</option>
+                        </select>
+                        <span class="js_span_date_month2">июня</span>
+                        <span class="text_edit">2021</span>г
+
+                        договору <span class="js_number2">19А01№0498/2019</span> г
+                        от «<span class="js_date_day_static">09</span>» <span class="js_date_month_static">декабря</span>
+                        <span class="js_date_year_static">2019</span>г.
+                    </p>
+                    <p class="ml-3 mb-1">
+                        2.&emsp; Принять Приложения №1,2,3 к настоящему дополнительному соглашению
+                        №<span class="js_number_n_static">5</span> от «___» ________ <span class="js_date_year2_static">2022</span> г.
+                        в следующей редакции (прилагается). <br/>
+                    </p>
+
+                    <p class="ml-3 mb-1">
+                        3.&emsp; Остальные пункты договора сохраняют свою силу в прежней редакции. <br/>
+                    </p>
+                    <p class="ml-3 mb-1">
+                        4.&emsp; Дополнительное соглашение №<span class="js_number_n_static">5</span> является неотъемлемой частью
+                        договора <span class="js_number2">19А01№0498/2019</span> г
+                        от «<span class="js_date_day_static">09</span>» <span class="js_date_month_static">декабря</span>
+                        <span class="js_date_year_static">2019</span>г.
+                        и вступает в силу с момента его подписания.
+                    </p>
+                    <br/>
+                    <br/>
 
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
-                            <p class="text-bold">
-                                ОПЕРАТОР: <br>
-                                Генеральный директор <br>
-                                Lee Baek Hee
-                            </p>
-                            <p class="text-bold">_________________</p>
+                            <p class="text-bold mb-2">ОПЕРАТОР:</p>
+                            <p class="mb-1">Генеральный директор</p>
+                            <p class="text-bold">Lee Baek Hee</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
+
                         <div class="text-center">
-                            <p>
-                                <span class="text-bold">АБОНЕНТ:</span> <br>
-                                <span class="text_edit js_director_position_dynamic">Председатель областного совета</span>
-                                <br>
-                                <span class="text-bold text_edit js_director_name_dynamic">Бобокулов  У.</span>
-                            </p>
-                            <p class="text-bold">_________________</p>
+                            <p class="text-bold mb-2">АБОНЕНТ:</p>
+                            <p class="text_edit mb-1 js_director_position_dynamic">Председатель областного совета</p>
+                            <p class="text-bold text_edit js_director_name_dynamic">Бобокулов  У.</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
                     </div>
@@ -112,8 +119,11 @@
             </div><!-- ./card -->
 
 
+            <div class="html2pdf__page-break"></div>
+
+
             <!-- 2 - list -->
-            <div class="card contract-text">
+            <div class="card contract-text div-list2">
 
                 <div class="text-right">
                     Приложение №<span class="js_number_№_static">1</span> <br/>
@@ -187,6 +197,8 @@
                             </td>
                         </tr>
                     </table>
+
+                    <p class="text-right mb-0">(марка, количество, стоимость)</p>
 
                     <table class="table mb-0">
                         <tr>
@@ -279,31 +291,29 @@
 
                     <div class="d-flex justify-content-around mt-3">
                         <div class="text-center">
-                            <p class="text-bold">
-                                ОПЕРАТОР: <br>
-                                Генеральный директор <br>
-                                Lee Baek Hee
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">ОПЕРАТОР:</p>
+                            <p class="mb-1">Генеральный директор</p>
+                            <p class="text-bold">Lee Baek Hee</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
+
                         <div class="text-center">
-                            <p>
-                                <span class="text-bold">АБОНЕНТ:</span> <br>
-                                <span class="js_position_static">Председатель областного совета</span>
-                                <br>
-                                <span class="text-bold js_name_static">Бобокулов  У.</span>
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">АБОНЕНТ:</p>
+                            <p class="js_position_static mb-1">Председатель областного совета</p>
+                            <p class="text-bold js_name_static">Бобокулов  У.</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
                     </div>
                 </div>
             </div><!-- ./card -->
 
-
+            
             <!-- 3 - list -->
-            <div class="card contract-text">
+            <div class="card contract-text div-list3">
                 <div class="text-right">
                     Приложение №<span class="js_number_n_static">2</span> <br/>
                     к дополнительному соглашению «_____» ________ <span class="js_date_year_static">2022</span>г.
@@ -375,25 +385,23 @@
                     <p>** Ежемесячная абонентская плата вносится абонентом ежемесячно на условиях 100% предоплаты.</p>
 
                     <p class="mt-2">Настоящий протокол является основанием для проведения взаимных расчетов и платежей между Абонентом и Оператором</p>
-
+                    <br/>
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
-                            <p class="text-bold">
-                                ОПЕРАТОР: <br>
-                                Генеральный директор <br>
-                                Lee Baek Hee
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">ОПЕРАТОР:</p>
+                            <p class="mb-1">Генеральный директор</p>
+                            <p class="text-bold">Lee Baek Hee</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
+
                         <div class="text-center">
-                            <p>
-                                <span class="text-bold">АБОНЕНТ:</span> <br>
-                                <span class="js_name_static">Председатель областного совета</span>
-                                <br>
-                                <span class="text-bold js_position_static">Бобокулов  У.</span>
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">АБОНЕНТ:</p>
+                            <p class="js_position_static mb-1">Председатель областного совета</p>
+                            <p class="text-bold js_name_static">Бобокулов  У.</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
                     </div>
@@ -403,8 +411,11 @@
             </div><!-- ./card -->
 
 
+            <div class="html2pdf__page-break"></div>
+
+
             <!-- 4 - list -->
-            <div class="card contract-text">
+            <div class="card contract-text div-list4">
                 <div class="text-right">
                     Приложение №<span class="js_number_n_static">3</span> <br/>
                     к дополнительному соглашению «<span>_____</span>» <span>________</span> <span class="js_date_year2_static">2022</span>г.
@@ -417,7 +428,7 @@
                     <span class="js_date_year_static">2019</span>г.
                 </div>
                 <div>
-                    <p class="text-center text-bold">Регламент организационно-технического взаимодействия</p>
+                    <p class="text-center text-bold mb-0">Регламент организационно-технического взаимодействия</p>
 
                     <p class="text-bold mb-0">1.	Общие положения</p>
                     1.1.	<span class="text_edit">Оператор оказывает Абоненту услуги на непрерывной, круглосуточной основе согласно условиям настоящего договора и требованиям регулирующих
@@ -471,24 +482,22 @@
                     из Интернета и с других носителей информации. Оплата за сгенерированный в этих случаях трафик должна производиться Абонентом на общих
                     основаниях по установленным тарифам. <br/>
 
-                    <div class="d-flex justify-content-around mt-5">
+                    <div class="d-flex justify-content-around mt-4 mb-0">
                         <div class="text-center">
-                            <p class="text-bold">
-                                ОПЕРАТОР: <br>
-                                Генеральный директор <br>
-                                Lee Baek Hee
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">ОПЕРАТОР:</p>
+                            <p class="mb-1">Генеральный директор</p>
+                            <p class="text-bold">Lee Baek Hee</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
+
                         <div class="text-center">
-                            <p>
-                                <span class="text-bold">АБОНЕНТ:</span> <br>
-                                <span class="js_position_static">Председатель областного совета</span>
-                                <br>
-                                <span class="text-bold js_name_static">Бобокулов  У.</span>
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">АБОНЕНТ:</p>
+                            <p class="js_position_static mb-1">Председатель областного совета</p>
+                            <p class="text-bold js_name_static">Бобокулов  У.</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
                     </div>
@@ -521,7 +530,7 @@
                 $.ajax({
                     url: '{{ route('templates.store') }}',
                     type: 'POST',
-                    data: {'_token': token, 'number': number, 'title': title, 'data': data},
+                    data: {'_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template7'},
                     dataType: 'JSON',
                     success: (response) => {
                         // console.log('res: ', response)

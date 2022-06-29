@@ -6,13 +6,6 @@
         $id = Request::segment(2);
     @endphp
 
-    @if(Request::segment(3) == 'create-pdf' && (ContractController::checkApproved($id) == 1))
-        <style>
-            .js_data_all_pdf *{
-                color: black !important;
-            }
-        </style>
-    @endif
 @endsection
 
 @section('content')
@@ -42,8 +35,10 @@
         @endif
 
 
-        <div class="js_data_all_pdf">
+        <div class="js_data_all_pdf {{ $contract->class }}">
+
             @php echo $contract->data; @endphp
+
         </div>
 
     </section>
@@ -72,7 +67,7 @@
                     data: { '_token': token, 'id': id, 'status': status, 'comment': comment },
                     dataType: 'JSON',
                     success: (response) => {
-
+                        console.log(response)
                         if (response.status) {
                             if (response.contract_status == '1')
                                 $('.text_edit').css('color', 'black');

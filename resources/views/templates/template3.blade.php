@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf">
+    <section class="app-user-list js_data_all js_data_all_pdf template3">
 
         <div class="contract3">
 
@@ -13,8 +13,8 @@
                     Договор № <span class="text_edit js_number" contenteditable="false">1284</span> <br/>
                     <span class="js_title">Уступки права требования и перевода долга</span>
                 </h4>
-                <div class="d-flex justify-content-between">
-                    <span>г. Ташкент</span>
+                <div class="d-flex mb-1 justify-content-between">
+                    <span class="text_edit ml-5">г. Ташкент</span>
                     <div>
                         «<span class="text_edit" contenteditable="false">26</span>»
                         <select name="month1" class="js_select_data_month1 d-none">
@@ -33,23 +33,24 @@
                             <option>декабря</option>
                         </select>
                         <span class="text_edit js_span_date_month1">декабря</span>
-                        <span class="text_edit" contenteditable="false">2020</span>г. <br>
+                        <span class="text_edit" contenteditable="false">2020</span>г.<br/>
                     </div>
                 </div>
+
                 <div>
-                    <span class="text_edit" contenteditable="false"><b>ООО «NOWADAY»</b></span>, именуемое в дальнейшем «Дебитор» в лице <span class="text_edit" contenteditable="false">Директора <b>Aхмедова Ж.А.</b></span>,
+                    &emsp;&emsp;&emsp;<span class="text_edit" contenteditable="false"><b>ООО «NOWADAY»</b></span>, именуемое в дальнейшем «Дебитор» в лице <span class="text_edit" contenteditable="false">Директора <b>Aхмедова Ж.А.</b></span>,
                     действующего на основании <span class="text_edit" contenteditable="false">Устава</span> с одной стороны, <b>СП ООО «Ist Telekom»</b>, именуемое в дальнейшем «Кредитор» в лице
                     Генерального директора <b>Lee Baek Hee</b>, действующего на основании Устава со второй стороны,
                     <span class="text_edit" contenteditable="false"><b>ООО "FASHION CORNER"</b></span>, именуемое в дальнейшем «Принимающая сторона», в лице
                     <span class="text_edit" contenteditable="false">Директора <b>Пулатова У.С.</b></span>,
                     действующего на основании <span class="text_edit" contenteditable="false">Устава</span> с третьей стороны, в соответствии с Главой 23 ст.313,315,316,320,321,322,323 ГК
-                    РУз заключили настоящий договор о нижеследующем: <br>
-
+                    РУз заключили настоящий договор о нижеследующем:<br/>
+                    <br/>
                     1. По настоящему договору «Дебитор» уступает (передаёт) права по востребованию дебиторской задолженности по
                     договору № <span class="text_edit" contenteditable="false">800-11418</span> от <span class="text_edit" contenteditable="false">24.08.2020</span> года в сумме
                     <span class="text_edit" contenteditable="false"><b>3 718 386</b></span> сум РУз между «Дебитором» и «Принимающей стороной», а «Кредитор» принимает на себя права
-                    истребования дебиторского долга. <br>
-
+                    истребования дебиторского долга.<br/>
+                    <br/>
                     2. «Принимающая сторона» отплачивает «Кредитору» дебиторскую задолженность в сумме
                     <span class="text_edit" contenteditable="false">
                         <b>3 718 386,00</b>
@@ -71,23 +72,27 @@
                         <option>декабря</option>
                     </select>
                     <span class="text_edit js_span_date_month2">декабря</span>
-                    <span class="text_edit" contenteditable="false">2020</span> года. <br>
+                    <span class="text_edit" contenteditable="false">2020</span> года.<br/>
+                    <br/>
 
                     3. По настоящему договору «Кредитор» получает права вместе с «Дебитором» требовать от «Принимающей стороны» исполнения следующих обязательств:
-                    - истребовать сумму долга в размере <span class="text_edit" contenteditable="false"><b>3 718 386,00</b></span> сум РУз. <br>
-
-                    4. «Дебитор» обязан с момента подписания настоящего договора известить «Принимающую сторону» о состоявшейся уступке права требования. <br>
-
-                    5. «Дебитор» обязан передать «Кредитору» всю документацию, из которой вытекает право требования, являющего предметом настоящего договора. <br>
-
+                    - истребовать сумму долга в размере <span class="text_edit" contenteditable="false"><b>3 718 386,00</b></span> сум РУз.<br/>
+                    <br/>
+                    4. «Дебитор» обязан с момента подписания настоящего договора известить «Принимающую сторону» о состоявшейся уступке права требования.<br/>
+                    <br/>
+                    5. «Дебитор» обязан передать «Кредитору» всю документацию, из которой вытекает право требования, являющего предметом настоящего договора.<br/>
+                    <br/>
                     6. Все вопросы, возникающие при исполнении настоящего договора, стороны разрешают путем мирных переговоров. При не достижении соглашения спор выносится на
-                    рассмотрение в Ташкентский Межрайонный Экономический суд. <br>
+                    рассмотрение в Ташкентский Межрайонный Экономический суд.<br/>
+                    <br/>
+                    7. Настоящий договор вступает в силу с момента его подписания сторонами и действует до полного его выполнения.<br/>
+                    <br/>
+                    8. Настоящий договор составлен в трех экземплярах, имеющий равную юридическую силу, по одному экземпляру для каждой из сторон.<br/><br/>
 
-                    7. Настоящий договор вступает в силу с момента его подписания сторонами и действует до полного его выполнения. <br>
+                    Юридические адреса и банковские реквизиты сторон:
+                    <br/>
+                    <br/>
 
-                    8. Настоящий договор составлен в трех экземплярах, имеющий равную юридическую силу, по одному экземпляру для каждой из сторон. <br>
-                    <br>
-                    <br>
                     <div class="inn js_tin_div1">
                         <p><b>Принимающая сторона:</b></p>
                         <p><span class="text_edit js_name" contenteditable="false"><b>ООО «FASHION CORNER» 11</b></span></p>
@@ -101,7 +106,7 @@
                         <p>РКННДС: _______________________</p>
                         <p>Телефон: <span class="text_edit js_phone" contenteditable="false">+998951424451</span></p>
 
-                        <p class="mt-3"><span class="text_edit js_director">Директор</span></p>
+                        <p class="mt-4"><span class="text_edit js_director">Директор</span></p>
                         <p><span class="text_edit" contenteditable="false">Пулатов У.С.</span></p>
                         <p>_________________________________</p>
                         <p>М.П.</p>
@@ -109,9 +114,13 @@
                 </div>
             </div><!-- ./card -->
 
+
+            <div class="html2pdf__page-break"></div>
+
+
             <!-- 2 - list -->
             <div class="card contract-text">
-                <div class="inn js_tin_div2 mb-5">
+                <div class="inn js_tin_div2 mb-5"><br/>
                     <p><b>Дебитор:</b></p>
                     <p><span class="text_edit js_name" contenteditable="false"><b>ООО «NOWADAY»</b></span></p>
                     <p><span class="text_edit js_address" contenteditable="false">100060, г.Ташкент, Мирабадский р-н, ул. Тарас Шевченко д.36</span></p>
@@ -125,13 +134,14 @@
                     <p>РКННДС: _______________________</p>
                     <p>Телефон: <span class="text_edit js_phone" contenteditable="false">+998951424451</span></p>
 
-                    <p class="mt-3"><span class="text_edit js_director" contenteditable="false">Директор</span></p>
+                    <p class="mt-4"><span class="text_edit js_director" contenteditable="false">Директор</span></p>
                     <p><span class="text_edit" contenteditable="false">Ахмедов Ж.А</span></p>
                     <p>_________________________________</p>
                     <p>М.П.</p>
                 </div>
-
-                <div class="inn">
+                <br/>
+                <br/>
+                <div class="inn mt-5">
                     <p><b>Кредитор:</b></p>
 
                     <p><b>СП ООО «Ist Telekom»</b></p>
@@ -142,7 +152,7 @@
                     <p>МФО: 00842 ИНН: 204663354 ОКЭД: 61100</p>
                     <p>Регистрационный код: 326010005625</p>
 
-                    <p class="mt-3">Генеральный директор</p>
+                    <p class="mt-4">Генеральный директор</p>
                     <p>Lee Baek Hee</p>
                     <p>_________________________________</p>
                     <p>М.П.</p>
@@ -175,7 +185,7 @@
                 $.ajax({
                     url: '{{ route('templates.store') }}',
                     type: 'POST',
-                    data: { '_token': token, 'number': number, 'title': title, 'data': data },
+                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template3' },
                     dataType: 'JSON',
                     success: (response) => {
                         // console.log('res: ', response)

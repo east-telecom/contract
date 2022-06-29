@@ -1,0 +1,29 @@
+
+
+.contract3 table {
+    background: white !important;
+}
+
+.contract3 .table th {
+    text-align: center;
+    padding: 5px;
+    line-height: 1;
+    color: black !important;
+}
+
+.contract3 .table td {
+    color: black !important;
+    padding: 3px 5px !important;
+}
+
+
+
+.contract3 .contract-text {
+    padding: 20px 30px 20px 50px !important;
+    font-size: 11pt!important;
+}
+
+.contract3 h4 {
+    font-size: 11.4pt !important;
+}
+

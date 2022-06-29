@@ -1,0 +1,212 @@
+@extends('layouts.app')
+
+
+@section('content')
+
+    <section class="app-user-list js_data_all js_data_all_pdf template9">
+
+        <div class="contract9">
+
+            <!-- 1 - list -->
+            <div class="card contract-text">
+                <h4 class="text-center mt-4">
+                    <span class="js_title">ДОГОВОР ПОРУЧИТЕЛЬСТВА</span> № <span class="text_edit js_number">1682</span> <br/>
+                </h4>
+                <div class="d-flex mb-1 justify-content-between mt-2 mb-3">
+                    <span class="text_edit">г. Ташкент</span>
+                    <div>
+                        «<span class="text_edit">24</span>»
+                        <select name="month1" class="js_select_data_month1 d-none">
+                            <option>Январь</option>
+                            <option>Февраль</option>
+                            <option>Март</option>
+                            <option>Апрель</option>
+                            <option>Май</option>
+                            <option>Июнь</option>
+                            <option>Июль</option>
+                            <option>Август</option>
+                            <option>Сентябрь</option>
+                            <option>Октябрь</option>
+                            <option>Ноябрь</option>
+                            <option>Ноябрь</option>
+                            <option>декабря</option>
+                        </select>
+                        <span class="text_edit js_span_date_month1">Май</span>
+                        <span class="text_edit">2022</span>г.<br/>
+                    </div>
+                </div>
+
+                <div>
+                    &emsp;&emsp;&emsp;<span class="text_edit text-bold">СП OOO «Ist Теlеkom»</span>, именуемое в дальнейшем <b>«Оператор»</b>,
+                    в лице Генерального директора Lee Baek Hee, действующего на основании Устава, с одной стороны, и
+                    <span class="text_edit">"DIABAZ KOMPOZIT" MCHJ QK</span> именуемый в дальнейшем «Абонент», в лице
+                    <span class="text_edit">директора Усманова Ж.</span>, действующего на основании <span class="text_edit">Устава</span>,
+                    с другой стороны, и <span class="text_edit">OOO “DIABAZ COMPOZIT GROUP”</span> именуемый в дальнейшем <b>«Поручитель»</b>,
+                    в лице <span class="text_edit">директора Алибаева Х.И.</span>, действующего на основании <span class="text_edit">Устава</span>,
+                    с третьей стороны, вместе именуемые <b>«Стороны»</b>, заключили настоящий Договор о нижеследующем.
+                    <br/>
+
+                    <h5 class="text-bold mt-3 mb-2">1.&nbsp; ПРЕДМЕТ ДОГОВОРА</h5>
+                    <p class="ml-4">
+                        1.1. &emsp; В соответствии с письменным заявлением Абонента (прилагается), на условиях настоящего Договора, Поручитель обязуется отвечать перед Оператором в том же
+                        объёме, что и Абонент за исполнение обязательств Абонента по своевременной оплате счетов за предоставляемые телекоммуникационные услуги, выставляемых Оператором в
+                        соответствии с договором на оказание телекоммуникационных услуг <span class="text_edit">13А01№0855/2021</span> от <span class="text_edit js_date">10.02.2021</span>г.,
+                        заключенным между Оператором и Абонентом.
+                    </p>
+
+                    <h5 class="text-bold mt-2 mb-2">2.&nbsp; ПРАВА И ОБЯЗАННОСТИ СТОРОН</h5>
+                    <p class="ml-4">
+                        2.1.&emsp; Оператор выставляет счет Абоненту, и в случае неплатежеспособности Абонента этот счёт передается самим Абонентом, а в случаях уклонения Абонента
+                        от выполнения  этих действий - Оператором, Поручителю для осуществления платежа. Поручитель обязуется в установленные для Абонента Договором об оказании
+                        телекоммуникационных услуг сроки оплатить выставленный Оператором счет. <br/>
+                        2.2.&emsp;	Основанием для оплаты Поручителем счетов за Абонента является настоящий Договор. <br/>
+                        2.3.&emsp;	В случае исполнения Поручителем обязательств Абонента перед Оператором по Договору, Поручитель вправе требовать от Абонента  возмещения всех выплаченных
+                        Оператору сумм. Поручитель также вправе требовать от Абонента уплаты сумм пени, штрафов, выплаченных Оператору, а также возмещения иных убытков, понесенных в связи
+                        с ответственностью по платежам Абонента. При этом Оператор не несет ответственности за взаиморасчеты между Поручителем и Абонентом.
+                    </p>
+
+                    <h5 class="text-bold mt-2 mb-2">3.&nbsp; ОТВЕТСТВЕННОСТЬ СТОРОН</h5>
+                    <p class="ml-4">
+                        3.1.&emsp; Поручитель отвечает перед Оператором по обязательствам Абонента, в полном объеме, включая уплату пени, штрафов, возмещение судебных издержек по взысканию
+                        долга и других убытков Оператора, вызванных неисполнением или ненадлежащим исполнением своих обязательства Абонентом. <br/>
+                        3.2.&emsp; За невыполнение или ненадлежащее выполнение своих договорных обязательств Стороны несут ответственность, предусмотренную вышеуказанным
+                        Договором об оказании телекоммуникационных услуг.
+                    </p>
+
+                    <h5 class="text-bold mt-2 mb-2">4.&nbsp; РАЗРЕШЕНИЕ СПОРОВ</h5>
+                    <p class="ml-4">
+                        4.1.&emsp; Стороны прикладывают все усилия, чтобы устранить возникающие разногласия исключительно путем согласительных процедур. При невозможности устранения
+                        разногласий путем переговоров, Стороны обращаются в суд, в  установленном порядке в законодательстве Республики Узбекистан.
+                    </p>
+
+                </div>
+            </div><!-- ./card -->
+
+
+            <div class="html2pdf__page-break"></div>
+
+
+            <!-- 2 - list -->
+            <div class="card contract-text">
+
+
+                    <h5 class="text-bold mb-1">5.&nbsp; ДРУГИЕ УСЛОВИЯ ДОГОВОРА</h5>
+                    <p class="ml-4">
+                        5.1.&emsp; Все изменения и дополнения к настоящему Договору действительны только в случае, если они совершены в письменной форме и подписаны Сторонами. <br>
+                        5.2.&emsp; Настоящий Договор составлен в 3-х экземплярах, которые идентичны и имеют одинаковую юридическую силу, по одному для каждой стороны. С момента его
+                        подписания всеми Сторонами настоящий Договор прилагается к Договору об оказании телекоммуникационных услуг
+                        <span class="text_edit">13А01№0855/2021</span> от <span class="text_edit">10.02.2021</span>г., и составляет с ним одно целое. <br/>
+                        5.3.&emsp; Договор вступает в силу с момента его подписания и будет действовать в течении всего срока действия Договора
+                        <span class="text_edit">13А01№0855/2021</span> от <span class="text_edit">10.02.2021</span>г., на предоставление телекоммуникационных услуг юридическим лицам. <br/>
+                        5.4.&emsp; Настоящий Договор может быть расторгнут досрочно по инициативе одной из Сторон, оповестившей остальные Стороны о своем намерении расторгнуть его не менее
+                        чем за 10 дней до предполагаемой даты расторжения Договора. <br/>
+                        5.5.&emsp; Поручительство по настоящему Договору может быть также прекращено по иным основаниям, предусмотренным действующим законодательством. <br/>
+                        5.6.&emsp; Во всем остальном, что не урегулировано условиями настоящего договора, стороны руководствуются действующим законодательством Республики Узбекистан. <br/>
+                    </p>
+
+                    <h5 class="text-bold mt-2 mb-3">6.&nbsp; ЮРИДИЧЕСКИЕ АДРЕСА СТОРОН</h5>
+
+                    <div>
+                        <p class="text-bold mb-1">"ОПЕРАТОР": СП OOO «Ist Теlеkom»</p>
+                        <p class="mb-1">100060, г. Ташкент, Мирабадский район, ул. Т. Шевченко, д.21</p>
+                        <p class="mb-1">Телефон: 78 150 00 00,&emsp;Факс: 78 150 01 02 </p>
+                        <p class="mb-1">Р/счет: 20214000404281148001&emsp;Банк: UZ КDВ BANK МФО: 00842</p>
+                        <p class="mb-1">ИНН: 204663354&emsp;ОКЭД: 61100</p>
+                    </div>
+
+                    <div class="text-right">
+                        <p class="mb-0">Генеральный директор</p>
+                        <p class="text-bold mb-1">Lee Baek Hee</p>
+                        <p class="mb-0">М.П._________________</p>
+                        <p class="ml-5 mb-0">(подпись)</p>
+                    </div>
+
+
+                    {{-- 2 --}}
+                    <div>
+                        <p class="text-bold mb-1 text_edit js_name">"АБОНЕНТ": "DIABAZ KOMPOZIT" MCHJ QK,</p>
+                        <p class="mb-1 text_edit js_address">130100, Джизакская область, Фариш, Эгизбулок КФЙ</p>
+                        <p class="mb-1">Телефон: <span class="text_edit">998901203535</span></p>
+                        <p class="mb-1">Р/счет: <span class="text_edit text-bold js_account">20214000305084432001</span></p>
+                        <p class="mb-1">Банк: <span class="text_edit text-bold">ЖИЗЗАХ Ш., "АСАКА" ДАТ БАНКИНИНГ ЖИЗЗАХ ВИЛОЯТ ФИЛИАЛИ</span></p>
+                        <p class="mb-1">
+                            МФО: <span class="text_edit text-bold">00140</span>
+                            ИНН:  <span class="text_edit text-bold">306458310</span>
+                            ОКЭД:  ______
+                        </p>
+                    </div>
+
+                    <div class="text-right">
+                        <p class="mb-0">Директор</p>
+                        <p class="text-bold mb-1">Усманов Ж.</p>
+                        <p class="mb-0">М.П._________________</p>
+                        <p class="ml-5 mb-0">(подпись)</p>
+                    </div>
+
+
+                    {{-- 3 --}}
+                    <div>
+                        <p class="text-bold mb-1 js_name">"ПОРУЧИТЕЛЬ": OOO “DIABAZ COMPOZIT GROUP”</p>
+                        <p class="mb-1 js_address">130100Джизакская область, Фаришский район,  Эгизбулок, МСГ Эгизбулок</p>
+                        <p class="mb-1">Телефон: <span class="text_edit text-bold">998 90 120 35 35</span></p>
+                        <p class="mb-1">Р/счет: <span class="text_edit text-bold js_account">20208000600302909001</span></p>
+                        <p class="mb-1 text-bold">Банк: <span class="js_bank text_edit text-bold">в Ташкентском Городском ф-ле банка"АСАКА"</span></p>
+                        <p class="mb-1">
+                            МФО: <span class="text_edit text-bold js_tin">00416</span>&emsp;
+                            ИНН: <span class="text_edit text-bold js_tin">204663354</span>&emsp;
+                            ОКЭД: <span class="text_edit text-bold js_okd">20600</span>
+                        </p>
+                    </div>
+
+                    <div class="text-right">
+                        <p class="mb-0">Директор</p>
+                        <p class="text-bold mb-1">Алибаев Х.И.</p>
+                        <p class="mb-0">М.П._________________</p>
+                        <p class="ml-5 mb-0">(подпись)</p>
+                    </div>
+
+
+
+
+            </div><!-- ./card -->
+
+        </div><!-- ./contract3 -->
+
+    </section>
+
+@endsection
+
+
+@section('script')
+
+    <script src="{{ asset('js/template_function.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+
+            $(document).on('click', '.js_text_save_btn', function (e) {
+                e.preventDefault();
+
+                let token = $('meta[name="csrf-token"]').attr('content');
+                let number = $('.js_number').html()
+                let title = 'Договор На Уступки';
+                let data = $('.js_data_all').html()
+
+                $.ajax({
+                    url: '{{ route('templates.store') }}',
+                    type: 'POST',
+                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template3' },
+                    dataType: 'JSON',
+                    success: (response) => {
+                        // console.log('res: ', response)
+                        window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
+                    },
+                    error: (response) => {
+                        console.log('error: ', response)
+                    }
+                })
+            });
+
+        });
+
+    </script>
+@endsection

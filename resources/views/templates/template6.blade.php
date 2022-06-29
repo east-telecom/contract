@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('style')
-    <link rel="stylesheet" href="{{ asset('css/contract6.css?'.time()) }}">
-@endsection
+
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf">
+    <section class="app-user-list js_data_all js_data_all_pdf template6">
 
         <div class="contract6">
 
             <!-- 1 - list -->
             <div class="card contract-text">
-                <h4 class="text-center">Дополнительное соглашение №<span class="text_edit js_number_n">4</span> <br/>
+                <h4 class="text-center">
+                    <span class="js_title">Дополнительное соглашение</span>
+                    №<span class="text_edit js_number_n">4</span> <br/>
                     к договору №<span class="text_edit js_number">106-82</span>г от
                     «<span class="text_edit js_date_day" contenteditable="false">12</span>»
                     <select name="month1" class="js_date_month js_select_data_month1 d-none">
@@ -34,7 +34,7 @@
                     <span class="text_edit js_date_year">2015</span>г.
                 </h4>
 
-                <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between mb-1 mt-2">
                     <span>г. Ташкент</span>
                     <div>
                         «<span class="text_edit js_date_day" contenteditable="false">12</span>»
@@ -58,43 +58,46 @@
                     </div>
                 </div>
                <div class="mt-3">
-                    <b>СП ООО «IST TELEKOM»,</b> именуемое в дальнейшем <b>«Арендодатель»</b>, действующее на основании  Лицензий: Серия АА №0008087 от 31.03.2020г.,
+                    &emsp;&emsp;<b>СП ООО «IST TELEKOM»,</b> именуемое в дальнейшем <b>«Арендодатель»</b>, действующее на основании  Лицензий: Серия АА №0008087 от 31.03.2020г.,
                     Серия АА №0008088 от 31.03.2020г., Серия АА №0008089 от 31.03.2020г., Серия АА №0008090 от 31.03.2020г., в лице  Генерального директора Lee Bаеk Hee,
                     действующего на основании <span class="text_edit">Устава</span>, с одной стороны, и
                     <span class="text_edit text-bold">АО «Узбекская Республиканская Товарно-Сырьевая Биржа»</span>, именуемый в дальнейшем «Арендатор», в лице Председателя
                     правления Бадриддинова З.Б., действующего на основании _____________, с другой стороны, вместе именуемые «Стороны», пришли к соглашению о нижеследующем: <br/>
-                   <br/>
-                    <p>1.	Признать утратившим юридическую силу Приложение №1 к дополнительному соглашению №3 по договору №106-82 от 12 «мая» 2015г.</p>
-                    <p>2.	Принять Приложение №1 к настоящему дополнительному соглашению №4 от «04» апреля 2022г. в следующей редакции (прилагается).</p>
-                    <p>3.	Остальные пункты договора сохраняют свою силу в прежней редакции.</p>
-                    <p>4.	Настоящее дополнительное соглашение №4 от «04» апреля 2022г. является неотъемлемой частью договора №106-82 от 12 «мая» 2015г.
-                        и вступает в силу с момента его подписания.</p>
-                    <br>
-
+                    <br/>
+                    <br/>
+                    <p class="ml-3">1.&nbsp; Признать утратившим юридическую силу Приложение №1 к дополнительному соглашению №3 по договору №106-82 от 12 «мая» 2015г.</p>
+                    <p class="ml-3">2.&nbsp; Принять Приложение №1 к настоящему дополнительному соглашению №4 от «04» апреля 2022г. в следующей редакции (прилагается).</p>
+                    <p class="ml-3">3.&nbsp; Остальные пункты договора сохраняют свою силу в прежней редакции.</p>
+                    <p class="ml-3">4.&nbsp; Настоящее дополнительное соглашение №4 от «04» апреля 2022г. является неотъемлемой частью договора №106-82 от 12 «мая» 2015г. и вступает в силу с
+                        момента его подписания.</p>
+                    <br/>
+                    <br/>
+                    <br/>
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
-                            <p class="text-bold">
-                                АРЕНДОДАТЕЛЬ: <br>
-                                Генеральный директор <br>
-                                Lee Baek Hee
-                            </p>
-                            <p class="text-bold">_________________</p>
+                            <p class="text-bold mb-2">АРЕНДОДАТЕЛЬ:</p>
+                            <p class="mb-1">Генеральный директор</p>
+                            <p class="text-bold">Lee Baek Hee</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
+
                         <div class="text-center">
-                            <p>
-                                <span class="text-bold">АРЕНДАТОР:</span> <br>
-                                <span class="text_edit js_director_position_dynamic">Председатель правления</span>
-                                <br>
-                                <span class="text-bold text_edit js_director_name_dynamic">Бадриддинов З. Б.</span>
-                            </p>
-                            <p class="text-bold">_________________</p>
+                            <p class="text-bold mb-2">АРЕНДАТОР:</p>
+                            <p class="text_edit mb-1 js_director_position_dynamic">Председатель правления</p>
+                            <p class="text-bold text_edit js_director_name_dynamic">Бадриддинов З. Б.</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
                     </div>
                 </div>
 
             </div><!-- ./card -->
+
+
+            <div class="html2pdf__page-break"></div>
 
 
             <!-- 2 - list -->
@@ -112,13 +115,14 @@
                     <span class="js_date_year_static">2019</span>г.
                 </div>
                 <div>
-                    <p class="text-center text-bold mt-2 mb-0">Протокол</p>
+                    <p class="text-center text-bold mt-3 mb-0">Протокол</p>
                     <p class="text-center text-bold">согласования договорной цены арендуемых IP каналов</p>
 
                     Мы, нижеподписавшиеся, от <b>Арендатора</b> – <span class="text_edit text-bold">АО «Узбекская Республиканская Товарно-Сырьевая Биржа»</span>,
                     в лице ______________________________________________, действующего на основании __________________, с одной стороны,
                     и от <b>Арендодателя – СП ООО «Ist Telekom»</b>, в лице Генерального директора <b>Lee Bаеk Hee</b>, действующего на основании
                     <span class="text_edit">Устава</span>, с другой стороны, удостоверяем, что сторонами принят Протокол согласования договорной цены на арендуемые IP каналы:
+                    <br/>
                     <br/>
 
                     <table class="table">
@@ -158,22 +162,20 @@
 
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
-                            <p class="text-bold">
-                                АРЕНДОДАТЕЛЬ: <br>
-                                Генеральный директор <br>
-                                Lee Baek Hee
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">АРЕНДОДАТЕЛЬ:</p>
+                            <p class="mb-1">Генеральный директор</p>
+                            <p class="text-bold">Lee Baek Hee</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
+
                         <div class="text-center">
-                            <p>
-                                <span class="text-bold">АРЕНДАТОР:</span> <br>
-                                <span class="js_position_static">Председатель правления</span>
-                                <br>
-                                <span class="text-bold js_name_static">Бадриддинов З. Б.</span>
-                            </p>
-                            <p class="text-bold mb-0">_________________</p>
+                            <p class="text-bold mb-2">АРЕНДАТОР:</p>
+                            <p class="text_edit mb-1 js_director_position_dynamic">Председатель правления</p>
+                            <p class="text-bold text_edit js_director_name_dynamic">Бадриддинов З. Б.</p>
+
+                            <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
                         </div>
                     </div>
@@ -205,7 +207,7 @@
                 $.ajax({
                     url: '{{ route('templates.store') }}',
                     type: 'POST',
-                    data: {'_token': token, 'number': number, 'title': title, 'data': data},
+                    data: {'_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template6'},
                     dataType: 'JSON',
                     success: (response) => {
                         // console.log('res: ', response)

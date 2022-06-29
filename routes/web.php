@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ContractController;
 use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\MailController;
 
 
 /*
@@ -34,6 +35,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template5', [TemplateController::class, 'template5'])->name('template5');
         Route::get('/template6', [TemplateController::class, 'template6'])->name('template6');
         Route::get('/template7', [TemplateController::class, 'template7'])->name('template7');
+        Route::get('/template8', [TemplateController::class, 'template8'])->name('template8');
+        Route::get('/template9', [TemplateController::class, 'template9'])->name('template9');
 
         Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
         Route::post('/template/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');
@@ -45,8 +48,6 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
     Route::group(['prefix' => '/'], function() {
         Route::resource('/contract', ContractController::class)->except(['create', 'store', 'show']);
         Route::get('/contract/{contract}/create-pdf', [ContractController::class, 'show'])->name('contract.show');
-
-        Route::get('/contract/pdf/{id}', [ContractController::class, 'create_pdf'])->name('contract.pdf');
 
         Route::post('/contract/update-status/', [ContractController::class, 'update_status'])->name('contract.update_status');
     });
@@ -62,6 +63,9 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::put('/user/user-profile-update/{id}', [UsersController::class, 'user_profile_update'])->name('user.user_profile_update');
     });
     /******************** Users ***********************/
+
+
+
 
 });
 

@@ -60,3 +60,83 @@ Stack trace:
 [06-Jun-2022 16:52:14 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
 [06-Jun-2022 16:52:16 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
 [06-Jun-2022 16:52:20 Asia/Karachi] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.4.24. in /home/ismoil/contract/vendor/composer/platform_check.php on line 24
+[20-Jun-2022 18:32:42 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:32:42 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:33:23 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:33:23 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:33:26 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:33:26 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:34:41 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:34:41 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:34:41 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:34:41 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:37:04 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:37:04 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:37:06 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:37:06 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:41:14 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:41:14 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:41:14 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:41:14 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:41:17 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[20-Jun-2022 18:41:17 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../public/html2pdf/vendor/autoload.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
