@@ -9,9 +9,9 @@
 
             <!-- 1 - list -->
             <div class="card contract-text">
-                <h4 class="text-center mt-4">
+                <h5 class="text-center text-bold mt-4">
                     <span class="js_title">ДОГОВОР ПОРУЧИТЕЛЬСТВА</span> № <span class="text_edit js_number">1682</span> <br/>
-                </h4>
+                </h5>
                 <div class="d-flex mb-1 justify-content-between mt-2 mb-3">
                     <span class="text_edit">г. Ташкент</span>
                     <div>
@@ -39,18 +39,18 @@
                 <div>
                     &emsp;&emsp;&emsp;<span class="text_edit text-bold">СП OOO «Ist Теlеkom»</span>, именуемое в дальнейшем <b>«Оператор»</b>,
                     в лице Генерального директора Lee Baek Hee, действующего на основании Устава, с одной стороны, и
-                    <span class="text_edit">"DIABAZ KOMPOZIT" MCHJ QK</span> именуемый в дальнейшем «Абонент», в лице
+                    <span class="text_edit text-bold">"DIABAZ KOMPOZIT" MCHJ QK</span> именуемый в дальнейшем <b>«Абонент»</b>, в лице
                     <span class="text_edit">директора Усманова Ж.</span>, действующего на основании <span class="text_edit">Устава</span>,
-                    с другой стороны, и <span class="text_edit">OOO “DIABAZ COMPOZIT GROUP”</span> именуемый в дальнейшем <b>«Поручитель»</b>,
+                    с другой стороны, и <span class="text_edit text-bold">OOO “DIABAZ COMPOZIT GROUP”</span> именуемый в дальнейшем <b>«Поручитель»</b>,
                     в лице <span class="text_edit">директора Алибаева Х.И.</span>, действующего на основании <span class="text_edit">Устава</span>,
                     с третьей стороны, вместе именуемые <b>«Стороны»</b>, заключили настоящий Договор о нижеследующем.
                     <br/>
 
                     <h5 class="text-bold mt-3 mb-2">1.&nbsp; ПРЕДМЕТ ДОГОВОРА</h5>
                     <p class="ml-4">
-                        1.1. &emsp; В соответствии с письменным заявлением Абонента (прилагается), на условиях настоящего Договора, Поручитель обязуется отвечать перед Оператором в том же
+                        1.1.&emsp; В соответствии с письменным заявлением Абонента (прилагается), на условиях настоящего Договора, Поручитель обязуется отвечать перед Оператором в том же
                         объёме, что и Абонент за исполнение обязательств Абонента по своевременной оплате счетов за предоставляемые телекоммуникационные услуги, выставляемых Оператором в
-                        соответствии с договором на оказание телекоммуникационных услуг <span class="text_edit">13А01№0855/2021</span> от <span class="text_edit js_date">10.02.2021</span>г.,
+                        соответствии с договором на оказание телекоммуникационных услуг <span class="text_edit js_number">13А01№0855/2021</span> от <span class="text_edit js_date">10.02.2021</span>г.,
                         заключенным между Оператором и Абонентом.
                     </p>
 
@@ -93,11 +93,11 @@
                     <h5 class="text-bold mb-1">5.&nbsp; ДРУГИЕ УСЛОВИЯ ДОГОВОРА</h5>
                     <p class="ml-4">
                         5.1.&emsp; Все изменения и дополнения к настоящему Договору действительны только в случае, если они совершены в письменной форме и подписаны Сторонами. <br>
-                        5.2.&emsp; Настоящий Договор составлен в 3-х экземплярах, которые идентичны и имеют одинаковую юридическую силу, по одному для каждой стороны. С момента его
-                        подписания всеми Сторонами настоящий Договор прилагается к Договору об оказании телекоммуникационных услуг
-                        <span class="text_edit">13А01№0855/2021</span> от <span class="text_edit">10.02.2021</span>г., и составляет с ним одно целое. <br/>
+                        5.2.&emsp; Настоящий Договор составлен в 3-х экземплярах, которые идентичны и имеют одинаковую юридическую силу, по одному для каждой стороны. С момента его подписания всеми
+                        Сторонами настоящий Договор прилагается к Договору об оказании телекоммуникационных услуг <span class="text_edit js_number2">13А01№0855/2021</span>
+                        от <span class="text_edit">10.02.2021</span>г., и составляет с ним одно целое. <br/>
                         5.3.&emsp; Договор вступает в силу с момента его подписания и будет действовать в течении всего срока действия Договора
-                        <span class="text_edit">13А01№0855/2021</span> от <span class="text_edit">10.02.2021</span>г., на предоставление телекоммуникационных услуг юридическим лицам. <br/>
+                        <span class="js_number2 text_edit">13А01№0855/2021</span> от <span class="text_edit">10.02.2021</span>г., на предоставление телекоммуникационных услуг юридическим лицам. <br/>
                         5.4.&emsp; Настоящий Договор может быть расторгнут досрочно по инициативе одной из Сторон, оповестившей остальные Стороны о своем намерении расторгнуть его не менее
                         чем за 10 дней до предполагаемой даты расторжения Договора. <br/>
                         5.5.&emsp; Поручительство по настоящему Договору может быть также прекращено по иным основаниям, предусмотренным действующим законодательством. <br/>
@@ -110,59 +110,61 @@
                         <p class="text-bold mb-1">"ОПЕРАТОР": СП OOO «Ist Теlеkom»</p>
                         <p class="mb-1">100060, г. Ташкент, Мирабадский район, ул. Т. Шевченко, д.21</p>
                         <p class="mb-1">Телефон: 78 150 00 00,&emsp;Факс: 78 150 01 02 </p>
-                        <p class="mb-1">Р/счет: 20214000404281148001&emsp;Банк: UZ КDВ BANK МФО: 00842</p>
-                        <p class="mb-1">ИНН: 204663354&emsp;ОКЭД: 61100</p>
+                        <p class="mb-1">Р/счет: <b>20214000404281148001</b>&emsp;Банк: <b>UZ КDВ BANK</b> МФО: <b>00842</b></p>
+                        <p class="mb-1">ИНН: <b>204663354</b>&emsp;ОКЭД: <b>61100</b></p>
+
+                        <div class="text-right">
+                            <p class="mb-0">Генеральный директор</p>
+                            <p class="text-bold mb-1">Lee Baek Hee</p>
+                            <p class="mb-0">М.П._________________</p>
+                            <p class="ml-5 mb-0">(подпись)</p>
+                        </div>
                     </div>
 
-                    <div class="text-right">
-                        <p class="mb-0">Генеральный директор</p>
-                        <p class="text-bold mb-1">Lee Baek Hee</p>
-                        <p class="mb-0">М.П._________________</p>
-                        <p class="ml-5 mb-0">(подпись)</p>
-                    </div>
 
 
                     {{-- 2 --}}
-                    <div>
+                    <div class="js_tin_div1">
                         <p class="text-bold mb-1 text_edit js_name">"АБОНЕНТ": "DIABAZ KOMPOZIT" MCHJ QK,</p>
                         <p class="mb-1 text_edit js_address">130100, Джизакская область, Фариш, Эгизбулок КФЙ</p>
                         <p class="mb-1">Телефон: <span class="text_edit">998901203535</span></p>
                         <p class="mb-1">Р/счет: <span class="text_edit text-bold js_account">20214000305084432001</span></p>
                         <p class="mb-1">Банк: <span class="text_edit text-bold">ЖИЗЗАХ Ш., "АСАКА" ДАТ БАНКИНИНГ ЖИЗЗАХ ВИЛОЯТ ФИЛИАЛИ</span></p>
                         <p class="mb-1">
-                            МФО: <span class="text_edit text-bold">00140</span>
-                            ИНН:  <span class="text_edit text-bold">306458310</span>
+                            МФО: <span class="text_edit text-bold js_mfo">00140</span>&emsp;
+                            ИНН:  <span class="text_edit text-bold js_tin">306458310</span>&emsp;
                             ОКЭД:  ______
                         </p>
+
+                        <div class="text-right">
+                            <p class="mb-0 text_edit">Директор</p>
+                            <p class="text-bold text_edit mb-1 js_director">Усманов Ж.</p>
+                            <p class="mb-0">М.П._________________</p>
+                            <p class="ml-5 mb-0">(подпись)</p>
+                        </div>
                     </div>
 
-                    <div class="text-right">
-                        <p class="mb-0">Директор</p>
-                        <p class="text-bold mb-1">Усманов Ж.</p>
-                        <p class="mb-0">М.П._________________</p>
-                        <p class="ml-5 mb-0">(подпись)</p>
-                    </div>
 
 
                     {{-- 3 --}}
-                    <div>
-                        <p class="text-bold mb-1 js_name">"ПОРУЧИТЕЛЬ": OOO “DIABAZ COMPOZIT GROUP”</p>
-                        <p class="mb-1 js_address">130100Джизакская область, Фаришский район,  Эгизбулок, МСГ Эгизбулок</p>
+                    <div class="js_tin_div2">
+                        <p class="text-bold mb-1 text_edit js_name">"ПОРУЧИТЕЛЬ": OOO “DIABAZ COMPOZIT GROUP”</p>
+                        <p class="mb-1 js_address text_edit">130100, Джизакская область, Фаришский район,  Эгизбулок, МСГ Эгизбулок</p>
                         <p class="mb-1">Телефон: <span class="text_edit text-bold">998 90 120 35 35</span></p>
                         <p class="mb-1">Р/счет: <span class="text_edit text-bold js_account">20208000600302909001</span></p>
-                        <p class="mb-1 text-bold">Банк: <span class="js_bank text_edit text-bold">в Ташкентском Городском ф-ле банка"АСАКА"</span></p>
+                        <p class="mb-1">Банк:   <span class="js_bank text_edit text-bold">в Ташкентском Городском ф-ле банка"АСАКА"</span></p>
                         <p class="mb-1">
-                            МФО: <span class="text_edit text-bold js_tin">00416</span>&emsp;
+                            МФО: <span class="text_edit text-bold js_mfo">00416</span>&emsp;
                             ИНН: <span class="text_edit text-bold js_tin">204663354</span>&emsp;
-                            ОКЭД: <span class="text_edit text-bold js_okd">20600</span>
+                            ОКЭД: <span class="text_edit text-bold js_oked">20600</span>
                         </p>
-                    </div>
 
-                    <div class="text-right">
-                        <p class="mb-0">Директор</p>
-                        <p class="text-bold mb-1">Алибаев Х.И.</p>
-                        <p class="mb-0">М.П._________________</p>
-                        <p class="ml-5 mb-0">(подпись)</p>
+                        <div class="text-right">
+                            <p class="mb-0 text_edit">Директор</p>
+                            <p class="text-bold text_edit mb-1 js_director">Алибаев Х.И.</p>
+                            <p class="mb-0">М.П._________________</p>
+                            <p class="ml-5 mb-0">(подпись)</p>
+                        </div>
                     </div>
 
 
@@ -187,14 +189,14 @@
                 e.preventDefault();
 
                 let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html()
+                let number = $('.js_number').html();
                 let title = 'Договор На Уступки';
-                let data = $('.js_data_all').html()
+                let data = $('.js_data_all').html();
 
                 $.ajax({
                     url: '{{ route('templates.store') }}',
                     type: 'POST',
-                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template3' },
+                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template9' },
                     dataType: 'JSON',
                     success: (response) => {
                         // console.log('res: ', response)

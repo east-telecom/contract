@@ -290,7 +290,7 @@
                             <tr class="tr-empty">
                                 <td></td>
                                 <td></td>
-                                <td>количество, наименование устройств: телефонный аппарат, модем, факс, телекс и др.)</td>
+                                <td class="td-span">(количество, наименование устройств: телефонный аппарат, модем, факс, телекс и др.)</td>
                             </tr>
                             <tr>
                                 <td class="text-bold align-middle">4.</td>
@@ -318,7 +318,7 @@
                             <tr class="tr-empty">
                                 <td></td>
                                 <td></td>
-                                <td>(марка, количество, стоимость)</td>
+                                <td class="td-span">(марка, количество, стоимость)</td>
                             </tr>
 
                             <tr>
@@ -344,10 +344,10 @@
                                 <td>Соединительные линии:</td>
                                 <td></td>
                             </tr>
-                            <tr>
-                                <td class="tr-empty"></td>
+                            <tr class="tr-empty">
                                 <td></td>
-                                <td>(количество, направление)</td>
+                                <td></td>
+                                <td class="td-span">(количество, направление)</td>
                             </tr>
                             <tr>
                                 <td><b>8.</b></td>
@@ -483,8 +483,18 @@
 
                 <p class="text-center text-bold mt-1 mb-1">Единовременные платежи за услуги *</p>
 
-                <table class="table table-bordered contract1-list4-table2">
-                   <tbody>
+                <div class="create_tarif_tr1 d-flex mt-2 mb-3">
+                    <select name="tarif_tr" class="form-control col-md-3 js_tarif_select1">
+                        <option value="">---</option>
+                        <option value="sip_trunc">SIP TRUNK</option>
+                        <option value="phone">ТЕЛЕФОНИЯ</option>
+                        <option value="internet">ИНТЕРНЕТ</option>
+                    </select>
+                    <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">add</button>
+                </div>
+
+                <table class="table table-bordered js_add_tarif_to_table1 contract1-list4-table2">
+                   <thead>
                        <tr>
                            <th>№</th>
                            <th>Наименование платежей</th>
@@ -493,8 +503,10 @@
                            <th>Кол- во</th>
                            <th>Стоимость*</th>
                        </tr>
-                       <tr>
-                           <td colspan="6"><b>1. &emsp;&emsp; SIP TRUNK</b></td>
+                   </thead>
+                    <tbody>
+                       <tr class="js_tr_group js_tarif_sip_trunc">
+                           <td colspan="6" class="text-bold">1. &emsp; &emsp; SIP TRUNK</td>
                        </tr>
                         <tr>
                             <td>1.1</td>
@@ -520,12 +532,39 @@
                            <td>1</td>
                            <td>2 800 000.0</td>
                        </tr>
+
+                       <tr class="js_tr_group js_tarif_phone">
+                           <td colspan="6" class="text-bold">2. &emsp; &emsp; ТЕЛЕФОНИЯ</td>
+                       </tr>
+                       <tr>
+                           <td>2.1</td>
+                           <td>
+                               <span class="text_edit">Абонентская плата**</span> <br/>
+                               <span class="text_edit">согласно тарифному плану «Country Free»***</span>
+                           </td>
+                           <td>номер</td>
+                           <td>50 500.0</td>
+                           <td>1</td>
+                           <td>50 500 000.0</td>
+                       </tr>
+
                    </tbody>
                 </table>
 
                 <p class="text-center text-bold mt-2 mb-1">Ежемесячные платежи за услуги *</p>
-                <table class="table table-bordered mb-1 list4-table">
-                    <tbody>
+
+                <div class="create_tarif_tr d-flex mt-2 mb-3">
+                    <select name="tarif_tr2" class="form-control col-md-3 ">
+                        <option value="">---</option>
+                        <option value="sip_trunc">SIP TRUNK</option>
+                        <option value="phone">ТЕЛЕФОНИЯ</option>
+                        <option value="internet">ИНТЕРНЕТ</option>
+                    </select>
+                    <button type="button" class="ml-2 btn btn-secondary">add</button>
+                </div>
+
+                <table class="table table-bordered js_add_tarif_to_table2 mb-1 list4-table">
+                    <thead>
                         <tr>
                             <th>№</th>
                             <th>Наименование платежей</th>
@@ -534,6 +573,8 @@
                             <th>Кол- во</th>
                             <th>Стоимость*</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td colspan="6"><b>1. &emsp;&emsp; SIP TRUNK</b></td>
                         </tr>

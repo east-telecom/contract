@@ -69,7 +69,7 @@ class UsersController extends Controller
         }
         else {
             try {
-                $phone = str_replace(' ', '', $request->phone);
+                $phone = isset($request->phone) ? str_replace(' ', '', $request->phone) : '';
                 User::create([
                     'section_id'=> $request->section_id,
                     'full_name' => $request->full_name,
@@ -109,7 +109,7 @@ class UsersController extends Controller
         }
         else {
             try {
-                $phone = str_replace(' ', '', $request->phone);
+                $phone = isset($request->phone) ? str_replace(' ', '', $request->phone) : '';
                 $update_data = [
                     'section_id'=> $request->section_id,
                     'full_name' => $request->full_name,
@@ -141,7 +141,6 @@ class UsersController extends Controller
     {
         return [
             'full_name' => 'required',
-            'phone'     => 'required',
             'email'     => 'required|email|unique:users,email',
             'password'  => 'required|min:3',
         ];

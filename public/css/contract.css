@@ -107,3 +107,9 @@ span.text_edit {
 .horizontal-table tr:last-child td:first-child {
     font-style: normal !important;
 }
+
+
+.table .td-span {
+    text-align:  center;
+    font-size: 8.5pt!important;
+}

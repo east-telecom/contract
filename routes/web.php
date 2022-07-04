@@ -37,6 +37,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template7', [TemplateController::class, 'template7'])->name('template7');
         Route::get('/template8', [TemplateController::class, 'template8'])->name('template8');
         Route::get('/template9', [TemplateController::class, 'template9'])->name('template9');
+        Route::get('/template10', [TemplateController::class, 'template10'])->name('template10');
+        Route::get('/template11', [TemplateController::class, 'template11'])->name('template11');
 
         Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
         Route::post('/template/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');

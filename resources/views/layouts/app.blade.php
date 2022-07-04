@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="{{ asset('css/contract4.css?'.time()) }}">
     <link rel="stylesheet" href="{{ asset('css/contract5.css?'.time()) }}">
     <link rel="stylesheet" href="{{ asset('css/contract6.css?'.time()) }}">
-    <link rel="stylesheet" href="{{ asset('css/contract7.css?'.time()) }}">
     <link rel="stylesheet" href="{{ asset('css/contract8.css?'.time()) }}">
     <link rel="stylesheet" href="{{ asset('css/contract9.css?'.time()) }}">
+    <link rel="stylesheet" href="{{ asset('css/contract7_10_11.css?'.time()) }}">
 
     @yield('style')
 
@@ -53,6 +53,11 @@
     <div class="c-wrapper c-fixed-components">
         <header class="c-header c-header-light c-header-fixed c-header-with-subheader">
 
+            @php
+                $user = \Auth::user();
+                $user->load('section');
+            @endphp
+
             <a href="{{ route('contract.index') }}" class="c-header-toggler c-class-toggler mfs-3" style="margin-top: 12px; color: black;">Contract</a>
             <ul class="c-header-nav">
 
@@ -61,33 +66,49 @@
                         <i class="far fa-file" style="margin-right: 5px;"></i> <span>Шаблоны</span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title1 @if(Request::segment(1) == 'template1') active @endif" href="{{ route('template1') }}">Договор Юр. Лица</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title2 @if(Request::segment(1) == 'template2') active @endif" href="{{ route('template2')  }}">Договор Подряда</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title3 @if(Request::segment(1) == 'template3') active @endif" href="{{ route('template3') }}">Договор На Уступки</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title4 @if(Request::segment(1) == 'template4') active @endif" href="{{ route('template4')  }}">Дговор На Аренду</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title5 @if(Request::segment(1) == 'template5') active @endif" href="{{ route('template5') }}">Договор Бюджет 1</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title8 @if(Request::segment(1) == 'template8') active @endif" href="{{ route('template8') }}">Договор Бюджет 2</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title6 @if(Request::segment(1) == 'template6') active @endif" href="{{ route('template6') }}">Доп Cогл №4 Аренда Канала</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title7 @if(Request::segment(1) == 'template7') active @endif" href="{{ route('template7') }}">Доп Соглашение №5</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center js_title9 @if(Request::segment(1) == 'template9') active @endif" href="{{ route('template9') }}">Договор Поручительства </a>
-                        </li>
+                        @if($user->section->rule == 'ROOT')
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title1 @if(Request::segment(1) == 'template1') active @endif" href="{{ route('template1') }}">Договор Юр. Лица</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title2 @if(Request::segment(1) == 'template2') active @endif" href="{{ route('template2')  }}">Договор Подряда</a>
+                            </li>
+                        @endif
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title3 @if(Request::segment(1) == 'template3') active @endif" href="{{ route('template3') }}">Договор На Уступки</a>
+                            </li>
+                        @if($user->section->rule == 'ROOT')
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title4 @if(Request::segment(1) == 'template4') active @endif" href="{{ route('template4')  }}">Дговор На Аренду</a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title5 @if(Request::segment(1) == 'template5') active @endif" href="{{ route('template5') }}">Договор Бюджет 1</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title8 @if(Request::segment(1) == 'template8') active @endif" href="{{ route('template8') }}">Договор Бюджет 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title6 @if(Request::segment(1) == 'template6') active @endif" href="{{ route('template6') }}">Доп Cогл №4 Аренда Канала</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title7 @if(Request::segment(1) == 'template7') active @endif" href="{{ route('template7') }}">Доп Соглашение 1</a>
+                            </li>
+
+                        @endif
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title9 @if(Request::segment(1) == 'template9') active @endif" href="{{ route('template9') }}">Договор Поручительства</a>
+                            </li>
+                        @if($user->section->rule == 'ROOT')
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title10 @if(Request::segment(1) == 'template10') active @endif" href="{{ route('template10') }}">Доп Соглашение 2</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center js_title11 @if(Request::segment(1) == 'template11') active @endif" href="{{ route('template11') }}">Доп Соглашение 3</a>
+                            </li>
+                        @endif
                     </ul>
                 </li>
 
@@ -123,25 +144,27 @@
             @endif
 
             <ul class="c-header-nav ml-auto mr-4">
-                @php
-                    $user = \Auth::user();
-                    $user->load('section');
-                @endphp
+
 
                 @if($user->section->rule != 'JURIST')
                     @if(Request::segment(1) == 'template1' || Request::segment(1) == 'template2' || Request::segment(1) == 'template3' ||
                         Request::segment(1) == 'template4' || Request::segment(1) == 'template5' || Request::segment(1) == 'template6' ||
                         Request::segment(1) == 'template7' || Request::segment(1) == 'template8' || Request::segment(1) == 'template9' ||
-                        Request::segment(3) == 'edit')
+                        Request::segment(1) == 'template10' || Request::segment(1) == 'template11' || Request::segment(3) == 'edit')
 
                         @if(Request::segment(1) != 'template6' and Request::segment(1) != 'template7')
                             <li class="nav-item d-flex align-content-center" style="height: 39px;">
                                 <div class="row js_div_form d-none" style="margin-top: 5px;">
-                                    @if(Request::segment(1) == 'template3')
+                                    @if(Request::segment(1) == 'template3' || Request::segment(1) == 'template9')
                                         <div class="col-md-5">
                                             <select name="number" class="form-control form-control-sm js_tin_number" style="border: 1px solid #7367f0;">
-                                                <option value="1">Принимающая сторона</option>
-                                                <option value="2">Дебитор</option>
+                                                @if(Request::segment(1) == 'template3')
+                                                    <option value="1">Принимающая сторона</option>
+                                                    <option value="2">Дебитор</option>
+                                                @elseif(Request::segment(1) == 'template9')
+                                                    <option value="1">один</option>
+                                                    <option value="2">два</option>
+                                                @endif
                                             </select>
                                         </div>
                                         <div class="col-md-7 pl-0">
@@ -440,27 +463,55 @@
                     html2pdf().set(opt).from(template6).save();
                 }
 
-                else if(show_view_pdf_div.hasClass('template7'))  { //############# template 7 #############//
+                else if(show_view_pdf_div.hasClass('template7') || show_view_pdf_div.hasClass('template10') || show_view_pdf_div.hasClass('template11'))  { //############# template 7 or 10 or 11 #############//
 
-                    let template7 = $('.js_data_all_pdf div');
-                    template7.css({'font-size': '8.9pt', 'color': 'black!important;'});
-                    template7.find('p.ml-3.mb-1').css('margin-top', '5px');
+                    let template7_10_11 = $('.js_data_all_pdf div');
+                    template7_10_11.css({'font-size': '9.5pt', 'color': 'black!important;'});
+                    template7_10_11.find('p.mb-2').css('margin-top', '5px');
+                    template7_10_11.find('.div-list1 p').css({'font-size': '8pt'});
 
-                    template7.find('.table tr th, .table tr td').css({
+
+                    template7_10_11.find('.table tr th, .table tr td').css({
                         'border': '0.1pt solid darkgray',
-                        'padding': '1px 5px',
+                        'padding': '3px 5px',
                         'font-size': '9pt',
                         'color': 'black!important',
                         'vertical-align': 'middle',
                     });
-                    template7.find('.div-list2 .table tr td:nth-child(1)').css('width', '4%');
-                    template7.find('.div-list2 .table tr td:nth-child(2)').css('width', '30%');
-                    template7.find('.div-font-small').css({'font-size': '8.6pt'});
-                    template7 = template7.html();
+                    template7_10_11.find('.div-list2 .table tr td:nth-child(1)').css('width', '4%');
+                    template7_10_11.find('.div-list2 .table tr td:nth-child(2)').css('width', '30%');
+                    template7_10_11.find('.div-font-small').css({'font-size': '7.5pt', 'margin-top': '5px'});
+                    template7_10_11.find('.div-list4 div').css('font-size', '8.5pt');
 
-                    opt.margin = [3, 1, 4, 2];
+                    template7_10_11.find('.horizontal-list').addClass('d-none');
 
-                    html2pdf().set(opt).from(template7).save();
+                    template7_10_11 = template7_10_11.html();
+
+                    opt.margin = [3, 2, 3, 3];
+
+                    html2pdf().set(opt).from(template7_10_11).save();
+
+                    $('.horizontal-list').removeClass('d-none');
+
+                    // horizontal list
+                    let template11_2 = $('.horizontal-list');
+                    template11_2.css({'font-size': '7.7pt', 'color': 'black !important;'});
+
+                    template11_2.find('.table').css('margin-top', '0');
+                    template11_2.find('p, span, *').css('color', 'black');
+                    template11_2.find('.table tr th, .table tr td').css({'padding': '2px 3px', 'color': 'black', 'border': '0.1pt solid darkgray'});
+
+                    template11_2 = template11_2.html();
+
+                    let opt2 = {
+                        margin: [5, 15],
+                        filename: name+'2.pdf',
+                        html2canvas: {scale: 3, logging: true, dpi: 96, letterRendering: true},
+                        jsPDF: {unit: 'mm', formant: 'a4', orientation: 'landscape'},
+                    };
+
+                    html2pdf().set(opt2).from(template11_2).save();
+
                 }
 
                 else if(show_view_pdf_div.hasClass('template8')) { //############# template 8 Бюджет 2 #############//
@@ -514,11 +565,34 @@
                     template9.css({'font-size': '12pt', 'color': 'black!important;'});
 
                     template9 = template9.html();
-                    opt.margin = [3, 3, 3, 4];
+                    opt.margin = [3, 5, 3, 5];
 
                     html2pdf().set(opt).from(template9).save();
                 }
 
+                else if(show_view_pdf_div.hasClass('template10'))  { //############# template 11 #############//
+
+                    let template10 = $('.js_data_all_pdf div');
+                    template10.css({'font-size': '9.5pt', 'color': 'black!important;'});
+                    template10.find('p.mb-2').css('margin-top', '5px');
+
+                    template10.find('.table tr th, .table tr td').css({
+                        'border': '0.1pt solid darkgray',
+                        'padding': '3px 5px',
+                        'font-size': '9pt',
+                        'color': 'black!important',
+                        'vertical-align': 'middle',
+                    });
+                    template10.find('.div-list2 .table tr td:nth-child(1)').css('width', '4%');
+                    template10.find('.div-list2 .table tr td:nth-child(2)').css('width', '30%');
+                    template10.find('.div-font-small').css({'font-size': '7.5pt', 'margin-top': '5px'});
+                    template10.find('.div-list4 div').css('font-size', '8.5pt');
+                    template10 = template10.html();
+
+                    opt.margin = [3, 2, 3, 3];
+
+                    html2pdf().set(opt).from(template10).save();
+                }
 
             });
 

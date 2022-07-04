@@ -64,6 +64,16 @@ class TemplateController extends Controller
         return view('templates.template9');
     }
 
+    public function template10()
+    {
+        return view('templates.template10');
+    }
+
+    public function template11()
+    {
+        return view('templates.template11');
+    }
+
 
     /**
      * Store a newly created resource in storage.
