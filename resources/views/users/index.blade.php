@@ -7,7 +7,7 @@
         <a href="javascript:void(0);" data-url="{{ route('user.store') }}"
            class="btn btn-outline-primary add-user-btn js_add_btn">
             <i class="fas fa-user-plus"></i></a>
-        <h3 class="text-center text-primary position-absolute" style="z-index: 1; left: 45%; top: 12px;">Users</h3>
+        <h3 class="text-center text-primary position-absolute" style="z-index: 1; left: 45%; top: 12px;">Пользователи</h3>
         <!-- Modal -->
     </div>
 
@@ -17,14 +17,14 @@
                 <thead class="table-light">
                     <tr>
                         <th>№</th>
-                        <th>Section</th>
-                        <th>Full Name</th>
-                        <th>Email</th>
-                        <th>Phone</th>
-                        <th>Status</th>
-                        <th>date</th>
-                        <th>rule</th>
-                        <th class="text-right">Actions</th>
+                        <th>Раздел</th>
+                        <th>ФИО</th>
+                        <th>Эл. адрес</th>
+                        <th>Телефон</th>
+                        <th>Статус</th>
+                        <th>Свидание</th>
+                        <th>Правило</th>
+                        <th class="text-right">Действия</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,15 +37,15 @@
                         <td>{{ $u->full_name }}</td>
                         <td>{{ $u->email }}</td>
                         <td>{{ \Helper::phoneFormat($u->phone) }}</td>
-                        <td>@if($u->status) active @else no active @endif</td>
+                        <td>@if($u->status) активный @else нет активных @endif</td>
                         <td>{{ date('d.m.Y H:i', strtotime($u->created_at)) }}</td>
                         <td>
                             @if(optional($u->section)->rule == 'ADMIN_USER')
-                                admin & user
+                                администратор и пользователь
                             @elseif(optional($u->section)->rule == 'JURIST')
-                                jurist
+                                юрист
                             @elseif(optional($u->section)->rule == 'USER')
-                                user
+                                пользователь
                             @endif
                         </td>
                         <td class="text-right">
@@ -110,7 +110,14 @@
                 autoWidth: true,
                 language: {
                     search: "",
-                    searchPlaceholder: " Search...",
+                    searchPlaceholder: " Поиск...",
+                    info: "Показано с _START_ по _END_ из _TOTAL_ записей",
+                    paginate: {
+                        first: "Первый",
+                        last: "Последний",
+                        next: "Следующий",
+                        previous: "Предыдущий"
+                    }
                 },
                 "columnDefs": [
                     { "visible": false, "targets": 1 }
@@ -141,7 +148,7 @@
 
                 form.attr('action', url)
                 user_form_clear(form)
-                modal.find('.modal-title').html('Add User')
+                modal.find('.modal-title').html('Добавить пользователя')
                 modal.modal('show')
             })
 
@@ -181,7 +188,7 @@
                                 }
                             })
                         }
-                        modal.find('.modal-title').html('Edit User')
+                        modal.find('.modal-title').html('Изменить пользователя')
                         modal.modal('show')
                     },
                     error: (response) => {

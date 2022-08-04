@@ -9,16 +9,16 @@
                 </button>
             </div>
             <div class="modal-body">
-                <span class="js_message">All data will be permanently deleted. <br/> You really want to turn it off ?</span>
+                <span class="js_message">Все данные будут безвозвратно удалены. <br/> Вы действительно хотите выключить его?</span>
                 <span class="js_danger text-danger"></span>
             </div>
             <div class="modal-footer">
                 <form id="js_modal_delete_form" method="POST">
                     @csrf
                     {{ method_field('DELETE') }}
-                    <button type="submit" name="saveBtn" class="btn btn-danger">Yes</button>
+                    <button type="submit" name="saveBtn" class="btn btn-danger">Да</button>
                 </form>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Но</button>
             </div>
         </div>
     </div>

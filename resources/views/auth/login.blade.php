@@ -8,7 +8,7 @@
             <div class="card p-2">
                 <div class="card-body">
                     <form action="{{ route('login') }}" method="POST">
-                        <h1 class="text-center mb-3">{{ __('Login') }}</h1>
+                        <h1 class="text-center mb-3">{{ __('Авторизоваться') }}</h1>
                         @error('email')
                             <p class="p-0 mt-1 mb-1 text-center text-danger font-weight-bold">{{'There is an error in the email or password'}}</p>
                         @enderror
@@ -23,7 +23,7 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Email">
+                                <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Эл. адрес">
                             </div>
 
                         </div>
@@ -37,13 +37,13 @@
                                         </svg>
                                     </span>
                                 </div>
-                                <input type="password" class="form-control @error('email') is-invalid @enderror" name="password" placeholder="Password">
+                                <input type="password" class="form-control @error('email') is-invalid @enderror" name="password" placeholder="Пароль">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="text-right col-12">
-                                <button type="submit" class="btn px-4 btn-block btn-primary">{{ __('Sing in') }}</button>
+                                <button type="submit" class="btn px-4 btn-block btn-primary">{{ __('Войти') }}</button>
                             </div>
                         </div>
                     </form>

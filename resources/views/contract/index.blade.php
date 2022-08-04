@@ -9,14 +9,14 @@
             <thead class="table-light">
                 <tr>
                     <th style="width: 3%;">№</th>
-                    <th>Name</th>
-                    <th>Number</th>
-                    <th>Status</th>
-                    <th style="max-width: 20%;">Comment</th>
-                    <th>Date</th>
-                    <th>Employees</th>
-                    <th>Jurist</th>
-                    <th class="text-right">Actions</th>
+                    <th>Имя</th>
+                    <th>Число</th>
+                    <th>Статус</th>
+{{--                    <th style="max-width: 20%;">Комментарий</th>--}}
+                    <th>Сотрудники</th>
+                    <th>Юрист</th>
+                    <th>Дата создания</th>
+                    <th class="text-right">Действия</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,41 +26,96 @@
             @endphp
             @foreach($contracts as $c)
 
-                <tr class="js_this_tr" data-id="{{ $c->id }}">
+                @if($user->section->rule == 'JURIST')
+                    @if($c->status == 1 || $c->status == -1 || $c->status == 2)
+                        <tr class="js_this_tr" data-id="{{ $c->id }}">
+                            <td>{{ 1 + $loop->index }}</td>
+                            <td>{{ $c->title }}</td>
+                            <td>{{ $c->number }}</td>
+                            <td>
+                                @if($c->status == 0)
+                                    <span class="badge badge-secondary p-1" style="font-size: 12px;">Готов к отправке</span>
+                                @elseif($c->status == 1)
+                                    <sapn class="badge badge-warning p-1" style="font-size: 12px;">Проверяется</sapn>
+                                @elseif($c->status == -1)
+                                    <sapn class="badge badge-danger p-1" style="font-size: 12px;">Отклонено</sapn>
+                                @elseif($c->status == 2)
+                                    <sapn class="badge badge-success p-1" style="font-size: 12px;">Одобрено</sapn>
+                                @endif
+                            </td>
+{{--                            <td>{{ $c->comment }}</td>--}}
+
+                            <td>{{ optional($c->user)->full_name }}</td>
+                            <td>{{ optional($c->jurist)->full_name }}</td>
+                            <td>{{ date('d.m.Y H:i', strtotime($c->created_at)) }}</td>
+
+                            <td class="text-right">
+                                <div class="d-flex justify-content-around">
+
+                                    <a href="{{ route('contract.show', [$c->id]) }}" class="btn btn-outline-primary btn-sm" title="Show">
+                                        <i class="fa-solid fa-file mr-1"></i> Просмотр
+                                    </a>
+
+                                </div>
+                            </td>
+                        </tr>
+                    @endif
+                @else
+                    {{-- admin or user or root --}}
+                    <tr class="js_this_tr" data-id="{{ $c->id }}">
                     <td>{{ 1 + $loop->index }}</td>
                     <td>{{ $c->title }}</td>
                     <td>{{ $c->number }}</td>
                     <td>
                         @if($c->status == 0)
-                            <span class="badge badge-warning p-1" style="font-size: 12px;">Sent for Verification</span>
-                        @elseif($c->status == -1)
-                            <sapn class="badge badge-danger p-1" style="font-size: 12px;">Unapproved</sapn>
+                            <span class="badge badge-secondary p-1" style="font-size: 12px;">Готов к отправке</span>
                         @elseif($c->status == 1)
-                            <sapn class="badge badge-success p-1" style="font-size: 12px;">Approved</sapn>
+                            <sapn class="badge badge-warning p-1" style="font-size: 12px;">Проверяется</sapn>
+                        @elseif($c->status == -1)
+                            <sapn class="badge badge-danger p-1" style="font-size: 12px;">Отклонено</sapn>
+                        @elseif($c->status == 2)
+                            <sapn class="badge badge-success p-1" style="font-size: 12px;">Одобрено</sapn>
                         @endif
                     </td>
-                    <td>{{ $c->comment }}</td>
-                    <td>{{ date('d.m.Y H:i', strtotime($c->created_at)) }}</td>
+{{--                    <td>{{ $c->comment }}</td>--}}
+
                     <td>{{ optional($c->user)->full_name }}</td>
-                    <td>{{ optional($c->jurist)->full_name }}</td>
+                    <td>
+                        @if($c->status == 0 && $user->section->rule != 'JURIST')
+                            <a href="#" class="btn btn-secondary btn-sm js_send_to_jurists_btn" title="Send to Jurist"
+                               data-url="{{ route('contract.update_status_and_send_jurists') }}"
+                               data-id="{{ $c->id }}">
+                                <i class="fas fa-envelope"></i> отправить Юристам
+                            </a>
+                        @else
+                            {{ optional($c->jurist)->full_name }}
+                        @endif
+                    </td>
+                    <td>{{ date('d.m.Y H:i', strtotime($c->created_at)) }}</td>
 
                     <td class="text-right">
                         <div class="d-flex justify-content-around">
-                            
-                            <a href="{{ route('contract.show', [$c->id]) }}" class="text-info" title="Show">
-                                <i class="fas fa-eye mr-50"></i>
-                            </a>
+
+                            @if($user->section->rule != 'JURIST')
+                                @if($c->status == 2 || $c->status == 1)
+                                    <a href="{{ route('contract.show', [$c->id]) }}" class="text-info" title="Show">
+                                        <i class="fas fa-eye mr-50"></i>
+                                    </a>
+                                @endif
+                            @else
+                                <a href="{{ route('contract.show', [$c->id]) }}" class="text-info" title="Show">
+                                    <i class="fas fa-eye mr-50"></i>
+                                </a>
+                            @endif
 
                             @if($user->section->rule != 'JURIST')
 
-                                @if($c->status != 1)
-                                    <a href="{{ route('contract.edit', [$c->id]) }}" class="text-primary"
-                                       title="Edit">
+                                @if($c->status == 0 || $c->status == -1)
+                                    <a href="{{ route('contract.edit', [$c->id]) }}" class="text-primary" title="Edit">
                                         <i class="fas fa-pen mr-50"></i>
                                     </a>
                                 @else
-                                    <a href="javascript:void(0);" class="text-secondary"
-                                       title="Edit">
+                                    <a href="javascript:void(0);" class="text-secondary" title="Edit">
                                         <i class="fas fa-pen mr-50"></i>
                                     </a>
                                 @endif
@@ -85,6 +140,7 @@
                         </div>
                     </td>
                 </tr>
+                @endif
 
             @endforeach
 
@@ -116,46 +172,21 @@
                 autoWidth: true,
                 language: {
                     search: "",
-                    searchPlaceholder: " Search...",
-                },
+                    searchPlaceholder: " Поиск...",
+                    info: "Показано с _START_ по _END_ из _TOTAL_ записей",
+                    paginate: {
+                        first: "Первый",
+                        last: "Последний",
+                        next: "Следующий",
+                        previous: "Предыдущий"
+                    }
+                }
 
-                {{--processing: true,--}}
-                {{--serverSide: true,--}}
-                {{--ajax: {--}}
-                {{--    "url": '{{ route("contract.getContracts") }}',--}}
-                {{--},--}}
-                {{--columns: [--}}
-                {{--    {data: 'DT_RowIndex'},--}}
-                {{--    // {data: 'title'},--}}
-                {{--    // {data: 'number'},--}}
-                {{--    {data: 'status'},--}}
-                {{--    // {data: 'date'},--}}
-                {{--    // {data: 'user'},--}}
-                {{--    // {data: 'jurist'},--}}
-                {{--    {data: 'action', name: 'action', orderable: false, searchable: false}--}}
-                {{--],--}}
-                // initComplete: function () {
-                //     this.api()
-                //         .columns()
-                //         .every(function () {
-                //             let column = this;
-                //             let select = $('<select><option value=""></option></select>')
-                //                 .appendTo($(column.footer()).empty())
-                //                 .on('change', function () {
-                //                     let val = $.fn.dataTable.util.escapeRegex($(this).val());
-                //                     column.search(val ? '^' + val + '$' : '', true, false).draw();
-                //                 });
-                //             column
-                //                 .data()
-                //                 .unique()
-                //                 .sort()
-                //                 .each(function (d, j) {
-                //                     select.append('<option value="' + d + '">' + d + '</option>');
-                //                 });
-                //         });
-                // }
             });
 
+            setInterval(function() {
+                location.reload();
+            }, 100000);
         });
     </script>
 @endsection

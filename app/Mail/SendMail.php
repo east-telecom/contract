@@ -12,16 +12,18 @@ class SendMail extends Mailable
     use Queueable, SerializesModels;
 
     public $url;
-    public $text;
+    public $title;
+    public $content_array;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($url, $text)
+    public function __construct($url, $title, $content_array)
     {
         $this->url = $url;
-        $this->text = $text;
+        $this->title = $title;
+        $this->content_array = $content_array;
     }
 
     /**

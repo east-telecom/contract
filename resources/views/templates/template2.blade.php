@@ -4,10 +4,9 @@
 @section('content')
 
 
-    <section class="app-user-list js_data_all js_data_all_pdf template2">
+    <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="2">
 
         <div class="contract2">
-
 
             <!-- 1 - list -->
             <div class="card contract-text">
@@ -199,7 +198,6 @@
             <!-- 3 - list -->
             <div class="card contract-text">
                 <div>
-
                     <div class="text-right" style="line-height: 1;">
                         <p class="text-bold mb-0">Приложение № 1</p>
                         <p class="mb-0">к договору № <span class="js_number2">900-1195</span></p>
@@ -220,7 +218,7 @@
                     расценок на выполняемые работы по организации новой абонентской линии связи до объекта Заказчика.<br/>
 
 
-                    <table class="table table-bordered contract2-list3-table">
+                    <table class="table table-bordered contract2-list3-table js_table1">
                         <tbody>
                             <tr>
                                 <th>№</th>
@@ -229,19 +227,25 @@
                                 <th class="align-middle">Кол-во</th>
                                 <th class="align-middle">Стоимость работ с учетом НДС, сум</th>
                             </tr>
-                            <tr>
-                                <td>1</td>
+                            <tr class="js_tr_item">
+                                <td class="js_number">1</td>
                                 <td style="line-height: 1; text-align: left; font-size: 16px;">
-                                    <span class="text-bold text-underline">Организация новой абонентской линии СП ООО «Ist Telekom»:*</span>
-                                    <span class="text-bold text_edit" contenteditable="false">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>
+                                    <span class="text_edit text-bold text-underline">Организация новой абонентской линии СП ООО «Ist Telekom»:*</span>
+                                    <span class="text_edit text-bold" contenteditable="false">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>
                                 </td>
-                                <td class="align-middle text-center">линия</td>
-                                <td class="align-middle text-center">1</td>
-                                <td class="align-middle text-center">14 000 000,00</td>
+                                <td class="text_edit align-middle text-center">линия</td>
+                                <td class="text_edit align-middle text-center js_table_count_total">1</td>
+                                <td class="text_edit align-middle text-center js_table_sena_total">14 000 000</td>
+                                <td class="position-absolute add-tr-btns d-none">
+                                    <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr_no_group" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                </td>
                             </tr>
-                            <tr>
+                            <tr class="js_tr_total">
                                 <td colspan="4" class="text-left">ИТОГО</td>
-                                <td class="text-bold align-middle text-center">14 000 000,00</td>
+                                <td class="text-bold align-middle text-center js_table_sum_all">14 000 000</td>
+                                <td class="position-absolute add-tr-btns d-none">
+                                    <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr_no_group" title="add row"><i class="fas fa-plus"></i></a>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -276,6 +280,9 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+
 @endsection
 
 
@@ -285,21 +292,32 @@
 
         $(document).ready(function() {
 
-            $(document).on('click', '.js_text_save_btn', function (e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
                 e.preventDefault();
 
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html()
-                let title = $('.js_title2').html()
-                let data = $('.js_data_all').html()
+                afer_save_add_d_none_template()
+                
+                let form    = $(this);
+                let number  = $('.js_number').html();
+                let title   = $('.js_title1').html();
+                let data    = $('.js_data_all').html();
+                let template_number = $('.js_data_all_pdf').data('template_number')
+
+                form.find('.js_hidden_number').val(number);
+                form.find('.js_hidden_title').val(title);
+                form.find('.js_hidden_data').val(data);
+                form.find('.js_hidden_template_class').val(template_number);
 
                 $.ajax({
-                    url: '{{ route('templates.store') }}',
+                    url: '{{ route('contract.store') }}',
                     type: 'POST',
-                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template2' },
+                    data: new FormData(this),
                     dataType: 'JSON',
+                    contentType: false,
+                    // cache: false,
+                    processData: false,
                     success: (response) => {
-                        // console.log('res: ', response)
+                        // console.log('res: ', response);
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
                     },
                     error: (response) => {

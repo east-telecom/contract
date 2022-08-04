@@ -25,7 +25,8 @@ class Contract extends Model
         'updated_at',
         'deleted_at',
         'comment',
-        'class',
+        'template_number',
+        'files',
     ];
 
 

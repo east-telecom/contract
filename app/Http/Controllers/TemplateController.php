@@ -10,9 +10,10 @@ use App\Http\Controllers\MailController;
 
 class TemplateController extends Controller
 {
-    // 0-send jurist; Yurisatga jo'natildi
-    // -1-jurist no; Userga kirganda xabar chiqishi kerak
-    // 1-jurist yes; Userga pdfni saqlash imkoni hosil bo'lishi kerak
+    // 0 - yangi yaratildi; Yuristga jo'natishga tayyor
+    // 1 - send jurist; Yurisatga jo'natildi
+    // -1 - jurist no;
+    // 2 - jurist yes;
 
 
     public function template1()
@@ -74,48 +75,6 @@ class TemplateController extends Controller
         return view('templates.template11');
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $error = Validator::make($request->all(), [
-            'number'=> 'required',
-            'title' => 'required',
-            'data'  => 'required'
-        ]);
-
-        if ($error->fails()) {
-            return response()->json(array(
-                'success' => false,
-                'errors' => $error->getMessageBag()->toArray()
-            ));
-        }
-        else {
-            try {
-                $id = Contract::insertGetId([
-                    'user_id' => Auth::user()->id,
-                    'number'  => $request->number,
-                    'title'   => $request->title,
-                    'data'    => $request->data,
-                    'status'  => 0,
-                    'class'   => $request->class,
-                ]);
-
-                // send mail to Jurist
-                MailController::sendMail('i.maxmudov@etc.uz', $id, 'Tekshirib bering iltimos!');
-
-                return response()->json(['status' => true, 'msg' => 'ok']);
-
-            } catch (\Exception $exception) {
-                return response()->json(['status' => false, 'errors' => $exception->getMessage()]);
-            }
-        }
-    }
 
 
 

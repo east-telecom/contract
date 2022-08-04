@@ -1,5 +1,6 @@
 .app-content {
-    background: #cecdcf;
+    background: #cecdcfbf!important;
+    border: 2px solid red;
 }
 
 .contract-number-btn-group {
@@ -44,6 +45,7 @@ h4 {
 span.text_edit {
     line-height: 1;
 }
+
 
 .text-underline {
     text-decoration: underline;
@@ -112,4 +114,58 @@ span.text_edit {
 .table .td-span {
     text-align:  center;
     font-size: 8.5pt!important;
+}
+
+
+/** file uploader **/
+
+.file-uploaded-div {
+    max-width: 1030px !important;
+    margin: 5px auto;
+}
+
+
+.add-tr-btns {
+    display: flex;
+    padding: 1px 3px !important;
+}
+
+
+
+
+/** horizontal table icons **/
+
+.horizontal-table-icons {
+    position: absolute;
+    left: 100%;
+    top: 21.5%;
+}
+.horizontal-table-icons tr td {
+    padding: 2pt !important;
+}
+
+.horizontal-table-icons tr td:hover {
+    background: lightgreen;
+    cursor: pointer;
+}
+
+
+/** table in ul word icons **/
+
+.ul-word-icons{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    left: -43%;
+    top: 1px;
+}
+.ul-word-icons li {
+    border: 1px solid red;
+    padding: 3px 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ul-word-icons li:hover {
+    background: lightgreen;
 }

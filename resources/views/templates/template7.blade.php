@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf template7">
+    <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="7">
 
         <div class="contract7">
 
@@ -361,7 +361,19 @@
                     <span class="js_date_year_static">2019</span>г. <br/>
 
                     <p class="text-bold text-center mt-4">Ежемесячные платежи за услуги *</p>
-                    <table class="table">
+
+                    <div class="create_tarif_tr1 d-none mt-2 mb-3">
+                        <select name="tarif_tr1" class="form-control col-md-3 js_tarif_select1">
+                            <option value="">---</option>
+                            <option value="sip_trunc">SIP TRUNK</option>
+                            <option value="phone">ТЕЛЕФОНИЯ</option>
+                            <option value="internet">ИНТЕРНЕТ</option>
+                            <option value="vpn">VPN</option>
+                        </select>
+                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">add</button>
+                    </div>
+
+                    <table class="table js_add_tarif_to_table1">
                         <tr>
                             <th>№</th>
                             <th>Наименование платежей</th>
@@ -370,12 +382,12 @@
                             <th>Кол- во</th>
                             <th>Стоимость, сум*</th>
                         </tr>
-                        <tr>
-                            <td colspan="6">1. &ensp;&ensp;&ensp;  ИНТЕРНЕТ</td>
+                        <tr class="js_tr_group js_tarif_internet">
+                            <td colspan="6"><b>1</b>. &ensp;&ensp;&ensp;  ИНТЕРНЕТ</td>
                         </tr>
-                        <tr>
-                            <td>1.1</td>
-                            <td>
+                        <tr class="js_tr_item">
+                            <td class="text_edit js_item_number"><b>1.1</b></td>
+                            <td class="text_edit">
                                 <p class="mb-0 text-underline">Абонентская плата** «BIZNES OPTIMA 15»</p>
                                 Доступ к глобальной сети Интернет на скорости <b>15 Мбит/с</b> неограничен <br>
                                 По данному тарифному плану вводится ограничение по времени с <b>07:00 до 18:59</b> <br>
@@ -383,22 +395,30 @@
                                 По данному тарифному плану вводится ограничение по времени с 19:00 до 06:59
                                 Доступ к ресурсам  Tas-Ix на скорости 15 Мбит/с неограничен
                             </td>
-                            <td>точка</td>
-                            <td>550 000</td>
-                            <td>1</td>
-                            <td>550  000</td>
+                            <td class="text_edit">точка</td>
+                            <td class="text_edit js_table_sena">550 000</td>
+                            <td class="text_edit js_table_count">1</td>
+                            <td class="text_edit js_table_sum_all">550 000</td>
+                            <td class="position-absolute add-tr-btns d-none">
+                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr d-none ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td>1.2</td>
-                            <td>
+                        <tr class="js_tr_item">
+                            <td class="text_edit js_item_number"><b>1.2</b></td>
+                            <td class="text_edit">
                                 <span class="text-bold text-underline">1.2 Абонентская плата**</span> согласно тарифному плану <b>«Интернет – 2/10  Мбит/с»</b>
                                 Доступ  к сети  Интернет на скорости-  2Мбит/с   неограничен
                                 Доступ к ресурсам сети  TAS-IX на скорости -   10 Мбит/с неограничен
                             </td>
-                            <td><b>точка</b></td>
-                            <td><b>200 000</b></td>
-                            <td><b>1</b></td>
-                            <td><b>200 000</b></td>
+                            <td>точка</td>
+                            <td class="text_edit js_table_sena">200 000</td>
+                            <td class="text_edit js_table_count">1</td>
+                            <td class="text_edit js_table_sum_all">200 000</td>
+                            <td class="position-absolute add-tr-btns d-none">
+                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                            </td>
                         </tr>
                     </table>
 
@@ -533,6 +553,10 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+
+
 @endsection
 
 
@@ -541,21 +565,32 @@
     <script>
         $(document).ready(function () {
 
-            $(document).on('click', '.js_text_save_btn', function (e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
                 e.preventDefault();
 
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html()
-                let title = $('.js_title4').html()
-                let data = $('.js_data_all').html()
+                afer_save_add_d_none_template()
+                
+                let form    = $(this);
+                let number  = $('.js_number').html();
+                let title   = $('.js_title1').html();
+                let data    = $('.js_data_all').html();
+                let template_number = $('.js_data_all_pdf').data('template_number');
+                
+                form.find('.js_hidden_number').val(number);
+                form.find('.js_hidden_title').val(title);
+                form.find('.js_hidden_data').val(data);
+                form.find('.js_hidden_template_class').val(template_number);
 
                 $.ajax({
-                    url: '{{ route('templates.store') }}',
+                    url: '{{ route('contract.store') }}',
                     type: 'POST',
-                    data: {'_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template7'},
+                    data: new FormData(this),
                     dataType: 'JSON',
+                    contentType: false,
+                    // cache: false,
+                    processData: false,
                     success: (response) => {
-                        // console.log('res: ', response)
+                        // console.log('res: ', response);
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
                     },
                     error: (response) => {

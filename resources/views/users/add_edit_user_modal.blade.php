@@ -2,7 +2,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="myModalLabel33">Add User</h4>
+                <h4 class="modal-title" id="myModalLabel33">Добавить пользователя</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -14,7 +14,7 @@
                     <div class="row">
 
                         <div class="col-md-6 form-group">
-                            <label for="section">Section *</label>
+                            <label for="section">Отдел *</label>
                             <select name="section_id" class="form-control js_section" id="section">
                                 @foreach($section as $s)
                                     <option value="{{ $s->id }}">
@@ -32,20 +32,20 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="full_name">Full Name *</label>
+                            <label for="full_name">ФИО *</label>
                             <input type="text" name="full_name" class="form-control js_full_name" id="full_name" />
                             <div class="invalid-feedback">The full name field is required.</div>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="prefix">Phone</label>
+                            <label for="prefix">Телефон</label>
                             <input type="text" name="phone" class="form-control js_phone phone-mask" id="prefix" placeholder="+998901234567" />
                             <div class="invalid-feedback">The phone field is required.</div>
                         </div>
 
 
                         <div class="col-md-6 form-group">
-                            <label for="status">Status *</label>
+                            <label for="status">Статус *</label>
                             <select name="status" id="status" class="form-control js_status">
                                 <option value="1">Active</option>
                                 <option value="0">No active</option>
@@ -53,13 +53,13 @@
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="email">Email *</label>
+                            <label for="email">Эл. адрес *</label>
                             <input type="text" name="email" class="form-control js_email" id="email" placeholder="a.admin@etc.uz" />
                             <div class="invalid-feedback">The email field is required.</div>
                         </div>
 
                         <div class="col-md-6 form-group">
-                            <label for="password">Password *</label>
+                            <label for="password">Пароль *</label>
                             <input type="text" name="password" class="form-control js_password" id="password" />
                             <div class="invalid-feedback">The password field is required.</div>
                         </div>
@@ -67,8 +67,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary" name="saveBtn">Save</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary" name="saveBtn">Сохранять</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отмена</button>
                 </div>
             </form>
         </div>

@@ -2,15 +2,16 @@
 
 @section('content')
 
-    <div class="btn-group-vertical contract-number-btn-group js_btn_list_number d-none" role="group" aria-label="lists btn">
-        <button type="button" class="btn btn-outline-primary" data-number="1">- 1 -</button>
-        <button type="button" class="btn btn-outline-primary" data-number="2">- 2 -</button>
-        <button type="button" class="btn btn-outline-primary" data-number="3">- 3 -</button>
-        <button type="button" class="btn btn-outline-primary" data-number="4">- 4 -</button>
-        <button type="button" class="btn btn-outline-primary" data-number="5">- 5 -</button>
-    </div>
+{{--    <div class="btn-group-vertical contract-number-btn-group js_btn_list_number d-none" role="group" aria-label="lists btn">--}}
+{{--        <button type="button" class="btn btn-outline-primary" data-number="1">- 1 -</button>--}}
+{{--        <button type="button" class="btn btn-outline-primary" data-number="2">- 2 -</button>--}}
+{{--        <button type="button" class="btn btn-outline-primary" data-number="3">- 3 -</button>--}}
+{{--        <button type="button" class="btn btn-outline-primary" data-number="4">- 4 -</button>--}}
+{{--        <button type="button" class="btn btn-outline-primary" data-number="5">- 5 -</button>--}}
+{{--    </div>--}}
 
-    <section class="app-user-list js_data_all js_data_all_pdf template1">
+
+    <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="1">
 
         <div class="contract1">
 
@@ -483,12 +484,14 @@
 
                 <p class="text-center text-bold mt-1 mb-1">Единовременные платежи за услуги *</p>
 
-                <div class="create_tarif_tr1 d-flex mt-2 mb-3">
-                    <select name="tarif_tr" class="form-control col-md-3 js_tarif_select1">
+                <div class="create_tarif_tr1 d-none mt-2 mb-3">
+                    <select name="tarif_tr1" class="form-control col-md-3 js_tarif_select1">
                         <option value="">---</option>
                         <option value="sip_trunc">SIP TRUNK</option>
                         <option value="phone">ТЕЛЕФОНИЯ</option>
                         <option value="internet">ИНТЕРНЕТ</option>
+                        <option value="abonet">АБОНЕНТСКАЯ ЛИНИЯ</option>
+                        <option value="vpn">VPN</option>
                     </select>
                     <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">add</button>
                 </div>
@@ -506,46 +509,91 @@
                    </thead>
                     <tbody>
                        <tr class="js_tr_group js_tarif_sip_trunc">
-                           <td colspan="6" class="text-bold">1. &emsp; &emsp; SIP TRUNK</td>
+                           <td colspan="6" class="text-bold"><b>1</b>. &emsp; &emsp; SIP TRUNK</td>
                        </tr>
-                        <tr>
-                            <td>1.1</td>
-                            <td>Регистрационная плата за инсталляцию порта SIP TRUNK</td>
+                        <tr class="js_tr_item">
+                            <td class="text_edit js_item_number"><b>1.1</b></td>
+                            <td class="js_table_text position-relative">
+                                <span class="text_edit td-span-text">Регистрационная плата за инсталляцию порта SIP TRUNK</span>
+                                <ul class="ul-word-icons d-none">
+                                    <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                    <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                    <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                    <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                                </ul>
+                            </td>
                             <td>порт</td>
-                            <td>4 210 000.0</td>
-                            <td>1</td>
-                            <td>4 210 000.0</td>
+                            <td class="text_edit js_table_sena">4 210 000</td>
+                            <td class="text_edit js_table_count">1</td>
+                            <td class="text-bold js_table_sum_all">4 210 000</td>
+                            <td class="position-absolute add-tr-btns d-none">
+                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr d-none ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                            </td>
                         </tr>
-                       <tr>
-                           <td>1.2</td>
-                           <td>Регистрационная плата за установку основного телефона</td>
+                       <tr class="js_tr_item">
+                           <td class="text_edit js_item_number"><b>1.2</b></td>
+                           <td class="js_table_text position-relative">
+                               <span class="text_edit td-span-text">Регистрационная плата за установку основного телефона</span>
+                               <ul class="ul-word-icons d-none">
+                                   <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                   <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                   <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                   <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                               </ul>
+                           </td>
                            <td>номер</td>
-                           <td>126 300.0</td>
-                           <td>1</td>
-                           <td>126 300.0</td>
+                           <td class="text_edit js_table_sena">126 300</td>
+                           <td class="text_edit js_table_count">1</td>
+                           <td class="text-bold js_table_sum_all">126 300</td>
+                           <td class="position-absolute add-tr-btns d-none">
+                               <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                               <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr d-none ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                           </td>
                        </tr>
-                       <tr>
-                           <td>1.3</td>
-                           <td>Плата за выбор номера</td>
+                       <tr class="js_tr_item">
+                           <td class="text_edit js_item_number"><b>1.3</b></td>
+                           <td class="js_table_text position-relative">
+                               <span class="text_edit td-span-text">Плата за выбор номера</span>
+                               <ul class="ul-word-icons d-none">
+                                   <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                   <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                   <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                   <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                               </ul>
+                           </td>
                            <td>номер</td>
-                           <td>2 800 000.0</td>
-                           <td>1</td>
-                           <td>2 800 000.0</td>
+                           <td class="text_edit js_table_sena">2 800 000</td>
+                           <td class="text_edit js_table_count">1</td>
+                           <td class="text-bold js_table_sum_all">2 800 000</td>
+                           <td class="position-absolute add-tr-btns d-none">
+                               <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                               <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                           </td>
                        </tr>
 
                        <tr class="js_tr_group js_tarif_phone">
-                           <td colspan="6" class="text-bold">2. &emsp; &emsp; ТЕЛЕФОНИЯ</td>
+                           <td colspan="6" class="text-bold"><b>2</b>. &emsp; &emsp; ТЕЛЕФОНИЯ</td>
                        </tr>
-                       <tr>
-                           <td>2.1</td>
-                           <td>
-                               <span class="text_edit">Абонентская плата**</span> <br/>
-                               <span class="text_edit">согласно тарифному плану «Country Free»***</span>
+                       <tr class="js_tr_item">
+                           <td class="text_edit js_item_number"><b>2.1</b></td>
+                           <td class="js_table_text position-relative">
+                               <span class="text_edit td-span-text"><b>Абонентская плата**</b> <br/> согласно тарифному плану <b>«Country Free»***</b></span>
+                               <ul class="ul-word-icons d-none">
+                                   <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                   <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                   <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                   <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                               </ul>
                            </td>
                            <td>номер</td>
-                           <td>50 500.0</td>
-                           <td>1</td>
-                           <td>50 500 000.0</td>
+                           <td class="text_edit js_table_sena">50 500</td>
+                           <td class="text_edit js_table_count">1</td>
+                           <td class="tex-bold js_table_sum_all">50 500</td>
+                           <td class="position-absolute add-tr-btns d-none">
+                               <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                               <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                           </td>
                        </tr>
 
                    </tbody>
@@ -553,14 +601,16 @@
 
                 <p class="text-center text-bold mt-2 mb-1">Ежемесячные платежи за услуги *</p>
 
-                <div class="create_tarif_tr d-flex mt-2 mb-3">
-                    <select name="tarif_tr2" class="form-control col-md-3 ">
+                <div class="create_tarif_tr2 d-none mt-2 mb-3">
+                    <select name="tarif_tr2" class="form-control col-md-3 js_tarif_select2">
                         <option value="">---</option>
                         <option value="sip_trunc">SIP TRUNK</option>
                         <option value="phone">ТЕЛЕФОНИЯ</option>
                         <option value="internet">ИНТЕРНЕТ</option>
+                        <option value="abonet">АБОНЕНТСКАЯ ЛИНИЯ</option>
+                        <option value="vpn">VPN</option>
                     </select>
-                    <button type="button" class="ml-2 btn btn-secondary">add</button>
+                    <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table2">add</button>
                 </div>
 
                 <table class="table table-bordered js_add_tarif_to_table2 mb-1 list4-table">
@@ -575,33 +625,52 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td colspan="6"><b>1. &emsp;&emsp; SIP TRUNK</b></td>
+                        <tr class="js_tr_group js_tarif_sip_trunc">
+                            <td colspan="6" class="text-bold"><b>1</b>. &emsp;&emsp; SIP TRUNK</td>
                         </tr>
-                        <tr>
-                            <td>1.1</td>
-                            <td>
-                                Абонентская плата ** <br/>
-                                за одну группу из <span class="text_edit">10</span> каналов SIP TRUNK
+                        <tr class="js_tr_item">
+                            <td class="text_edit js_item_number"><b>1.1</b></td>
+                            <td class="js_table_text position-relative">
+                                <span class="text_edit td-span-text"><b>Абонентская плата**</b> <br/> за одну группу из 10 каналов SIP TRUNK</span>
+                                <ul class="ul-word-icons d-none">
+                                    <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                    <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                    <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                    <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                                </ul>
                             </td>
-                            <td>группа</td>
-                            <td>336 800,0</td>
-                            <td>1</td>
-                            <td>336 800.0</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6"><b>2. &emsp;&emsp; ТЕЛЕФОНИЯ</b></td>
-                        </tr>
-                        <tr>
-                            <td>2.1</td>
-                            <td>
-                                <span class="text_edit">Абонентская плата**</span> <br/>
-                                <span class="text_edit">согласно тарифному плану «Country Free»***</span>
+                            <td class="text-center">группа</td>
+                            <td class="text-center text_edit js_table_sena">336 800</td>
+                            <td class="text-center text_edit js_table_count">1</td>
+                            <td class="text-center js_table_sum_all">336 800</td>
+                            <td class="position-absolute add-tr-btns d-none">
+                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
                             </td>
-                            <td>номер</td>
-                            <td>50 500.0</td>
-                            <td>1</td>
-                            <td>50 500 000.0</td>
+                        </tr>
+                        <tr class="js_tr_group js_tarif_phone">
+                            <td colspan="6" class="text-bold"><b>2</b>. &emsp;&emsp; ТЕЛЕФОНИЯ</td>
+                        </tr>
+                        <tr class="js_tr_item">
+                            <td class="text_edit js_item_number"><b>2.1</b></td>
+                            <td class="js_table_text position-relative">
+                                <span class="text_edit td-span-text"><b>Абонентская плата**</b> <br/> согласно тарифному плану «Country Free»***</span>
+                                <ul class="ul-word-icons d-none">
+                                    <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                    <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                    <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                    <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                                </ul>
+                            </td>
+
+                            <td class="text-center">номер</td>
+                            <td class="text-center text_edit js_table_sena">50 500</td>
+                            <td class="text-center text_edit js_table_count">1</td>
+                            <td class="text-center js_table_sum_all">50 500</td>
+                            <td class="position-absolute add-tr-btns d-none">
+                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
@@ -725,27 +794,41 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+
+
 @endsection
 
 
 @section('script')
     <script>
-
         $(document).ready(function() {
 
-            $(document).on('click', '.js_text_save_btn', function (e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
                 e.preventDefault();
 
-                let token   = $('meta[name="csrf-token"]').attr('content');
+                afer_save_add_d_none_template()
+
+                let form    = $(this);
                 let number  = $('.js_number').html();
                 let title   = $('.js_title1').html();
                 let data    = $('.js_data_all').html();
+                let template_number = $('.js_data_all_pdf').data('template_number')
+
+                form.find('.js_hidden_number').val(number);
+                form.find('.js_hidden_title').val(title);
+                form.find('.js_hidden_data').val(data);
+                form.find('.js_hidden_template_class').val(template_number);
 
                 $.ajax({
-                    url: '{{ route('templates.store') }}',
+                    url: '{{ route('contract.store') }}',
                     type: 'POST',
-                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template1' },
+                    data: new FormData(this),
                     dataType: 'JSON',
+                    contentType: false,
+                    // cache: false,
+                    processData: false,
                     success: (response) => {
                         // console.log('res: ', response);
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
@@ -755,20 +838,6 @@
                     }
                 })
             });
-
-
-            $(document).on('click', '.js_btn_list_number .btn', function() {
-                let number = $(this).data('number');
-
-                // list_show_(number)
-                let card = $('.card:nth-child('+number+')');
-
-                if(card) {
-                    window.scrollTo(0, number*'100%');
-                    console.log('222')
-                }
-
-            })
 
         });
 

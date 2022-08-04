@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 
-
 @section('content')
 
     <a href="{{ route('contract.index') }}" class="back-btn-icon" title="go back"><i class="fas fa-long-arrow-alt-left"></i></a>
@@ -12,178 +11,86 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+
 @endsection
 
 
 @section('script')
-
     <script>
 
-        function select_date_month_fun_edit() {
-            // 1
-            $('.js_select_data_month1').removeClass('d-none');
-            $('.js_span_date_month1').addClass('d-none');
+        let files = '{{ $contract->files }}'.replaceAll('&quot;', '"');
+        files = JSON.parse(files);
 
-            // 2
-            $('.js_select_data_month2').removeClass('d-none');
-            $('.js_span_date_month2').addClass('d-none')
+        let arrayFiles = [], hidden_files = [];
+        files.forEach( (file, id) => {
+            arrayFiles[id] = "https://contract.etc-network.uz/file_uploaded/"+file;
+            // option_files[id] = { filename: file, downloadUrl: "https://contract.etc-network.uz/file_uploaded/"+file, key: id}
+            hidden_files[id] = file;
+        });
+
+        $('.js_hidden_files').val(hidden_files);
+
+
+        // file uploaded
+        $('#inp-add-2').fileinput({
+            uploadUrl: '#',
+            allowedFileExtensions: ['jpg', 'jpeg', 'png', 'pdf'],
+            initialPreviewAsData: true,
+            initialPreview: arrayFiles,
+            // initialPreviewConfig: [ option_files ],
+        });
+
+
+        $('.fileinput-upload-button').addClass('d-none');
+        $('.fileinput-remove-button').removeClass('btn-outline-secondary').addClass('btn-secondary');
+
+        let upload_btn = $('.kv-file-upload');
+        if(!upload_btn.hasClass('d-none')) {
+            setInterval(function() {
+                $('.kv-file-upload').addClass('d-none');
+                $('.kv-file-rotate').addClass('d-none');
+            }, 1000);
         }
-
-        function select_date_month_fun_save() {
-            // 1
-            let select_month1 = $('.js_select_data_month1');
-            let span_month1 = $('.js_span_date_month1');
-
-            select_month1.addClass('d-none');
-            span_month1.html(select_month1.val());
-            span_month1.removeClass('d-none');
-
-            // 2
-            let select_month2 = $('.js_select_data_month2');
-            let span_month2 = $('.js_span_date_month2');
-
-            select_month2.addClass('d-none');
-            span_month2.html(select_month2.val());
-            span_month2.removeClass('d-none')
-        }
-
-
-        function create_div(number, response) {
-            let tin_div;
-            if(number == 1)
-                tin_div = $('.js_tin_div1');
-            else
-                tin_div = $('.js_tin_div2');
-
-            tin_div.find('.js_name').html('<b>'+response.name+'</b>').css('color', 'blue');
-            tin_div.find('.js_address').html(response.address).css('color', 'blue');
-            tin_div.find('.js_account').html(response.account).css('color', 'blue');
-            tin_div.find('.js_mfo').html(response.mfo).css('color', 'blue');
-            tin_div.find('.js_oked').html(response.oked).css('color', 'blue');
-            tin_div.find('.js_tin').html(response.tin).css('color', 'blue');
-            tin_div.find('.js_director').html(response.director).css('color', 'blue')
-        }
-
-
-        $(document).ready(function() {
-
-            // edit btn
-            $(document).on('click', '.js_text_edit_btn', function (e) {
-                $('.js_div_form').removeClass('d-none');
-
-                $(this).siblings('.btn').removeClass('d-none');
-                $(this).addClass('d-none');
-
-                $('.text_edit').attr('contenteditable', true);
-
-                select_date_month_fun_edit()
-            });
-
-            // save btn
-            $(document).on('click', '.js_text_save_btn', function (e) {
-                $(this).siblings('.js_text_edit_btn').removeClass('d-none');
-                $(this).siblings('.js_text_cancel_btn').addClass('d-none');
-                $(this).addClass('d-none');
-
-                $('.js_div_form').addClass('d-none')
-
-                $('.text_edit').attr('contenteditable', false)
-
-                select_date_month_fun_save()
-            });
-
-
-            // cancel btn
-            $(document).on('click', '.js_text_cancel_btn', function (e) {
-                $(this).siblings('.js_text_edit_btn').removeClass('d-none')
-                $(this).siblings('.js_text_save_btn').addClass('d-none')
-                $(this).addClass('d-none');
-
-                $('.js_div_form').addClass('d-none')
-
-                $('.text_edit').attr('contenteditable', false)
-                location.reload();
-            });
+        $('.btn-file .hidden-xs').addClass('ml-2').html('file upload');
 
 
 
+        $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
+            e.preventDefault();
 
-            // tin from
-            $(document).on('click', '.js_tin_btn', function(e) {
-                e.preventDefault()
+            afer_save_add_d_none_template()
 
-                let number = $('.js_tin_number').val()
-                let tin = $('.js_tin_input').val()
-                if(tin.length == 9) {
-                    let url = "https://api.e-invoice.uz/api/ru/rouming/bytin/"+tin
-                    $.ajax({
-                        type: 'GET',
-                        url: url,
-                        dataType: 'JSON',
-                        success: (response) => {
-                            console.log('res: ', response)
-                            create_div(number, response)
-                        },
-                        error: (response) => {
-                            console.log('error: ', response)
-                        }
-                    })
+            let form    = $(this);
+            let number  = $('.js_number').html();
+            let title   = $('.js_title1').html();
+            let data    = $('.js_data_all').html();
+
+            form.find('.js_hidden_number').val(number);
+            form.find('.js_hidden_title').val(title);
+            form.find('.js_hidden_data').val(data);
+            form.append('<input type="hidden" name="_method" value="PUT">');
+
+            $.ajax({
+                url: '{{ route('contract.update', [$contract->id]) }}',
+                type: 'POST',
+                data: new FormData(this),
+                dataType: 'JSON',
+                contentType: false,
+                // cache: false,
+                processData: false,
+                success: (response) => {
+                    // console.log('res: ', response);
+                    window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
+                },
+                error: (response) => {
+                    console.log('error: ', response)
                 }
-                else {
-                    alert('Tin error!')
-                }
-            })
-
-            /* summa  */
-            $(document).on('focusout', '.js_sum', function () {
-
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let sum = $(this).html()
-                sum = sum.replaceAll(' ', '')
-                let sum_text = $('.js_sum_text')
-
-                $.ajax({
-                    url: '{{ route("sum_text") }}',
-                    type: 'POST',
-                    data: { '_token': token, 'sum': sum },
-                    dataType: 'JSON',
-                    success: (response) => {
-                        console.log('res: ', response)
-                        sum_text.html(response.many_text)
-                    },
-                    error: (response) => {
-                        console.log('error: ', response)
-                    }
-                })
-            });
-            /* ./summa  */
-
-
-            $(document).on('click', '.js_text_save_btn', function (e) {
-                e.preventDefault();
-
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html()
-                let data = $('.js_data_all').html()
-
-
-                console.log('number: ', number)
-                $.ajax({
-                    url: '{{ route('contract.update', [$contract->id]) }}',
-                    type: 'POST',
-                    data: { '_token': token, 'number': number, 'data': data, '_method': 'PUT' },
-                    dataType: 'JSON',
-                    success: (response) => {
-                        // console.log('res: ', response)
-                        window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
-                    },
-                    error: (response) => {
-                        console.log('error: ', response)
-                    }
-                })
-
             })
         });
+        
+
 
     </script>
 @endsection

@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf template3">
+    <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="3">
 
         <div class="contract3">
 
@@ -165,30 +165,44 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+    
+
 @endsection
 
 
 @section('script')
 
-    <script src="{{ asset('js/template_function.js') }}"></script>
     <script>
         $(document).ready(function() {
 
-            $(document).on('click', '.js_text_save_btn', function (e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
                 e.preventDefault();
 
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html()
-                let title = 'Договор На Уступки';
-                let data = $('.js_data_all').html()
+                afer_save_add_d_none_template()
+
+                let form    = $(this);
+                let number  = $('.js_number').html();
+                let title   = $('.js_title3').html();
+                let data    = $('.js_data_all').html();
+                let template_number = $('.js_data_all_pdf').data('template_number')
+                
+                form.find('.js_hidden_number').val(number);
+                form.find('.js_hidden_title').val(title);
+                form.find('.js_hidden_data').val(data);
+                form.find('.js_hidden_template_class').val(template_number);
 
                 $.ajax({
-                    url: '{{ route('templates.store') }}',
+                    url: '{{ route('contract.store') }}',
                     type: 'POST',
-                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template3' },
+                    data: new FormData(this),
                     dataType: 'JSON',
+                    contentType: false,
+                    // cache: false,
+                    processData: false,
                     success: (response) => {
-                        // console.log('res: ', response)
+                        // console.log('res: ', response);
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
                     },
                     error: (response) => {

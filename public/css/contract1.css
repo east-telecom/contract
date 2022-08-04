@@ -88,4 +88,9 @@
     border: 1px solid darkgray;
 }
 
+.contract1 .ul-word-icons{
+    position: absolute;
+    left: -56%;
+    top: 1px;
+}
 

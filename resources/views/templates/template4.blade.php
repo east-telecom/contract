@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf template4">
+    <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="4">
 
         <div class="contract4">
             
@@ -242,8 +242,8 @@
                         <th class="align-middle">Порт оборудования<br/> Арендодателя</th>
                     </tr>
                     <tr>
-                        <td class="align-middle text-center">1</td>
-                        <td class="align-middle text-center">1</td>
+                        <td class="align-middle text-center js_number">1</td>
+                        <td class="align-middle text-center"><span class="text_edit">1</span></td>
                         <td class="align-middle">
                             <span class="text_edit">г.Ташкент, Мирзо-Улугбекский р-н, улица </span><br/>
                             <span class="text_edit">Зиёлилар, дом 9 (10277) - г.Ташкент, АТС 241</span>
@@ -254,6 +254,10 @@
                         <td class="align-middle text-center"><span class="text_edit">75 000,00</span></td>
                         <td class="align-middle text-center"><span class="text_edit">1 000 000,0</span></td>
                         <td class="align-middle text-center"><span class="text_edit">Ethernet</span></td>
+                        <td class="position-absolute add-tr-btns d-none">
+                            <a href="javascript:void(0);" class="btn btn-danger btn-sm js_template4_icon_remove_tr d-none" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-info btn-sm js_template4_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                        </td>
                     </tr>
                 </table>
 
@@ -281,6 +285,10 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+
+
 @endsection
 
 
@@ -289,21 +297,32 @@
     <script>
         $(document).ready(function() {
 
-            $(document).on('click', '.js_text_save_btn', function (e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
                 e.preventDefault();
 
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html();
-                let title = $('.js_title4').html();
-                let data = $('.js_data_all').html();
+                afer_save_add_d_none_template()
+
+                let form    = $(this);
+                let number  = $('.js_number').html();
+                let title   = $('.js_title1').html();
+                let data    = $('.js_data_all').html();
+                let template_number = $('.js_data_all_pdf').data('template_number')
+                
+                form.find('.js_hidden_number').val(number);
+                form.find('.js_hidden_title').val(title);
+                form.find('.js_hidden_data').val(data);
+                form.find('.js_hidden_template_class').val(template_number);
 
                 $.ajax({
-                    url: '{{ route('templates.store') }}',
+                    url: '{{ route('contract.store') }}',
                     type: 'POST',
-                    data: { '_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template4' },
+                    data: new FormData(this),
                     dataType: 'JSON',
+                    contentType: false,
+                    // cache: false,
+                    processData: false,
                     success: (response) => {
-                        // console.log('res: ', response)
+                        // console.log('res: ', response);
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
                     },
                     error: (response) => {

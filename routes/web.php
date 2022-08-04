@@ -40,7 +40,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/template10', [TemplateController::class, 'template10'])->name('template10');
         Route::get('/template11', [TemplateController::class, 'template11'])->name('template11');
 
-        Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
+//        Route::post('/template-store', [TemplateController::class, 'store'])->name('templates.store');
         Route::post('/template/sum_text', [TemplateController::class, 'sum_text'])->name('sum_text');
     });
     /******************** ./Template *********************/
@@ -48,10 +48,13 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
 
     /******************** Contract *************************/
     Route::group(['prefix' => '/'], function() {
-        Route::resource('/contract', ContractController::class)->except(['create', 'store', 'show']);
+        Route::resource('/contract', ContractController::class)->except(['create', 'show']);
         Route::get('/contract/{contract}/create-pdf', [ContractController::class, 'show'])->name('contract.show');
 
-        Route::post('/contract/update-status/', [ContractController::class, 'update_status'])->name('contract.update_status');
+        Route::post('/contract/update-status-jurists/', [ContractController::class, 'update_status_and_send_jurists'])->name('contract.update_status_and_send_jurists');
+        Route::post('/contract/update-status-employee/', [ContractController::class, 'update_status_and_send_employee'])->name('contract.update_status_and_send_employee');
+
+        Route::post('/contract/file-download/', [ContractController::class, 'files_download'])->name('files_download');
     });
     /******************** ./Contract *********************/
 

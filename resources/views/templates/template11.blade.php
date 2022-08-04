@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <section class="app-user-list js_data_all js_data_all_pdf template11">
+    <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="11">
 
         <div class="contract11">
 
@@ -363,73 +363,104 @@
 
 
 
-                    <p class="text-center text-bold mt-1 mb-1">Единовременные платежи за услуги *</p>
+{{--                    <p class="text-center text-bold mt-1 mb-1">Единовременные платежи за услуги *</p>--}}
 
-                    <table class="table table-bordered contract10-list2-table1">
-                        <tr>
-                            <th>№</th>
-                            <th>Наименование платежей</th>
-                            <th>Ед. измер.</th>
-                            <th>Цена*</th>
-                            <th>Кол- во</th>
-                            <th>Стоимость*</th>
-                        </tr>
-                        <tr>
-                            <td colspan="6"><b>1. &nbsp;&emsp; АБОНЕНТСКАЯ ЛИНИЯ:</b></td>
-                        </tr>
-                        <tr>
-                            <td>1.1</td>
-                            <td>Плата за перенос абонентской линии на другой адрес (ул. А.Шерозий,  дом№9)</td>
-                            <td>линия</td>
-                            <td>84 200</td>
-                            <td>1</td>
-                            <td>84 200</td>
-                        </tr>
-                    </table>
+{{--                    <div class="create_tarif_tr1 d-none mt-2 mb-3">--}}
+{{--                        <select name="tarif_tr1" class="form-control col-md-3 js_tarif_select1">--}}
+{{--                            <option value="">---</option>--}}
+{{--                            <option value="sip_trunc">SIP TRUNK</option>--}}
+{{--                            <option value="phone">ТЕЛЕФОНИЯ</option>--}}
+{{--                            <option value="internet">ИНТЕРНЕТ</option>--}}
+{{--                            <option value="abonet">АБОНЕНТСКАЯ ЛИНИЯ</option>--}}
+{{--                        </select>--}}
+{{--                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">add</button>--}}
+{{--                    </div>--}}
+
+
+{{--                    <table class="table table-bordered js_add_tarif_to_table1 contract10-list2-table1">--}}
+{{--                        <tr>--}}
+{{--                            <th>№</th>--}}
+{{--                            <th>Наименование платежей</th>--}}
+{{--                            <th>Ед. измер.</th>--}}
+{{--                            <th>Цена*</th>--}}
+{{--                            <th>Кол- во</th>--}}
+{{--                            <th>Стоимость*</th>--}}
+{{--                        </tr>--}}
+{{--                        <tr class="js_tr_group js_tarif_abonet">--}}
+{{--                            <td colspan="6" class="text-bold"><b>1</b>. &nbsp;&emsp; АБОНЕНТСКАЯ ЛИНИЯ:</td>--}}
+{{--                        </tr>--}}
+{{--                        <tr class="js_tr_item">--}}
+{{--                            <td class="js_item_number"><b>1.1</b></td>--}}
+{{--                            <td class="text_edit">Плата за перенос абонентской линии на другой адрес (ул. А.Шерозий,  дом№9)</td>--}}
+{{--                            <td>линия</td>--}}
+{{--                            <td class="text_edit js_table_sena">84 200</td>--}}
+{{--                            <td class="text_edit js_table_count">1</td>--}}
+{{--                            <td class="text_edit js_table_sum_all">84 200</td>--}}
+{{--                            <td class="position-absolute add-tr-btns d-none">--}}
+{{--                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>--}}
+{{--                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>--}}
+{{--                            </td>--}}
+{{--                        </tr>--}}
+{{--                    </table>--}}
+
 
 
 
                     <p class="text-bold text-center mt-4">Ежемесячные платежи за услуги *</p>
-                    <table class="table">
+
+                    <div class="create_tarif_tr1 d-none mt-2 mb-3">
+                        <select name="tarif_tr1" class="form-control col-md-3 js_tarif_select1">
+                            <option value="">---</option>
+                            <option value="sip_trunc">SIP TRUNK</option>
+                            <option value="phone">ТЕЛЕФОНИЯ</option>
+                            <option value="internet">ИНТЕРНЕТ</option>
+                            <option value="abonet">АБОНЕНТСКАЯ ЛИНИЯ</option>
+                        </select>
+                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">add</button>
+                    </div>
+
+                    <table class="table table-bordered mb-1 js_add_tarif_to_table1">
                         <tr>
                             <th>№</th>
                             <th>Наименование платежей</th>
                             <th>Ед. измер.</th>
                             <th>Цена, сум*</th>
-                            <th>Кол- во</th>
+                            <th>Кол-во</th>
                             <th>Стоимость, сум*</th>
                         </tr>
-                        <tr>
-                            <td colspan="6">1. &ensp;&ensp;&ensp;  ИНТЕРНЕТ</td>
+                        <tr class="js_tr_group js_tarif_internet">
+                            <td colspan="6"><b>1</b>. <span class="text-bold text_edit ml-4">ИНТЕРНЕТ</span></td>
                         </tr>
-                        <tr>
-                            <td>1.1</td>
-                            <td>
-                                <p class="mb-0 text-underline">Абонентская плата** «BIZNES OPTIMA 15»</p>
-                                Доступ к глобальной сети Интернет на скорости <b>15 Мбит/с</b> неограничен <br>
-                                По данному тарифному плану вводится ограничение по времени с <b>07:00 до 18:59</b> <br>
-                                Доступ к глобальной сети Интернет на скорости <b>4 Мбит/с</b> неограничен
-                                По данному тарифному плану вводится ограничение по времени с 19:00 до 06:59
-                                Доступ к ресурсам  Tas-Ix на скорости 15 Мбит/с неограничен
+                        <tr class="js_tr_item">
+                            <td class="js_item_number"><b>1.1</b></td>
+                            <td class="js_table_text position-relative">
+                            <span class="text_edit td-span-text">
+                                <span class="text-bold text-underline">Абонентская плата**</span> <br>
+                                <span class="text_edit">Согласно тарифному плану</span>
+                                <span class="text_edit"><b class="tarif_name">«Интернет 9-0/10 Мбит/с»</b></span> <br>
+                                <span class="text_edit">Доступ к сети Интернет на скорости 9 Мбит/с. <br>
+                                По данному тарифу вводится ограничение по времени с 08:00 до 20:00 <br>
+                                Доступ к сети ТАS –IХ на скорости  10 Мбит/с  неограничен</span>
+                            </span>
+                                <ul class="ul-word-icons d-none">
+                                    <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                    <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                    <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                    <li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>
+                                </ul>
                             </td>
-                            <td>точка</td>
-                            <td>550 000</td>
-                            <td>1</td>
-                            <td>550  000</td>
-                        </tr>
-                        <tr>
-                            <td>1.2</td>
-                            <td>
-                                <span class="text-bold text-underline">1.2 Абонентская плата**</span> согласно тарифному плану <b>«Интернет – 2/10  Мбит/с»</b>
-                                Доступ  к сети  Интернет на скорости-  2Мбит/с   неограничен
-                                Доступ к ресурсам сети  TAS-IX на скорости -   10 Мбит/с неограничен
+                            <td class="text-center"><span class="text_edit">точка</span></td>
+                            <td class="text_edit js_table_sena text-center">463 000</td>
+                            <td class="text_edit js_table_count text-center">1</td>
+                            <td class="text_edit js_table_sum_all text-center">463 000</td>
+                            <td class="position-absolute add-tr-btns d-none">
+                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
                             </td>
-                            <td><b>точка</b></td>
-                            <td><b>200 000</b></td>
-                            <td><b>1</b></td>
-                            <td><b>200 000</b></td>
                         </tr>
+
                     </table>
+
 
                     <p class="mb-0">* Цены установлены в сумах  с учетом НДС</p>
                     <p>** Ежемесячная абонентская плата вносится абонентом ежемесячно на условиях 100% предоплаты.</p>
@@ -591,159 +622,242 @@
                         <span class="text_edit">01.01.2022 г. до 31.12.2022г.</span>
                     </p>
 
-                    <table class="table horizontal-table" style="width: 99%!important; text-align: center">
-                        <tr class="tr-kvartl">
-                            <td>Период</td>
+                    <table class="table horizontal-table js_table_horizontal" style="width: 99%!important; text-align: center">
+                        <tr class="bg-secondary js_head_tr">
+                            <td><b>Период</b></td>
                             <td>
                                 <span class="text_edit">Абонентская плата согласно тарифному плану</span><br>
                                 <span class="text_edit text-bold">«Интернет 9-0/10 Мбит/с»*</span>
                             </td>
-                            <td>Кол-во</td>
+                            <td class="text-bold">Кол-во</td>
                             <td>
                                 <span class="text_edit">Итого Абонентская плата согласно тарифному плану</span><br>
                                 <span class="text_edit text-bold">«Интернет 9-0/10 Мбит/с»*</span>
                             </td>
-                            <td>
+                            <td class="text-bold js_head_td_total">
                                 Итого выплат за период */**
                             </td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Январь</span></td>
+                        <tr data-tr_number="1">
+                            <td style="width: 100px;">Январь</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Февраль</span></td>
+                        <tr data-tr_number="2">
+                            <td style="width: 100px;">Февраль</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Март</span></td>
+                        <tr data-tr_number="3">
+                            <td style="width: 100px;">Март</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr class="tr-kvartl">
-                            <td><span class="text_edit">I квартал</span></td>
+                        <tr class="tr-kvartl" data-tr_number="4">
+                            <td style="width: 100px;">I квартал</td>
                             <td><span class="text_edit">1 389 000</span></td>
                             <td><span class="text_edit"></span></td>
                             <td><span class="text_edit">1 389 500</span></td>
-                            <td><span class="text_edit">1 389 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">1 389 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Апрель</span></td>
+                        <tr data-tr_number="5">
+                            <td style="width: 100px;">Апрель</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Май</span></td>
+                        <tr data-tr_number="6">
+                            <td style="width: 100px;">Май</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Июнь</span></td>
+                        <tr data-tr_number="7">
+                            <td style="width: 100px;">Июнь</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr class="tr-kvartl">
-                            <td><span class="text_edit">II квартал</span></td>
+                        <tr class="tr-kvartl" data-tr_number="8">
+                            <td style="width: 100px;">II квартал</td>
                             <td><span class="text_edit">1 389 000</span></td>
                             <td><span class="text_edit"></span></td>
                             <td><span class="text_edit">1 389 000</span></td>
-                            <td><span class="text_edit">1 389 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">1 389 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Июль</span></td>
+                        <tr data-tr_number="9">
+                            <td style="width: 100px;">Июль</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Август</span></td>
+                        <tr data-tr_number="10">
+                            <td style="width: 100px;">Август</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Сентябрь</span></td>
+                        <tr data-tr_number="11">
+                            <td style="width: 100px;">Сентябрь</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr class="tr-kvartl">
-                            <td><span class="text_edit">III квартал</span></td>
+                        <tr class="tr-kvartl" data-tr_number="12">
+                            <td style="width: 100px;">III квартал</td>
                             <td><span class="text_edit">1 389 000</span></td>
                             <td><span class="text_edit"></span></td>
                             <td><span class="text_edit">1 389 000</span></td>
-                            <td><span class="text_edit">1 389 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">1 389 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Октябрь</span></td>
+                        <tr data-tr_number="13">
+                            <td style="width: 100px;">Октябрь</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Ноябрь</span></td>
+                        <tr data-tr_number="14">
+                            <td style="width: 100px;">Ноябрь</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr>
-                            <td><span class="text_edit">Декабрь</span></td>
+                        <tr data-tr_number="15">
+                            <td style="width: 100px;">Декабрь</td>
                             <td><span class="text_edit">463 000</span></td>
                             <td><span class="text_edit">1</span></td>
                             <td><span class="text_edit">463 000</span></td>
-                            <td><span class="text_edit">463 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">463 000</span></td>
                         </tr>
 
-                        <tr class="tr-kvartl">
-                            <td><span class="text_edit">IV квартал</span></td>
+                        <tr class="tr-kvartl" data-tr_number="16">
+                            <td style="width: 100px;">IV квартал</td>
                             <td><span class="text_edit">1 389 000</span></td>
                             <td><span class="text_edit"></span></td>
                             <td><span class="text_edit">1 389 000</span></td>
-                            <td><span class="text_edit">1 389 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">1 389 000</span></td>
                         </tr>
 
                         <tr class="tr-footer-all-sum js_tr_all_sum">
-                            <td><span class="text_edit">Итого за период 2022г</span></td>
+                            <td style="width: 100px;"><span class="text_edit">Итого за период 2022г</span></td>
                             <td><span class="text_edit">5 556 0000</span></td>
                             <td><span class="text_edit"></span></td>
                             <td><span class="text_edit">5 556 000</span></td>
-                            <td><span class="text_edit">5 556 000</span></td>
+                            <td class="js_td_total"><span class="text_edit">5 556 000</span></td>
                         </tr>
 
+                    </table>
+
+                    <table class="horizontal-table-icons d-none">
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="1" title="Январь"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="2" title="Февраль"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="3" title="Март"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="4" title="I квартал"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="5" title="Апрель"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="6" title="Май"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="7" title="Июнь"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="8" title="II квартал"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="9" title="Июль"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="10" title="Август"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="11" title="Сентябрь"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="12" title="III квартал"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="13" title="Октябрь"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="14" title="Ноябрь"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="15" title="Декабрь"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-eye js_icon_btn_hide_tr text-danger" data-tr_number="16" title="IV квартал"></i>
+                            </td>
+                        </tr>
                     </table>
 
                     &emsp;*&emsp;Все цены указаны в сумах с учетом НДС <br>
@@ -777,6 +891,10 @@
 
     </section>
 
+
+    @include('templates.form_file_and_contract_save')
+    
+
 @endsection
 
 
@@ -785,21 +903,32 @@
     <script>
         $(document).ready(function () {
 
-            $(document).on('click', '.js_text_save_btn', function (e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
                 e.preventDefault();
 
-                let token = $('meta[name="csrf-token"]').attr('content');
-                let number = $('.js_number').html();
-                let title = $('.js_title11').html();
-                let data = $('.js_data_all').html();
+                afer_save_add_d_none_template()
+                
+                let form    = $(this);
+                let number  = $('.js_number').html();
+                let title   = $('.js_title1').html();
+                let data    = $('.js_data_all').html();
+                let template_number = $('.js_data_all_pdf').data('template_number')
+
+                form.find('.js_hidden_number').val(number);
+                form.find('.js_hidden_title').val(title);
+                form.find('.js_hidden_data').val(data);
+                form.find('.js_hidden_template_class').val(template_number);
 
                 $.ajax({
-                    url: '{{ route('templates.store') }}',
+                    url: '{{ route('contract.store') }}',
                     type: 'POST',
-                    data: {'_token': token, 'number': number, 'title': title, 'data': data, 'class': 'template11'},
+                    data: new FormData(this),
                     dataType: 'JSON',
+                    contentType: false,
+                    // cache: false,
+                    processData: false,
                     success: (response) => {
-                        // console.log('res: ', response)
+                        // console.log('res: ', response);
                         window.location.href = window.location.protocol + "//" + window.location.host + "/contract/";
                     },
                     error: (response) => {
