@@ -1,15 +1,18 @@
 @extends('layouts.app')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/contract10.css?'.time()) }}">
+@endsection
 
 @section('content')
 
     <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="10">
 
-        <div class="contract10">
+        <div class="contract10" id="forstyle">
 
             <!-- 1 - list -->
             <div class="card contract-text">
-                <h4 class="text-center"><span class="js_title mt-2">Дополнительное соглашение</span> №<span class="text_edit js_number_n">5</span> <br/>
+                <h4 class="text-center"><span class="js_title mt-2">Дополнительное соглашение</span> <span class="text_edit js_number_n">№ 5</span> <br/>
                     к договору <span class="text_edit js_number">19А01№0498/2019</span>г от
                     «<span class="text_edit js_date_day">21</span>»
                     <select name="month1" class="js_date_month js_select_data_month1 d-none">
@@ -60,17 +63,16 @@
                     Серия АА №0008088 от 31.03.2020г., Серия АА №0008089 от 31.03.2020г., Серия АА №0008090 от
                     31.03.2020г.., в лице Генерального
                     <span class="text_edit">директора</span> <span class="text_edit text-bold">Lee Baek Hee</span>,
-                    действующей на основании <span class="text_edit">Устава</span>,, с одной стороны,
-                    и <span class="text_edit text-bold">Сурхондарё вилоят фермер, дехкон хужаликлари ва томорка ер эгалари кенгаши</span>,
+                    действующей на основании <span class="text_edit js_ustav">Устава</span>,, с одной стороны,
+                    и <span class="text_edit text-bold js_company_name">Сурхондарё вилоят фермер, дехкон хужаликлари ва томорка ер эгалари кенгаши</span>,
                     именуемое в дальнейшем <b>«Абонент»</b>, в лице
                     <span class="js_director_position_static">председателя областного совета</span>  <span class="js_director_name_static">Бобокулова У.</span>,
-                    действующего на основании <span class="text_edit">устава</span>, с другой стороны, вместе именуемые «Стороны»,
+                    действующего на основании <span class="text_edit js_ustav_html">устава</span>, с другой стороны, вместе именуемые «Стороны»,
                     пришли к соглашению о нижеследующем:<br/>
                     <br/>
 
-
                     <p class="mb-2">
-                        1.&emsp;&nbsp; Признать утратившими юридическую силу Приложения № 1,2,3 к дополнительному соглашению №<span class="text_edit">4</span> от
+                        1.&emsp;&nbsp; Признать утратившими юридическую силу Приложения № 1,2,3 к <span class="text_edit">дополнительному соглашению № 4</span> от
                         «<span class="text_edit">11</span>»
                         <select name="month2" class="js_date_month js_select_data_month2 d-none">
                             <option>Январь</option>
@@ -118,8 +120,8 @@
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
                             <p class="text-bold mb-2">ОПЕРАТОР:</p>
-                            <p class="mb-1">Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="mb-1 text_edit js_general_director_title">Генеральный директор</p>
+                            <p class="text-bold text_edit js_general_director_full_name">Lee Baek Hee</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -127,8 +129,8 @@
 
                         <div class="text-center">
                             <p class="text-bold mb-2">АБОНЕНТ:</p>
-                            <p class="text_edit mb-1 js_director_position_dynamic">Председатель областного совета</p>
-                            <p class="text-bold text_edit js_director_name_dynamic">Бобокулов  У.</p>
+                            <p class="mb-1"><span class="text_edit js_director_title">Председатель областного совета</span></p>
+                            <p class="text-bold"><span class="text_edit js_director_full_name">Бобокулов  У.</span></p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -136,9 +138,6 @@
                     </div>
                 </div>
             </div><!-- ./card -->
-
-
-            <div class="html2pdf__page-break"></div>
 
 
             <!-- 2 - list -->
@@ -160,83 +159,63 @@
                     <p class="text-center text-bold">используемых для подключения Абонента к сети СП OOO «Ist Теlеkom»</p>
 
                     <table class="table mb-0">
+                        <tbody>
                         <tr>
                             <td>1.</td>
                             <td>Наименование услуг:</td>
                             <td>
-                                <ul type="circle">
-                                    <li class="text-bold text-underline">Организация доступа к сети Интернет</li>
-                                </ul>
+                                <span class="text-bold text-underline text_edit">Организация доступа к сети Интернет</span>
                             </td>
                         </tr>
                         <tr>
                             <td>2.</td>
                             <td>Выделенные Абоненту телефонные номера для оказания услуг: **</td>
                             <td>
-                                <ul type="circle">
-                                    <li class="text-bold text-underline">нет</li>
-                                </ul>
+                                <span class="text-bold text-underline text_edit">нет</span>
                             </td>
                         </tr>
                         <tr>
                             <td>3.</td>
                             <td>Тип абонентского устройства предоставляемого абонентом:</td>
                             <td>
-                                <ul type="circle">
-                                    <li>ПК (Интернет)</li>
-                                </ul>
+                                <span class="text_edit">ПК (Интернет)</span>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td>
-                                <span class="text-center td-span">(количество, наименование устройств: телефонный аппарат, модем, факс, телекс и др.)</span>
-                            </td>
+                            <td class="text-center td-span">(количество, наименование устройств: телефонный аппарат, модем,факс, телекс и др.)</td>
                         </tr>
                         <tr>
                             <td>4.</td>
+                            <td>Тип порта, выделяемого абоненту: (нужное подчеркнуть)</td>
                             <td>
-                                Тип порта, выделяемого абоненту:
-                                (нужное подчеркнуть)
-                            </td>
-                            <td>
-                                <ul type="circle">
-                                    <li>Узкополосный</li>
-                                    <li class="text-bold text-underline">Широкополосный</li>
-                                    <li>другое:</li>
-                                </ul>
+                                <span class="text_edit">Узкополосный</span>
+                                <span class="text-bold text-underline text_edit">Широкополосный</span>
+                                <span class="text_edit">другое:</span>
                             </td>
                         </tr>
                         <tr>
                             <td>5.</td>
                             <td>Тип используемого оборудования:*</td>
                             <td>
-                                <ul type="circle">
-                                    <li class="text-bold text-underline">Абонентское</li>
-                                    <li class="text-bold text-underline">Модем Zexel–NBG-418 V2 - (1 - комплекта) стоимость 421 000 сум</li>
-                                </ul>
+                                <span class="text-bold text-underline text_edit">Абонентское</span>
+                                <span class="text-bold text-underline text_edit">Модем Zexel–NBG-418 V2 - (1 - комплекта) стоимость 421 000 сум</span>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td></td>
-                            <td>
-                                <span class="text-center td-span">(марка, количество, стоимость)</span>
-                            </td>
+                            <td class="text-center td-span">(марка, количество, стоимость)</td>
                         </tr>
                         <tr>
                             <td>6.</td>
+                            <td>Прямые провода: (нужное подчеркнуть)</td>
                             <td>
-                                Прямые провода:
-                                (нужное подчеркнуть)
-                            </td>
-                            <td>
-                                <ul type="circle">
-                                    <li>предоставлены  Абонентом</li>
-                                    <li class="text-bold text-underline">предоставлены СП ООО «Ist Telekom»</li>
-                                    <li>другое:</li>
-                                </ul>
+                                <span class="text_edit">предоставлены Абонентом</span> <br>
+                                <span class="text-bold text-underline text_edit">предоставлены СП ООО «Ist Telekom»</span>
+                                <br>
+                                <span class="text_edit">другое:</span>
                             </td>
                         </tr>
                         <tr>
@@ -247,9 +226,7 @@
                         <tr>
                             <td></td>
                             <td></td>
-                            <td>
-                                <span class="text-center td-span">(количество, направление)</span>
-                            </td>
+                            <td class="text-center td-span">(количество, направление)</td>
                         </tr>
                         <tr>
                             <td>8.</td>
@@ -257,10 +234,8 @@
                                 Почтовый адрес установки абонентского устройства:
                             </td>
                             <td>
-                                <ul type="circle">
-                                    <li class="text-bold text-underline">Сурхандарьинская область, г. Термез , ул.  Шукрона (бывшийМ. Каххор,)  дом 10</li>
-                                    <li class="text-bold text-underline">АТС-223</li>
-                                </ul>
+                                <span class="text-bold text-underline text_edit">Сурхандарьинская область, г. Термез , ул. Шукрона (бывшийМ. Каххор,) дом 10</span>
+                                <span class="text-bold text-underline text_edit">АТС-223</span>
                             </td>
                         </tr>
                         <tr>
@@ -270,11 +245,9 @@
                                 (нужное подчеркнуть)
                             </td>
                             <td>
-                                <ul type="circle">
-                                    <li>индивидуальное</li>
-                                    <li class="text-bold text-underline">коллективное</li>
-                                    <li>другое</li>
-                                </ul>
+                                <span class="text_edit">индивидуальное</span> <br>
+                                <span class="text-bold text-underline text_edit">коллективное</span> <br>
+                                <span class="text_edit">другое</span>
                             </td>
                         </tr>
                         <tr>
@@ -283,13 +256,14 @@
                                 Служба сервисной поддержки
                             </td>
                             <td>
-                                <ul type="circle">
-                                    <li class="text-bold text-underline">Бюро приёма заявок(78) 150 08  08; (78) 770 90 09</li>
-                                </ul>
+                                    <span class="text-bold text-underline text_edit">
+                                        Бюро приёма заявок(78) 150 08 08; (78) 770 90 09
+                                    </span>
                             </td>
                         </tr>
+                        </tbody>
                     </table>
-
+                    
                     <div class="div-font-small">
                         * Оборудование предоставляется Абоненту во временное пользование без взимания дополнительных платежей с правом Оператора на возврат в
                         случае расторжения предоставляемых услуг. <br/>
@@ -319,8 +293,8 @@
                     <div class="d-flex justify-content-around mt-3">
                         <div class="text-center">
                             <p class="text-bold mb-2">ОПЕРАТОР:</p>
-                            <p class="mb-1">Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="mb-1 js_general_director_title_html">Генеральный директор</p>
+                            <p class="text-bold js_general_director_full_name_html">Lee Baek Hee</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -328,8 +302,8 @@
 
                         <div class="text-center">
                             <p class="text-bold mb-2">АБОНЕНТ:</p>
-                            <p class="js_position_static mb-1">Председатель областного совета</p>
-                            <p class="text-bold js_name_static">Бобокулов  У.</p>
+                            <p class="js_director_title_html mb-1">Председатель областного совета</p>
+                            <p class="text-bold js_director_full_name_html">Бобокулов  У.</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -356,8 +330,8 @@
                     <p class="text-center text-bold mb-0">Протокол</p>
                     <p class="text-center text-bold">согласования договорной цены на предоставляемые работы и услуги</p>
 
-                    Мы, ниже подписавшиеся, от Абонента – и <span class="text_edit">Сурхондарё вилоят фермер, дехкон хужаликлари ва томорка ер эгалари кенгаши</span>,
-                    именуемое в дальнейшем «Абонент»,  в лице председателя областного совета Бобокулова У., действующего на основании  <span class="text_edit">устава</span>,
+                    Мы, ниже подписавшиеся, от Абонента – и <span class="text-bold js_company_name_html">Сурхондарё вилоят фермер, дехкон хужаликлари ва томорка ер эгалари кенгаши</span>,
+                    именуемое в дальнейшем «Абонент»,  в лице председателя областного совета Бобокулова У., действующего на основании  <span class="js_ustav_html">устава</span>,
                     с одной стороны,  и от Оператора – CП OOO «Ist Теlеkom», в лице  Генерального директора Lee Baek Hee, с другой стороны, удостоверяем, что сторонами
                     принят Протокол  согласования договорной цены на предоставляемые работы и услуги с учетом НДС, согласно, перечня услуг (Приложение № 1) к Дополнительному
                     соглашению №<span class="js_number_n_static">5</span> от «_____» _______ <span class="text_edit">2022</span>г.
@@ -377,34 +351,38 @@
                             <option value="internet">ИНТЕРНЕТ</option>
                             <option value="abonet">АБОНЕНТСКАЯ ЛИНИЯ</option>
                         </select>
-                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">add</button>
+                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table1">Добавить услуги</button>
                     </div>
 
 
-                    <table class="table table-bordered js_add_tarif_to_table1 contract10-list2-table1">
-                        <tr>
-                            <th>№</th>
-                            <th>Наименование платежей</th>
-                            <th>Ед. измер.</th>
-                            <th>Цена*</th>
-                            <th>Кол- во</th>
-                            <th>Стоимость*</th>
-                        </tr>
-                        <tr class="js_tr_group js_tarif_abonet">
-                            <td colspan="6"><b>1</b>. &nbsp;&emsp; АБОНЕНТСКАЯ ЛИНИЯ:</td>
-                        </tr>
-                        <tr class="js_tr_item">
-                            <td class="js_item_number"><b>1.1</b></td>
-                            <td class="text_edit">Плата за перенос абонентской линии на другой адрес (ул. А.Шерозий,  дом№9)</td>
-                            <td>линия</td>
-                            <td class="text_edit js_table_sena">84 200</td>
-                            <td class="text_edit js_table_count">1</td>
-                            <td class="text_edit js_table_sum_all">84 200</td>
-                            <td class="position-absolute add-tr-btns d-none">
-                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
-                            </td>
-                        </tr>
+                    <table class="table js_add_tarif_to_table1 contract10-list2-table1">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Наименование платежей</th>
+                                <th>Ед. измер.</th>
+                                <th>Цена*</th>
+                                <th>Кол- во</th>
+                                <th>Стоимость*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="js_tr_group js_tarif_abonet">
+                                <td colspan="6" class="text-left"><b class="ml-2">1</b>. &nbsp;&emsp; АБОНЕНТСКАЯ ЛИНИЯ:</td>
+                            </tr>
+                            <tr class="js_tr_item">
+                                <td class="js_item_number"><b>1.1</b></td>
+                                <td class="text_edit">Плата за перенос абонентской линии на другой адрес (ул. А.Шерозий,  дом№9)</td>
+                                <td>линия</td>
+                                <td class="text_edit js_table_sena">84 200</td>
+                                <td class="text_edit js_table_count">1</td>
+                                <td class="text_edit js_table_sum_all">84 200</td>
+                                <td class="position-absolute add-tr-btns d-none">
+                                    <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
                     </table>
 
 
@@ -419,20 +397,23 @@
                             <option value="internet">ИНТЕРНЕТ</option>
                             <option value="abonet">АБОНЕНТСКАЯ ЛИНИЯ</option>
                         </select>
-                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table2">add</button>
+                        <button type="button" class="ml-2 btn btn-secondary js_btn_add_tr_to_table2">Добавить услуги</button>
                     </div>
 
                     <table class="table js_add_tarif_to_table2">
-                        <tr>
-                            <th>№</th>
-                            <th>Наименование платежей</th>
-                            <th>Ед. измер.</th>
-                            <th>Цена, сум*</th>
-                            <th>Кол- во</th>
-                            <th>Стоимость, сум*</th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Наименование платежей</th>
+                                <th>Ед. измер.</th>
+                                <th>Цена, сум*</th>
+                                <th>Кол- во</th>
+                                <th>Стоимость, сум*</th>
+                            </tr>
+                        </thead>
+                        <tbody>
                         <tr class="js_tr_group js_tarif_internet">
-                            <td colspan="6"><b>1</b>. &ensp;&ensp;&ensp;  ИНТЕРНЕТ</td>
+                            <td colspan="6" class="text-left"><b class="ml-2">1</b>. &ensp;&ensp;&ensp;  ИНТЕРНЕТ</td>
                         </tr>
                         <tr class="js_tr_item">
                             <td class="js_item_number"><b>1.1</b></td>
@@ -469,6 +450,8 @@
                                 <a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
                             </td>
                         </tr>
+                        </tbody>
+
                     </table>
 
                     <p class="mb-0">* Цены установлены в сумах  с учетом НДС</p>
@@ -479,8 +462,8 @@
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
                             <p class="text-bold mb-2">ОПЕРАТОР:</p>
-                            <p class="mb-1">Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="mb-1 js_general_director_title_html">Генеральный директор</p>
+                            <p class="text-bold js_general_director_full_name_html">Lee Baek Hee</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -488,8 +471,8 @@
 
                         <div class="text-center">
                             <p class="text-bold mb-2">АБОНЕНТ:</p>
-                            <p class="js_position_static mb-1">Председатель областного совета</p>
-                            <p class="text-bold js_name_static">Бобокулов  У.</p>
+                            <p class="js_director_title_html mb-1">Председатель областного совета</p>
+                            <p class="text-bold js_director_full_name_html">Бобокулов  У.</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -499,9 +482,6 @@
                 </div>
 
             </div><!-- ./card -->
-
-
-            <div class="html2pdf__page-break"></div>
 
 
             <!-- 4 - list -->
@@ -579,8 +559,8 @@
                     <div class="d-flex justify-content-around mt-5 mb-0">
                         <div class="text-center">
                             <p class="text-bold mb-2">ОПЕРАТОР:</p>
-                            <p class="mb-1">Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="mb-1 js_general_director_title_html">Генеральный директор</p>
+                            <p class="text-bold js_general_director_full_name_html">Lee Baek Hee</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -588,8 +568,8 @@
 
                         <div class="text-center">
                             <p class="text-bold mb-2">АБОНЕНТ:</p>
-                            <p class="js_position_static mb-1">Председатель областного совета</p>
-                            <p class="text-bold js_name_static">Бобокулов  У.</p>
+                            <p class="js_director_title_html mb-1">Председатель областного совета</p>
+                            <p class="text-bold js_director_full_name_html">Бобокулов  У.</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -621,7 +601,7 @@
 
                 afer_save_add_d_none_template()
 
-                
+
                 let form    = $(this);
                 let number  = $('.js_number').html();
                 let title   = $('.js_title1').html();

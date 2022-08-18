@@ -1,15 +1,10 @@
 
 
-
-.contract2 table {
-    background: white !important;
+h4 {
+    font-size: 10.5pt;
 }
 
-.contract2 .table td,
-.contract2 .table th, tr {
-    border: 1px solid darkgray !important;
-    font-size: 14px !important;
-}
+
 .contract2-list3-table tr:nth-child(1) th:nth-child(2),
 .contract2-list3-table tr:nth-child(2) td:nth-child(2) {
     width: 45%;
@@ -23,12 +18,16 @@
     width: 15%;
 }
 
-.contract2 .contract-text {
+.contract-text {
     padding: 15px 30px 15px 45px !important;
-    font-size: 10pt!important;
-    line-height: 1.1!important;
+    font-size: 10pt !important;
+    line-height: 1.1 !important;
 }
 
-.contract2 p {
-    font-size: 9.9pt;
+p {
+    font-size: 9.8pt;
+}
+
+.add-tr-btns {
+    width: 30px !important;
 }

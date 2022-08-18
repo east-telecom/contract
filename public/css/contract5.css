@@ -1,63 +1,69 @@
 
-
-.contract5 .contract-text {
-    font-size: 7.7pt!important;
+.contract-text {
+    padding: 15px 35px 20px 50px !important;
+    font-size: 7.8pt;
 }
 
-.contract5 .horizontal-list {
-    font-size: 7.8pt!important;
+.horizontal-list {
+    font-size: 7.8pt;
 }
 
-
-
-.contract5 table {
-    background: white !important;
-    border: 1px solid black;
-    color: black;
-}
-
-.contract5 .table th {
-    text-align: center;
-    padding: 5px;
-    line-height: 1;
-    color: black !important;
-    border: 1px solid darkgray !important;
-}
-
-.contract5 .table tr td {
-    color: black !important;
-    padding: 3px 5px !important;
-    border: 1px solid darkgray !important;
+.horizontal-list table tr th,
+.horizontal-list table tr td {
+    color: #000 !important;
+    padding: 3px;
+    font-size: 7.8pt;
 }
 
 
-.contract5 .contract-text .table tr th,
-.contract5 .contract-text .table tr td {
+.contract-text .table tr th,
+.contract-text .table tr td {
     vertical-align: middle;
+    font-size: 8pt;
 }
 
 
-.contract5 h4 {
-    font-size: 9pt !important;
+h4 {
+    font-size: 8pt;
+    margin-top: 0;
 }
 
 
-.contract5 .contract-text {
-    padding: 20px 35px 20px 50px !important;
-    font-size: 7.7pt!important;
-    line-height: 1!important;
-}
-
-
-
-.contract5 .inn .row{
+.inn .row{
     margin-top: 5px !important;
 }
-.contract5 .card div .row .inn p {
+.card div .row .inn p {
     margin-bottom: 1px !important;
     line-height: 1!important;
 }
 
-.contract5 .inn p:first-child {
+.inn p:first-child {
     margin-bottom: 0 !important;
+}
+
+table tbody tr td {
+    padding: 5px;
+}
+
+table tbody tr td {
+    border-top-color: #000 !important;
+}
+
+table thead tr th {
+    border-top-color: #000 !important;
+}
+
+table thead {
+    border-top-color: #000 !important;
+}
+
+.contract5 table tbody tr td {
+    padding: 5px !important;
+    color: #000 !important;
+}
+
+
+.table .tr-span td {
+    padding: 3px !important;
+    font-size: 7.3pt !important;
 }

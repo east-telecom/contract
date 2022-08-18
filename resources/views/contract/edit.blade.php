@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/contract'.$contract->template_number.'.css?'.time()) }}">
+@endsection
+
+
 @section('content')
 
     <a href="{{ route('contract.index') }}" class="back-btn-icon" title="go back"><i class="fas fa-long-arrow-alt-left"></i></a>
@@ -53,7 +58,7 @@
                 $('.kv-file-rotate').addClass('d-none');
             }, 1000);
         }
-        $('.btn-file .hidden-xs').addClass('ml-2').html('file upload');
+        $('.btn-file .hidden-xs').addClass('ml-2').html('Прикрепить файлы');
 
 
 
@@ -89,8 +94,9 @@
                 }
             })
         });
-        
 
+
+        // windows.setInterval(keepAliveCall, 5000);
 
     </script>
 @endsection

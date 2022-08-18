@@ -1,0 +1,134 @@
+
+h4,
+h4,
+h4 {
+    font-size: 9.6pt !important;
+    margin-top: 30px;
+}
+
+.contract-text {
+    padding: 20px 35px 20px 50px !important;
+    font-size: 9.5pt !important;
+    max-width: 794px !important;
+    height: 1106px !important;
+}
+
+
+.div-list2 .table tr td:nth-child(1) {
+    width: 5% !important;
+}
+
+
+.div-list2 .table tr td:nth-child(2) {
+    width: 30% !important;
+}
+
+.div-list2 table tr td {
+    padding: 5px;
+}
+
+table tr th,
+table tr td {
+    vertical-align: middle;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 9pt;
+    color: black;
+    text-align: left;
+}
+
+
+.table tr td ul {
+    margin-bottom: 0;
+}
+
+
+.div-list3 {
+    font-size: 10px;
+}
+
+.div-list3 .table tr td {
+    padding: 5px;
+}
+
+.div-list3 .table tr td:nth-child(2)  {
+    width: 50%;
+}
+
+.div-list3 .table tr td:nth-child(3)  {
+    text-align: center;
+}
+
+.div-list3 .table tr td:nth-child(4)  {
+    text-align: center;
+}
+
+.div-list3 .table tr td:nth-child(5)  {
+    text-align: center;
+}
+
+.div-list3 .table tr td:nth-child(6)  {
+    width: 10%;
+    text-align: center;
+}
+
+
+.div-list3 .table tr:nth-child(2) td  {
+    text-align: left;
+    padding-left: 20px;
+}
+
+
+.table tr td:first-child {
+    width: 10px;
+    text-align: center;
+}
+
+
+.table tr td:nth-child(2) {
+    width: 30%;
+}
+
+/** 2 - list **/
+.last-table tr td:first-child {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+
+.table .td-span {
+    font-size: 8.5pt!important;
+}
+
+.div-font-small {
+    margin-top: 5px;
+    font-size: 8pt !important;
+}
+
+
+
+/** 4 - list **/
+
+
+.div-list4 {
+    font-size: 7.5pt!important;
+}
+
+
+table tbody tr td {
+    border-top-color: #000 !important;
+}
+
+
+
+table thead tr th {
+    border-top-color: #000 !important;
+}
+
+table thead tr th:nth-child(6) {
+    border-right-color: #000;
+}
+
+table tr td:nth-child(6) {
+    border-right-color: #000;
+}

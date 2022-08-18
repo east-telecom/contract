@@ -4,37 +4,37 @@
 
      <div class="content-wrapper">
         <div class="content-body">
-            <div class="card offset-3 col-md-6">
-                <h3 class="text-center text-info mt-2 mb-1">Пользовательское редактирование</h3>
+            <div class="card p-3">
+                <h4 class="text-center text-info mt-1 mb-2">Пользовательское редактирование</h4>
                 <form action="{{ route('user.user_profile_update', [$user->id]) }}" id="js_user_profile_update_from" method="POST">
                     <div class="row mb-1">
                         @csrf
                         @method('PUT')
-                        <div class="col-md-6 form-group">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 form-group">
                             <label for="full_name">ФИО</label>
                             <input type="text" name="full_name" class="form-control js_full_name" id="full_name" value="{{ $user->full_name }}" />
                             <div class="invalid-feedback">The full name field is required.</div>
                         </div>
 
-                        <div class="col-md-6 form-group">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 form-group">
                             <label for="phone">Телефон</label>
                             <input type="text" name="phone" class="form-control js_phone" id="phone" value="{{ $user->phone }}" />
                             <div class="invalid-feedback">The phone field is required.</div>
                         </div>
 
-                        <div class="col-md-6 form-group">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 form-group">
                             <label for="login">Эл. адрес</label>
                             <input type="text" name="email" class="form-control js_email" id="email" value="{{ $user->email }}" readonly />
                             <div class="invalid-feedback">The email field is required.</div>
                         </div>
 
-                        <div class="col-md-6 form-group">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 form-group">
                             <label for="password">Пароль</label>
                             <input type="text" name="password" class="form-control js_password" id="password" />
                             <div class="invalid-feedback">The password field is required.</div>
                         </div>
 
-                        <div class="col-md-12 mt-1 mb-3">
+                        <div class="col-md-12 mt-2 mb-2">
                             <button type="submit" class="btn btn-primary btn-block" name="saveBtn">Сохранять</button>
                         </div>
                     </div>

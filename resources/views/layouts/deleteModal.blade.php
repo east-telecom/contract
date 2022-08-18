@@ -18,7 +18,7 @@
                     {{ method_field('DELETE') }}
                     <button type="submit" name="saveBtn" class="btn btn-danger">Да</button>
                 </form>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Но</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Нет</button>
             </div>
         </div>
     </div>

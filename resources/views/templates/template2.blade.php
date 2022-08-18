@@ -1,20 +1,23 @@
 @extends('layouts.app')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/contract2.css?'.time()) }}">
+@endsection
 
 @section('content')
 
 
     <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="2">
 
-        <div class="contract2">
+        <div class="contract2" id="forstyle">
 
             <!-- 1 - list -->
             <div class="card contract-text">
-                <h4 class="text-center mt-1"><span class="js_title">ДОГОВОР ПОДРЯДА</span> № <span class="text_edit js_number" contenteditable="false">900-1195</span></h4>
+                <h4 class="text-center mt-1"><span class="js_title">ДОГОВОР ПОДРЯДА</span> <span class="text_edit js_number">№ 900-1195</span></h4>
                 <div class="d-flex mb-1 justify-content-between">
                     <span>г. Ташкент</span>
                     <div>
-                        «<span class="text_edit js_date_day" contenteditable="false">17</span>»
+                        «<span class="text_edit js_date_day">17</span>»
                         <select name="month1" class="js_select_data_month1 js_date_month d-none">
                             <option>Январь</option>
                             <option>Февраль</option>
@@ -31,14 +34,14 @@
                             <option>декабря</option>
                         </select>
                         <span class="text_edit js_span_date_month1">мая</span>
-                        <span class="text_edit js_date_year" contenteditable="false">2021</span>г.<br/>
+                        <span class="text_edit js_date_year">2022</span>г.<br/>
                     </div>
                 </div>
                 <div>
 
-                    &emsp;&emsp;&emsp;&emsp;<span class="text_edit"><b>ООО "Food City Tashkent"</b></span> именуемое в дальнейшем «Заказчик», в лице <span class="text_edit js_director_text">Директора Самигова Д.</span>,
+                    &emsp;&emsp;&emsp;&emsp;<span class="text_edit text-bold js_company_name">ООО "Food City Tashkent"</span> именуемое в дальнейшем «Заказчик», в лице <span class="text_edit">Директора Самигова Д.</span>,
                     действующего на основании ___________________, с одной стороны, и <b>СП ООО «Ist Telekom»</b>, именуемое в дальнейшем «Подрядчик», в лице Генерального директора
-                    <b>Lee Baek Hee,</b> действующего на основании устава, с другой стороны, далее именуемые «Стороны», заключили настоящий договор о нижеследующем:<br/>
+                    <b>Lee Baek Hee,</b> действующего на основании <span class="text_edit js_ustav">устава</span>, с другой стороны, далее именуемые «Стороны», заключили настоящий договор о нижеследующем:<br/>
 
                     <p class="text-center text-bold mb-0 mt-1">1. ПРЕДМЕТ ДОГОВОРА</p>
                     1.1. Заказчик поручает и оплачивает, а Подрядчик выполняет работы по организации новой абонентской линии связи до объекта Заказчика по адресу:
@@ -72,15 +75,15 @@
 
                     <p class="text-center text-bold mb-1 mt-1">4. ЦЕНА ДОГОВОРА</p>
                     4.1. Общая стоимость работ по настоящему Договору является договорной и определена на основании Протокола согласования единичных расценок (Приложение № 1),
-                    которая является неотъемлемой частью настоящего Договора, и <span class="text_edit" contenteditable="false">составляет</span>
-                    <span class="text_edit text-bold js_sum" contenteditable="false">14 000 000</span> <span class="text_edit" contenteditable="false">сум</span>
-                    (<span class="js_sum_text">четырнадцать миллионов</span>) <span class="text_edit" contenteditable="false">с учётом НДС.</span><br/>
+                    которая является неотъемлемой частью настоящего Договора, и <span class="text_edit">составляет</span>
+                    <span class="text_edit text-bold js_sum">14 000 000</span> <span class="text_edit">сум</span>
+                    (<span class="js_sum_text">четырнадцать миллионов</span>) <span class="text_edit">с учётом НДС.</span><br/>
 
                     <p class="text-center text-bold mb-1 mt-1">5. ПОРЯДОК И УСЛОВИЯ ПЛАТЕЖЕЙ</p>
                     5.1. Заказчик обязуется произвести предоплату по данному Договору в размере <span class="text_edit">15</span> % от суммы Договора в течение
                     <span class="text_edit js_sum2">5</span> (<span class="js_sum_text2">пяти</span>) банковских дней после подписания Договора.
                     Оплата производится путём перечисления денежных средств на расчётный счёт Подрядчика прямыми банковскими переводами.<br/>
-                    5.2. <span class="text_edit" contenteditable="false">Окончательный расчет по Договору производится не позднее 5 банковских дней после подписания
+                    5.2. <span class="text_edit">Окончательный расчет по Договору производится не позднее 5 банковских дней после подписания
                         Заказчиком Акта выполненных работ, на основании предоставленного Подрядчиком счета-фактуры.</span><br/>
 
                     <p class="text-center text-bold mb-1 mt-1">6. ОТВЕТСТВЕННОСТЬ СТОРОН</p>
@@ -148,21 +151,21 @@
                     <div class="row">
                         <div class="col-md-6 js_tin_div1 inn">
                             <p class="text-bold">ЗАКАЗЧИК:</p>
-                            <p><span class="text_edit text-bold js_name" contenteditable="false">ООО "Food City Tashkent"</span></p>
-                            <p><span class="text_edit js_address text-bold" contenteditable="false">111500, Ташкентская область, Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span></p>
-                            <p>Р/счет: <span class="text_edit js_account text-bold" contenteditable="false">2020 8000 7008 1864 9001</span></p>
-                            <p>Банк: <span class="text_edit js_bank text-bold" contenteditable="false">ГОО НБ ВЭД Р.Уз.</span></p>
+                            <p><span class="text_edit text-bold js_name js_company_name_html">ООО "Food City Tashkent"</span></p>
+                            <p><span class="text_edit js_address text-bold">111500, Ташкентская область, Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span></p>
+                            <p>Р/счет: <span class="text_edit js_account text-bold">2020 8000 7008 1864 9001</span></p>
+                            <p>Банк: <span class="text_edit js_bank text-bold">ГОО НБ ВЭД Р.Уз.</span></p>
                             <p>
-                                МФО: <span class="text_edit text-bold js_mfo" contenteditable="false">00407</span>
-                                ИНН: <span class="text_edit text-bold js_tin" contenteditable="false">305162870</span>
-                                ОКЭД: <span class="text_edit text-bold js_oked" contenteditable="false">68 202</span>
+                                МФО: <span class="text_edit text-bold js_mfo">00407</span>
+                                ИНН: <span class="text_edit text-bold js_tin">305162870</span>
+                                ОКЭД: <span class="text_edit text-bold js_oked">68 202</span>
                             </p>
-                            <p>Телефон: <span class="text_edit text-bold js_phone" contenteditable="false">+99895 142 44 51</span></p>
+                            <p>Телефон: <span class="text_edit text-bold js_phone">+99895 142 44 51</span></p>
                             <p>Факс: _______________________</p>
                             <p>РКННДС:</p>
                             <br/>
-                            <p class="js_director_position">Директор</p>
-                            <p class="js_director_name text-bold">Самигов Д.</p>
+                            <p class="text_edit js_director_title">Директор</p>
+                            <p class="text_edit js_director_full_name text-bold">Самигов Д.</p>
                             <p>_________________________________</p>
                             <p>М.П.</p>
                         </div>
@@ -182,8 +185,8 @@
                             <p>Факс: <span class="text-bold">78 150- 01-02</span></p>
                             <p>РКННДС: <span class="text-bold">326010005625</span></p>
                             <br/>
-                            <p>Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="text_edit js_general_director_title">Генеральный директор</p>
+                            <p class="text-bold text_edit js_general_director_full_name">Lee Baek Hee</p>
                             <p>_________________________________</p>
                             <p>М.П.</p>
                         </div>
@@ -205,21 +208,21 @@
                             <span>от</span>
                             «<span class="js_date_day_static">17</span>»
                             <span class="js_date_month_static">мая</span>
-                            <span class="js_date_year_static">2021</span>г<br/>
+                            <span class="js_date_year_static">2022</span>г<br/>
                         </p>
                     </div>
 
                     <p class="text-center text-bold mt-1 mb-2">Протокол согласования договорных единичных расценок</p>
 
-                    &emsp;&emsp;&emsp;&emsp;Мы, нижеподписавшиеся, от <b>Заказчика</b> - <span class="text_edit text-bold" contenteditable="false">ООО "Food City Tashkent"</span> в лице
+                    &emsp;&emsp;&emsp;&emsp;Мы, нижеподписавшиеся, от <b>Заказчика</b> - <span class="text_edit text-bold js_company_name_html">ООО "Food City Tashkent"</span> в лице
                     <span class="js_director_position">Директора</span> <span class="js_director_name">Самигова Д.</span>,
                     действующего на основании ____________________, с одной стороны, и от <span class="text-bold">Подрядчика – СП OOO «Ist Теlеkom»</span>, в лице Генерального
-                    директора <b>Lee Baek Hee</b>, действующего на основании устава, с другой стороны, удостоверяем, что сторонами принят Протокол согласования договорных единичных
+                    директора <b>Lee Baek Hee</b>, действующего на основании <span class="js_ustav_html">устава</span>, с другой стороны, удостоверяем, что сторонами принят Протокол согласования договорных единичных
                     расценок на выполняемые работы по организации новой абонентской линии связи до объекта Заказчика.<br/>
 
 
                     <table class="table table-bordered contract2-list3-table js_table1">
-                        <tbody>
+                       <thead>
                             <tr>
                                 <th>№</th>
                                 <th class="align-middle">Наименование работ</th>
@@ -227,11 +230,20 @@
                                 <th class="align-middle">Кол-во</th>
                                 <th class="align-middle">Стоимость работ с учетом НДС, сум</th>
                             </tr>
-                            <tr class="js_tr_item">
+                       </thead>
+                        <tbody>
+                            <tr class="js_tr_item position-relative">
                                 <td class="js_number">1</td>
-                                <td style="line-height: 1; text-align: left; font-size: 16px;">
-                                    <span class="text_edit text-bold text-underline">Организация новой абонентской линии СП ООО «Ist Telekom»:*</span>
-                                    <span class="text_edit text-bold" contenteditable="false">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>
+                                <td class="js_table_text" style="line-height: 1; text-align: left;">
+                                    <span class="text_edit td-span-text">
+                                        <span class="text_edit text-bold text-underline">Организация новой абонентской линии СП ООО «Ist Telekom»:*</span>
+                                        <span class="text_edit text-bold">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>
+                                    </span>
+                                    <ul class="ul-word-icons d-none">
+                                        <li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>
+                                        <li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>
+                                        <li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>
+                                    </ul>
                                 </td>
                                 <td class="text_edit align-middle text-center">линия</td>
                                 <td class="text_edit align-middle text-center js_table_count_total">1</td>
@@ -256,8 +268,8 @@
                         <div class="col-md-5 offset-1">
                             <p class="text-bold">ЗАКАЗЧИК</p>
                             <p>
-                                <span class="js_director_position">Директор</span><br/>
-                                <span class="js_director_name text-bold">Самигов Д.</span>
+                                <span class="js_director_title_html">Директор</span><br/>
+                                <span class="js_director_full_name_html text-bold">Самигов Д.</span>
                             </p>
                             <p class="mb-0">________________</p>
                             <p>М.П.</p>
@@ -265,8 +277,8 @@
                         <div class="col-md-5 offset-1">
                             <p class="text-bold">ПОДРЯДЧИК</p>
                             <p>
-                                <span>Генеральный директор</span><br/>
-                                <span class="text-bold">Lee Baek Hee</span>
+                                <span class="js_general_director_title_html">Генеральный директор</span><br/>
+                                <span class="text-bold js_general_director_full_name_html">Lee Baek Hee</span>
                             </p>
                             <p class="mb-1">__________________</p>
                             <p>М.П.</p>
@@ -296,7 +308,7 @@
                 e.preventDefault();
 
                 afer_save_add_d_none_template()
-                
+
                 let form    = $(this);
                 let number  = $('.js_number').html();
                 let title   = $('.js_title1').html();

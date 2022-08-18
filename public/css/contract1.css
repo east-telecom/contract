@@ -1,23 +1,20 @@
 
-
-.contract1 h4 {
-    font-size: 8pt;
+h4.text-center {
+    font-size: 8.5pt;
 }
 
-.contract1 .contract-text {
+.contract-text {
     padding: 5px 35px !important;
-    font-size: 7.9pt!important;
+    font-size: 7.8pt!important;
 }
-
 
 .inn {
     padding-top: 0 !important;
     margin-top: 0 !important;
 }
 
-.contract1 .row *,
-.contract1 p {
-    font-size: 7.9pt !important;
+.row, p {
+    font-size: 7.8pt !important;
 }
 
 .inn .row{
@@ -38,59 +35,74 @@
     margin-left: 0 !important;
 }
 
-.contract1 h5 {
+h5 {
     color: black !important;
     font-weight: bold;
 }
-.contract1 span.text_edit {
+span.text_edit {
     line-height: 1;
 }
-.contract1 .text-bold{
+.text-bold{
     font-weight: bold;
 }
-.contract1 .mt_1 {
+.mt_1 {
     margin-top: 8px;
 }
-.contract1 .tr-empty {
+.tr-empty {
     height: 20px;
 }
-.contract1 .tr-empty td:last-child {
+.tr-empty td:last-child {
     padding: 0;
     line-height: 1;
 }
-.contract1 .contract1-list3-table1 {
+.contract1-list3-table1 {
     line-height: 1;
 }
 
-.contract1 .contract1-list3-table1 tr td:nth-child(2) {
+.contract1-list3-table1 tr td:nth-child(2) {
     width: 35%;
 }
-.contract1 .contract1-list4-table2 tr td:nth-child(1) {
+.contract1-list4-table2 tr td:nth-child(1) {
     text-align: left;
-    padding-left: 15px;
 }
-.contract1 .contract1-list4-table2 tr td:nth-child(3),
-.contract1 .contract1-list4-table2 tr td:nth-child(4),
-.contract1 .contract1-list4-table2 tr td:nth-child(5) {
+.contract1-list4-table2 tr td:nth-child(1) b {
+    margin-left: 5px !important;
+}
+.contract1-list4-table2 tr td:nth-child(3),
+.contract1-list4-table2 tr td:nth-child(4),
+.contract1-list4-table2 tr td:nth-child(5) {
     text-align: center;
     line-height: 1;
 }
-.contract1 .contract1-list4-table2 tr td:nth-child(6)  {
+.contract1-list4-table2 tr td:nth-child(6)  {
     text-align: center;
     font-weight: bold;
 }
 
 
-.contract1 .table tr th,
-.contract1 .table tr td {
+.table tr th,
+.table tr td {
     font-size: 7.9pt;
-    padding: 10px;
-    border: 1px solid darkgray;
+    padding:  3px;
 }
 
-.contract1 .ul-word-icons{
-    position: absolute;
-    left: -56%;
-    top: 1px;
+tbody tr td {
+    padding: 3px;
 }
+
+thead tr th,
+tbody tr td,
+tbody tr td span {
+    color: #000;
+    border: none !important;
+}
+
+
+table thead tr:last-child {
+    border-bottom-color: #000 !important;
+}
+
+
+
+
 

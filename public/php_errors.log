@@ -140,3 +140,11 @@ Stack trace:
 #2 /home/ismoil/contract/public/index.php(34): require('...')
 #3 {main}
   thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[18-Aug-2022 08:58:58 Asia/Karachi] PHP Warning:  require(/home/ismoil/contract/vendor/composer/../../app/Http/Helpers/Helper.php): Failed to open stream: No such file or directory in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71
+[18-Aug-2022 08:58:58 Asia/Karachi] PHP Fatal error:  Uncaught Error: Failed opening required '/home/ismoil/contract/vendor/composer/../../app/Http/Helpers/Helper.php' (include_path='.:/usr/share/php') in /home/ismoil/contract/vendor/composer/autoload_real.php:71
+Stack trace:
+#0 /home/ismoil/contract/vendor/composer/autoload_real.php(61): composerRequirefb8734f950c15c2eee03c192ee49daf0()
+#1 /home/ismoil/contract/vendor/autoload.php(7): ComposerAutoloaderInitfb8734f950c15c2eee03c192ee49daf0::getLoader()
+#2 /home/ismoil/contract/public/index.php(34): require('...')
+#3 {main}
+  thrown in /home/ismoil/contract/vendor/composer/autoload_real.php on line 71

@@ -55,6 +55,8 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::post('/contract/update-status-employee/', [ContractController::class, 'update_status_and_send_employee'])->name('contract.update_status_and_send_employee');
 
         Route::post('/contract/file-download/', [ContractController::class, 'files_download'])->name('files_download');
+
+        Route::get('/duplicate-contract/{id}', [ContractController::class, 'duplicate_contract'])->name('contract.duplicate_contract');
     });
     /******************** ./Contract *********************/
 
@@ -66,6 +68,7 @@ Route::middleware(['auth', 'isAdmin'])->group(function () {
         Route::get('/user/one-user/{id}', [UsersController::class, 'oneUser'])->name('user.oneUser');
         Route::get('/user-profile-show/', [UsersController::class, 'user_profile_show'])->name('user.user_profile_show');
         Route::put('/user/user-profile-update/{id}', [UsersController::class, 'user_profile_update'])->name('user.user_profile_update');
+        Route::get('/video-instruction', [UsersController::class, 'video_instruction'])->name('user.video_instruction');
     });
     /******************** Users ***********************/
 

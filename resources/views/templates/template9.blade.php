@@ -1,11 +1,14 @@
 @extends('layouts.app')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/contract9.css?'.time()) }}">
+@endsection
 
 @section('content')
 
     <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="9">
 
-        <div class="contract9">
+        <div class="contract9" id="forstyle">
 
             <!-- 1 - list -->
             <div class="card contract-text">
@@ -39,10 +42,10 @@
                 <div>
                     &emsp;&emsp;&emsp;<span class="text_edit text-bold">СП OOO «Ist Теlеkom»</span>, именуемое в дальнейшем <b>«Оператор»</b>,
                     в лице Генерального директора Lee Baek Hee, действующего на основании Устава, с одной стороны, и
-                    <span class="text_edit text-bold">"DIABAZ KOMPOZIT" MCHJ QK</span> именуемый в дальнейшем <b>«Абонент»</b>, в лице
-                    <span class="text_edit">директора Усманова Ж.</span>, действующего на основании <span class="text_edit">Устава</span>,
-                    с другой стороны, и <span class="text_edit text-bold">OOO “DIABAZ COMPOZIT GROUP”</span> именуемый в дальнейшем <b>«Поручитель»</b>,
-                    в лице <span class="text_edit">директора Алибаева Х.И.</span>, действующего на основании <span class="text_edit">Устава</span>,
+                    <span class="text_edit text-bold js_company_name">"DIABAZ KOMPOZIT" MCHJ QK</span> именуемый в дальнейшем <b>«Абонент»</b>, в лице
+                    <span class="text_edit">директора Усманова Ж.</span>, действующего на основании <span class="text_edit js_ustav">Устава</span>,
+                    с другой стороны, и <span class="text_edit text-bold js_company_name2">OOO “DIABAZ COMPOZIT GROUP”</span> именуемый в дальнейшем <b>«Поручитель»</b>,
+                    в лице <span class="text_edit">директора Алибаева Х.И.</span>, действующего на основании <span class="text_edit js_ustav_html">Устава</span>,
                     с третьей стороны, вместе именуемые <b>«Стороны»</b>, заключили настоящий Договор о нижеследующем.
                     <br/>
 
@@ -89,7 +92,6 @@
             <!-- 2 - list -->
             <div class="card contract-text">
 
-
                     <h5 class="text-bold mb-1">5.&nbsp; ДРУГИЕ УСЛОВИЯ ДОГОВОРА</h5>
                     <p class="ml-4">
                         5.1.&emsp; Все изменения и дополнения к настоящему Договору действительны только в случае, если они совершены в письменной форме и подписаны Сторонами. <br>
@@ -107,15 +109,15 @@
                     <h5 class="text-bold mt-2 mb-3">6.&nbsp; ЮРИДИЧЕСКИЕ АДРЕСА СТОРОН</h5>
 
                     <div>
-                        <p class="text-bold mb-1">"ОПЕРАТОР": СП OOO «Ist Теlеkom»</p>
+                        <p class="text-bold mb-1">ОПЕРАТОР: СП OOO «Ist Теlеkom»</p>
                         <p class="mb-1">100060, г. Ташкент, Мирабадский район, ул. Т. Шевченко, д.21</p>
                         <p class="mb-1">Телефон: 78 150 00 00,&emsp;Факс: 78 150 01 02 </p>
                         <p class="mb-1">Р/счет: <b>20214000404281148001</b>&emsp;Банк: <b>UZ КDВ BANK</b> МФО: <b>00842</b></p>
                         <p class="mb-1">ИНН: <b>204663354</b>&emsp;ОКЭД: <b>61100</b></p>
 
                         <div class="text-right">
-                            <p class="mb-0">Генеральный директор</p>
-                            <p class="text-bold mb-1">Lee Baek Hee</p>
+                            <p class="mb-0 text_edit">Генеральный директор</p>
+                            <p class="text-bold mb-1 text_edit">Lee Baek Hee</p>
                             <p class="mb-0">М.П._________________</p>
                             <p class="ml-5 mb-0">(подпись)</p>
                         </div>
@@ -125,7 +127,7 @@
 
                     {{-- 2 --}}
                     <div class="js_tin_div1">
-                        <p class="text-bold mb-1 text_edit js_name">"АБОНЕНТ": "DIABAZ KOMPOZIT" MCHJ QK,</p>
+                        <p class="text-bold mb-1">АБОНЕНТ: <span class="text_edit js_name js_company_name_html">"DIABAZ KOMPOZIT" MCHJ QK,</span></p>
                         <p class="mb-1 text_edit js_address">130100, Джизакская область, Фариш, Эгизбулок КФЙ</p>
                         <p class="mb-1">Телефон: <span class="text_edit">998901203535</span></p>
                         <p class="mb-1">Р/счет: <span class="text_edit text-bold js_account">20214000305084432001</span></p>
@@ -137,18 +139,17 @@
                         </p>
 
                         <div class="text-right">
-                            <p class="mb-0 text_edit">Директор</p>
-                            <p class="text-bold text_edit mb-1 js_director">Усманов Ж.</p>
+                            <p class="mb-0"><span class="text_edit js_director_title">Директор</span></p>
+                            <p class="text-bold mb-1"><span class="text_edit js_director_full_name">Усманов Ж.</span></p>
                             <p class="mb-0">М.П._________________</p>
                             <p class="ml-5 mb-0">(подпись)</p>
                         </div>
                     </div>
-
-
+                
 
                     {{-- 3 --}}
                     <div class="js_tin_div2">
-                        <p class="text-bold mb-1 text_edit js_name">"ПОРУЧИТЕЛЬ": OOO “DIABAZ COMPOZIT GROUP”</p>
+                        <p class="text-bold mb-1">ПОРУЧИТЕЛЬ: <span class="text_edit js_name js_company_name2_html">OOO “DIABAZ COMPOZIT GROUP”</span></p>
                         <p class="mb-1 js_address text_edit">130100, Джизакская область, Фаришский район,  Эгизбулок, МСГ Эгизбулок</p>
                         <p class="mb-1">Телефон: <span class="text_edit text-bold">998 90 120 35 35</span></p>
                         <p class="mb-1">Р/счет: <span class="text_edit text-bold js_account">20208000600302909001</span></p>
@@ -160,15 +161,13 @@
                         </p>
 
                         <div class="text-right">
-                            <p class="mb-0 text_edit">Директор</p>
-                            <p class="text-bold text_edit mb-1 js_director">Алибаев Х.И.</p>
+                            <p class="mb-0 js_director_title_html">Директор</p>
+                            <p class="text-bold mb-1"><span class="text_edit js_director_full_name_html">Алибаев Х.И.</span></p>
                             <p class="mb-0">М.П._________________</p>
                             <p class="ml-5 mb-0">(подпись)</p>
                         </div>
                     </div>
-
-
-
+                
 
             </div><!-- ./card -->
 
@@ -199,7 +198,7 @@
                 let title   = $('.js_title1').html();
                 let data    = $('.js_data_all').html();
                 let template_number = $('.js_data_all_pdf').data('template_number');
-                
+
                 form.find('.js_hidden_number').val(number);
                 form.find('.js_hidden_title').val(title);
                 form.find('.js_hidden_data').val(data);

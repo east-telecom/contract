@@ -1,3 +1,53 @@
+/* ! color correction and the shadows are here */
+
+.dropdown-item.active, .dropdown-item:active,
+.btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #0088cc !important;
+}
+
+.c-header-nav-link.active  {
+    border-radius: 6px;
+    transition: 0.3s ease-in-out;
+}
+
+.c-header-nav-link.active:hover {
+    opacity: 0.8;
+}
+
+.btn-outline-success {
+    transition: 0.3s ease-in-out;
+    border-color: #0088cc !important;
+    color:#0088cc;
+}
+
+.btn-outline-success:hover {
+    background-color: #0088cc !important;
+    border-color: #0088cc !important;
+    color: #fff !important;
+}
+
+.form-control.js_tin_input {
+    border-color: #0088cc !important;
+}
+
+.text-primary {
+    color: #0088cc !important;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active, .btn-outline-success:not(:disabled):not(.disabled).active {
+    border-color: #0088cc !important;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled):active:focus, .btn-outline-success:not(:disabled):not(.disabled).active:focus, .btn-outline-success:focus, .btn-outline-success.focus, .c-header-nav-link.active:focus, .c-header-nav-item .btn:focus, .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 136, 204, 0.5) !important;
+}
+
+.c-header-nav-item .btn, .btn-outline-primary {
+    transition: 0.3s ease-in-out;
+}
+
+/* ! end  */
+
 
 .content-wrapper .add_btn {
     position: absolute;
@@ -11,6 +61,7 @@
     margin-top: 5px;
     margin-bottom: 0px;
 }
+
 
 .btn_back i {
     font-size: 40px;
@@ -50,26 +101,29 @@
     color: #28C76F !important;
 }
 
+/* Scrollbar styles */
+
+::-ms-scrollbar,
+::-moz-scrollbar,
+::-webkit-scrollbar,
+::scrollbar {
+    width: 5px;
+}
 
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 3px grey;
-    border-radius: 10px;
-}
-/* Handle */
+
+::-moz-scrollbar-thumb,
 ::-webkit-scrollbar-thumb {
-    background: #8b8bec;
-    border-radius: 5px;
+    background: dimgray;
 }
-/* Handle on hover */
+
+::-moz-scrollbar-thumb:hover,
 ::-webkit-scrollbar-thumb:hover {
-    background: #4a4aa5;
+    background: grey;
 }
+
+/* end */
+
 
 /**
  orders
@@ -260,7 +314,7 @@
 }
 
 .back-btn-icon {
-    color: #0D6AAD;
+    color: #0088cc;
     font-size: 40px;
     position: absolute;
     top: 60px;

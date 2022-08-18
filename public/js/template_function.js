@@ -7,7 +7,7 @@ $(document).ready(function() {
         $(this).siblings('.btn').removeClass('d-none')
         $(this).addClass('d-none');
 
-        $('.text_edit').attr('contenteditable', true).css('color', 'red');
+        $('.text_edit').attr('contenteditable', true).addClass('text-red');
 
         select_date_month_fun_edit()
 
@@ -15,6 +15,11 @@ $(document).ready(function() {
         // table dynamic
         $('.create_tarif_tr1').removeClass('d-none').addClass('d-flex')
         $('.create_tarif_tr2').removeClass('d-none').addClass('d-flex')
+
+
+        $('.td-span-text').addClass('text-red');
+
+
 
         // add tr btns
         $('.add-tr-btns').removeClass('d-none')
@@ -83,9 +88,9 @@ $(document).ready(function() {
             $('.kv-file-upload').addClass('d-none').css('border-color', '#6c757d');
         }, 1000);
     }
-    $('.btn-file .hidden-xs').addClass('ml-2').html('Файл загружен');
-    $('.fileinput-remove .hidden-xs').html(' Удалять');
-
+    $('.kv-fileinput-caption').attr('placeholder', 'Выбрать файлы...');
+    $('.btn-file .hidden-xs').addClass('ml-2').html('Прикрепить файлы');
+    $('.fileinput-remove .hidden-xs').html(' Удалить Все');
 
 
     // send to jurists btn
@@ -117,6 +122,33 @@ $(document).ready(function() {
 
     /******************************************** templates ********************************************/
 
+
+    // text_edit empty
+    $(document).on('focusout', '.text_edit', function() {
+        let name = $(this).html();
+        if (name == '') {
+            $(this).html('____')
+        }
+    });
+
+
+    // Company name
+    $(document).on('focusout', '.js_company_name', function() {
+        let name = $(this).html();
+        $('.js_company_name_html').html(name);
+    });
+
+    // Company name 2
+    $(document).on('focusout', '.js_company_name2', function() {
+        let name = $(this).html();
+        $('.js_company_name2_html').html(name);
+    });
+
+    $(document).on('focusout', '.js_ustav', function() {
+        let html = $(this).html();
+        $('.js_ustav_html').html(html)
+    })
+
     // month1 chage
     $(document).on('change', '.js_select_data_month1', function() {
         let month = $(this).val();
@@ -134,7 +166,6 @@ $(document).ready(function() {
         let month = $(this).val();
         $('.js_span_date_month1_html').html(month);
     });
-
 
 
     // № 4, 5, ...
@@ -191,38 +222,40 @@ $(document).ready(function() {
     })
 
 
-    $(document).on('focusout', '.js_director_position_dynamic', function() {
+    $(document).on('focusout', '.js_general_director_title', function() {
         let val = $(this).html()
-        $('.js_position_static').html(val)
+        $('.js_general_director_title_html').html(val)
     })
 
-    $(document).on('focusout', '.js_director_name_dynamic', function() {
+    $(document).on('focusout', '.js_general_director_full_name', function() {
         let val = $(this).html()
-        $('.js_name_static').html(val)
+        $('.js_general_director_full_name_html').html(val)
     })
 
 
-
-    /** director name edit **/
-    $(document).on('focusout', '.js_director_text', function() {
-        let text = $(this).html().split(' ');
-
-        console.log('t: ', text);
-        $('.js_director_position').html(text.shift())
-
-        let name = ''
-        $.each(text, function(i, index) {
-            name += index+' ';
-        });
-        $('.js_director_name').html(name)
+    $(document).on('focusout', '.js_director_title', function() {
+        let val = $(this).html()
+        $('.js_director_title_html').html(val)
     })
+
+    $(document).on('focusout', '.js_director_full_name', function() {
+        let val = $(this).html()
+        $('.js_director_full_name_html').html(val)
+    })
+
 
 
     /** summa 1  **/
     $(document).on('focusout', '.js_sum', function () {
         let sum = $(this).html()
+        sum = sum.replace(' ', '');
+        sum = sum.replaceAll('&nbsp;', '');
+
         let sum_text = $('.js_sum_text')
         get_sum_text_ajax(sum, sum_text)
+
+        sum = number_format(parseFloat(sum));
+        $(this).html(sum);
     });
 
     /** summa 2 **/
@@ -237,15 +270,22 @@ $(document).ready(function() {
 
     /** Table diynamic tr add  no group**/
     $(document).on('click', '.js_icon_add_tr_no_group', function() {
-        let tr = '<tr class="js_tr_item">\n' +
+        let tr = '<tr class="js_tr_item position-relative">\n' +
                     '<td class="js_number">1</td>\n' +
-                    '<td style="line-height: 1; text-align: left; font-size: 16px;">\n' +
-                    '  <span class="text-bold text-underline text_edit" contenteditable="true">Организация новой абонентской линии СП ООО «Ist Telekom»:*</span>\n' +
-                    '  <span class="text-bold text_edit" contenteditable="true">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>\n' +
+                    '<td classs="js_table_text" style="line-height: 1; text-align: left; font-size: 16px;">\n' +
+                        '<span class="text_edit td-span-text text-red">\n' +
+                            '<span class="text_edit text-red text-underline" contenteditable="true">Организация новой абонентской линии СП ООО «Ist Telekom»:*</span>\n' +
+                            '<span class="text_edit text-red text-red" contenteditable="true">Ташкентская область Уртачирчикский район, массив Ахунбабаева, поселок Кумовул</span>\n' +
+                        '</span>\n'+
+                        '<ul class="ul-word-icons">\n' +
+                            '<li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>\n' +
+                            '<li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>\n' +
+                            '<li class="js_text_underline_icon"><a href="#"><i class="fa-solid fa-underline"></i></a></li>\n' +
+                        '</ul>\n'+
                     '</td>\n' +
-                    '<td class="text_edit align-middle text-center" contenteditable="true">линия</td>\n' +
-                    '<td class="text_edit align-middle text-center js_table_count_total" contenteditable="true">1</td>\n' +
-                    '<td class="text_edit align-middle text-center js_table_sena_total" contenteditable="true">14 000 000</td>\n' +
+                    '<td class="text_edit text-red align-middle text-center" contenteditable="true">линия</td>\n' +
+                    '<td class="text_edit text-red align-middle text-center js_table_count_total" contenteditable="true">1</td>\n' +
+                    '<td class="text_edit text-red align-middle text-center js_table_sena_total" contenteditable="true">14 000 000</td>\n' +
                     '<td class="position-absolute add-tr-btns">\n' +
                     '  <a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr_no_group" title="delete row"><i class="fas fa-trash-alt"></i></a>\n' +
                     '  </td>\n' +
@@ -272,20 +312,19 @@ $(document).ready(function() {
     $(document).on('focusout', '.js_table_sena_total', function() {
         let table = $('.js_table1')
 
-
         no_group_table_number_draw_and_calculation(table)
 
-        let sum = $(this).html()
-        sum = number_format(sum);
+        let sum = $(this).html();
+        sum = sum.replaceAll('&nbsp;', '');
 
-        console.log('sum: ', sum)
-        $(this).val(sum);
-    })
+        sum = number_format(parseFloat(sum));
+        $(this).html(sum)
+    });
 
     $(document).on('focusout', '.js_table_count_total', function() {
         let table = $('.js_table1')
         no_group_table_number_draw_and_calculation(table)
-    })
+    });
 
     /** ###################################################### - ./ No group table events ###################################################### **/
 
@@ -305,7 +344,7 @@ $(document).ready(function() {
         let table = $('.js_add_tarif_to_table2');
         let js_tarif_select = $('.js_tarif_select2 option:selected').val();
 
-        table_create_tr(table, js_tarif_select)
+        table_create_tr(table, js_tarif_select);
     });
     
 
@@ -342,7 +381,6 @@ $(document).ready(function() {
         sum = number_format(sum).toString()
         tr_item.find('.js_table_sum_all').html(sum)
 
-
         // horizontall table
         horizontal_table_in_td_draw($(this))
     })
@@ -356,10 +394,10 @@ $(document).ready(function() {
         let number = tr.find('.js_item_number b').html()*1 + 0.1
         number = number.toFixed(1)
 
-        let new_tr = '<tr class="js_tr_item">\n' +
-                        '<td class="text_edit js_item_number" contenteditable="true"><b>'+number+'</b></td>\n' +
-                        '<td class="text_edit js_table_text position-relative">' +
-                            '<span contenteditable="true" class="td-span-text"><b>Абонентская плата**</b> <br/> Согласно тарифному плану</span>\n'+
+        let new_tr = '<tr class="js_tr_item position-relative">\n' +
+                        '<td class="js_item_number"><b>'+number+'</b></td>\n' +
+                        '<td class="text_edit js_table_text text-red">' +
+                            '<span contenteditable="true" class="td-span-text text-red"><b>Абонентская плата**</b> <br/> Согласно тарифному плану</span>\n'+
                             '<ul class="ul-word-icons">\n' +
                                 '<li class="js_text_bold_icon"><a href="#"><i class="fa-solid fa-bold mr-1"></i></a></li>\n' +
                                 '<li class="js_text_italic_icon"><a href="#"><i class="fa-solid fa-italic mr-1"></i></a></li>\n' +
@@ -367,10 +405,10 @@ $(document).ready(function() {
                                 '<li class="js_text_tarif_name_icon"><a href="#"><i class="fa-solid fa-t"></i></a></li>\n'+
                             '</ul>\n'+
                         '</td>\n' +
-                        '<td class="text-center text_edit" contenteditable="true">номер</td>\n' +
-                        '<td class="text_edit js_table_sena text-center" contenteditable="true">0</td>\n' +
-                        '<td class="text_edit js_table_count text-center" contenteditable="true">1</td>\n' +
-                        '<td class="js_table_sum_all text-center">0</td>\n' +
+                        '<td class="text_edit text-red text-center" contenteditable="true">номер</td>\n' +
+                        '<td class="text_edit text-red js_table_sena text-center" contenteditable="true">0</td>\n' +
+                        '<td class="text_edit text-red js_table_count text-center" contenteditable="true">1</td>\n' +
+                        '<td class="js_table_sum_all text-center text-bold">0</td>\n' +
                         '<td class="position-absolute add-tr-btns">' +
                         '<a href="javascript:void(0);" class="btn btn-danger btn-sm js_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>\n'+
                         '<a href="javascript:void(0);" class="btn btn-info btn-sm js_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>\n'+
@@ -390,7 +428,6 @@ $(document).ready(function() {
         let table = $(this).closest('.table')
         let tr = $(this).closest('.js_tr_item')
         let this_tr = $(this).closest('.js_tr_item')
-        // let n = 1;
 
         let prev =  tr.prev()
         let next =  tr.next()
@@ -408,7 +445,6 @@ $(document).ready(function() {
         }
 
 
-
         let trs = table.find('tbody tr')
         let this_number = this_tr.find('td b').html()
 
@@ -424,31 +460,31 @@ $(document).ready(function() {
 
             if ($(val).find('td b').html()) {
 
-                let s = $(val).find('td b').html();
+                let s = $(val).find('td:first-child b').html();
                 if (a != s[0] && b != 0) {
 
                     if ($(val).hasClass('js_tr_group'))
                         a++;
 
                     if (s[2])
-                        $(val).find('td b').html(a + '.' + s[2]);
+                        $(val).find('td:first-child b').html(a + '.' + s[2]);
                     else
-                        $(val).find('td b').html(a);
+                        $(val).find('td:first-child b').html(a);
                 }
                 else {
                     if (s[2])
-                        $(val).find('td b').html(a + '.' + s[2]);
+                        $(val).find('td:first-child b').html(a + '.' + s[2]);
                     else
-                        $(val).find('td b').html(a);
+                        $(val).find('td:first-child b').html(a);
                 }
 
                 b++;
 
                 if (!$(val).hasClass('js_tr_group')) {
-                    let t = $(val).find('td b').html();
+                    let t = $(val).find('td:first-child b').html();
 
                     if (t[0] == n) {
-                        $(val).find('td b').html(n+'.'+m)
+                        $(val).find('td:first-child b').html(n+'.'+m)
                         m++;
                     }
                 }
@@ -472,17 +508,17 @@ $(document).ready(function() {
         let this_tr = $(this).closest('tr')
         let tr = '<tr>\n' +
                     '<td class="align-middle text-center js_number">1</td>\n' +
-                    '<td class="align-middle text-center text_edit" contenteditable="true">1</td>\n' +
+                    '<td class="align-middle text-center text_edit text-red" contenteditable="true">1</td>\n' +
                     '<td class="align-middle">\n' +
-                        '<span class="text_edit" contenteditable="true">г.Ташкент, Мирзо-Улугбекский р-н, улица </span><br/>\n' +
-                        '<span class="text_edit" contenteditable="true">Зиёлилар, дом 9 (10277) - г.Ташкент, АТС 241</span>\n' +
+                        '<span class="text_edit text-red" contenteditable="true">г.Ташкент, Мирзо-Улугбекский р-н, улица </span><br/>\n' +
+                        '<span class="text_edit text-red" contenteditable="true">Зиёлилар, дом 9 (10277) - г.Ташкент, АТС 241</span>\n' +
                     '</td>\n' +
-                    '<td class="align-middle text-center"><span class="text_edit" contenteditable="true">100 Мб/с</span></td>\n' +
-                    '<td class="align-middle text-center"><span class="text_edit" contenteditable="true">местный</span></td>\n' +
-                    '<td class="align-middle text-center"><span class="text_edit" contenteditable="true">ВОЛС стыковка с абонентом</span></td>\n' +
-                    '<td class="align-middle text-center"><span class="text_edit" contenteditable="true">75 000,00</span></td>\n' +
-                    '<td class="align-middle text-center"><span class="text_edit" contenteditable="true">1 000 000,0</span></td>\n' +
-                    '<td class="align-middle text-center"><span class="text_edit" contenteditable="true">Ethernet</span></td>\n' +
+                    '<td class="align-middle text-center"><span class="text_edit text-red" contenteditable="true">100 Мб/с</span></td>\n' +
+                    '<td class="align-middle text-center"><span class="text_edit text-red" contenteditable="true">местный</span></td>\n' +
+                    '<td class="align-middle text-center"><span class="text_edit text-red" contenteditable="true">ВОЛС стыковка с абонентом</span></td>\n' +
+                    '<td class="align-middle text-center"><span class="text_edit js_sum_format" contenteditable="true">75&nbsp;000</span></td>\n' +
+                    '<td class="align-middle text-center"><span class="text_edit js_sum_format" contenteditable="true">1&nbsp;000&nbsp;000</span></td>\n' +
+                    '<td class="align-middle text-center"><span class="text_edit text-red" contenteditable="true">Ethernet</span></td>\n' +
                     '<td class="position-absolute add-tr-btns">\n' +
                         '<a href="javascript:void(0);" class="btn btn-danger btn-sm js_template4_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>\n' +
                         '<a href="javascript:void(0);" class="btn btn-info btn-sm js_template4_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>\n' +
@@ -527,6 +563,17 @@ $(document).ready(function() {
 
     })
 
+
+    $(document).on('focusout', '.js_sum_format', function() {
+
+        let sum = $(this).html();
+
+        sum = sum.replaceAll('&nbsp;', '');
+
+        sum = number_format(parseFloat(sum));
+        $(this).html(sum)
+    });
+
     /** ################################# ./template 4 ############################ **/
 
 
@@ -540,13 +587,13 @@ $(document).ready(function() {
         let this_tr = $(this).closest('tr')
         let tr = '<tr>\n' +
                     '<td class="js_number">2.</td>\n' +
-                    '<td class="text_edit" contenteditable="true">1</td>\n' +
-                    '<td class="text_edit" contenteditable="true">от AMTS/ATS-223 г. Навои, улица Навои 5-Д, до узла 21052 Gulshan Rano</td>\n' +
-                    '<td class="text_edit" contenteditable="true">4 Мб/c</td>\n' +
-                    '<td class="text_edit" contenteditable="true">местный</td>\n' +
-                    '<td class="text_edit" contenteditable="true">84 000,0</td>\n' +
-                    '<td class="text_edit" contenteditable="true">40 000,0</td>\n' +
-                    '<td class="text_edit" contenteditable="true">Ethernet</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">1</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">от AMTS/ATS-223 г. Навои, улица Навои 5-Д, до узла 21052 Gulshan Rano</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">4 Мб/c</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">местный</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">84 000</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">40 000</td>\n' +
+                    '<td class="text_edit text-red" contenteditable="true">Ethernet</td>\n' +
                     '<td class="position-absolute add-tr-btns">\n' +
                     '    <a href="javascript:void(0);" class="btn btn-danger btn-sm js_template6_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>\n' +
                     '    <a href="javascript:void(0);" class="btn btn-info btn-sm js_template6_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>\n' +
@@ -596,42 +643,42 @@ $(document).ready(function() {
 
     /** ################################# ./template 5 ############################ **/
 
-    /** Horizontal cvartl add **/
-    $(document).on('click', '.js_icon_btn_hide_tr', function() {
+    /** Horizontal cvartl add or remove tr **/
+    $(document).on('click', '.js_hide_show_tr', function() {
 
         let trs = $('.js_table_horizontal').find('tr')
         let this_number = $(this).data('tr_number')
 
-        $.each(trs, function(item, one_tr) {
+        if (!$(this).hasClass('hide_tr')) {
 
-            if ($(one_tr).data('tr_number') == this_number)
-                $(one_tr).addClass('d-none')
+            $.each(trs, function(item, one_tr) {
+                if ($(one_tr).data('tr_number') == this_number)
+                    $(one_tr).addClass('d-none');
+            });
 
-        })
+            let this_tr = $('.table').find('.js_tr_item')
+            horizontal_table_in_td_draw(this_tr)
 
-        $(this).removeClass('fa-eye js_icon_btn_hide_tr text-danger')
-        $(this).addClass('fa-eye-slash js_icon_btn_show_tr text-primary')
+            $(this).addClass('hide_tr')
+            $(this).find('i').removeClass('fa-eye text-red')
+            $(this).find('i').addClass('fa-eye-slash text-primay')
+        }
+        else {
 
+            $.each(trs, function(item, one_tr) {
+                if ($(one_tr).data('tr_number') == this_number)
+                    $(one_tr).removeClass('d-none');
+            });
+
+            let this_tr = $('.table').find('.js_tr_item')
+            horizontal_table_in_td_draw(this_tr)
+
+            $(this).removeClass('hide_tr')
+            $(this).find('i').removeClass('fa-eye-slash text-primay')
+            $(this).find('i').addClass('fa-eye text-red')
+
+        }
     });
-
-
-    /** Horizontal cvartl remove **/
-    $(document).on('click', '.js_icon_btn_show_tr', function() {
-
-        let trs = $('.js_table_horizontal').find('tr')
-        let this_number = $(this).data('tr_number')
-
-        $.each(trs, function(item, one_tr) {
-
-            if ($(one_tr).data('tr_number') == this_number)
-                $(one_tr).removeClass('d-none')
-
-        })
-
-        $(this).removeClass('fa-eye-slash js_icon_btn_show_tr text-primary')
-        $(this).addClass('fa-eye js_icon_btn_hide_tr text-danger')
-
-    })
 
 
     /** ################################# ./template 5 ############################ **/
@@ -724,7 +771,6 @@ $(document).ready(function() {
                 span.html(new_td_text)
 
                 horizontal_table_in_td_draw(td);
-                console.log('ttt')
             }
         }
 

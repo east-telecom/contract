@@ -16,7 +16,7 @@
                         <div class="col-md-6 form-group">
                             <label for="section">Отдел *</label>
                             <select name="section_id" class="form-control js_section" id="section">
-                                @foreach($section as $s)
+                                @foreach($sections as $s)
                                     <option value="{{ $s->id }}">
                                         {{ $s->name }}
                                         @if($s->rule == 'ADMIN_USER')

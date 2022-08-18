@@ -22,8 +22,7 @@
                         <th>Эл. адрес</th>
                         <th>Телефон</th>
                         <th>Статус</th>
-                        <th>Свидание</th>
-                        <th>Правило</th>
+                        <th>Роли</th>
                         <th class="text-right">Действия</th>
                     </tr>
                 </thead>
@@ -38,7 +37,6 @@
                         <td>{{ $u->email }}</td>
                         <td>{{ \Helper::phoneFormat($u->phone) }}</td>
                         <td>@if($u->status) активный @else нет активных @endif</td>
-                        <td>{{ date('d.m.Y H:i', strtotime($u->created_at)) }}</td>
                         <td>
                             @if(optional($u->section)->rule == 'ADMIN_USER')
                                 администратор и пользователь
@@ -102,7 +100,7 @@
                 scrollY: '70vh',
                 scrollCollapse: true,
                 paging: true,
-                pageLength: 50,
+                pageLength: 100,
                 lengthChange: false,
                 searching: true,
                 ordering: true,
@@ -111,7 +109,8 @@
                 language: {
                     search: "",
                     searchPlaceholder: " Поиск...",
-                    info: "Показано с _START_ по _END_ из _TOTAL_ записей",
+                    info: "Показано с _START_ по _END_ из _TOTAL_",
+                    emptyTable: "Нет данных",
                     paginate: {
                         first: "Первый",
                         last: "Последний",

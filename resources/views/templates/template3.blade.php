@@ -1,22 +1,25 @@
 @extends('layouts.app')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/contract3.css?'.time()) }}">
+@endsection
 
 @section('content')
 
     <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="3">
 
-        <div class="contract3">
+        <div class="contract3" id="forstyle">
 
             <!-- 1 - list -->
             <div class="card contract-text">
                 <h4 class="text-center">
-                    Договор № <span class="text_edit js_number" contenteditable="false">1284</span> <br/>
+                    Договор <span class="text_edit js_number">№ 1284</span> <br/>
                     <span class="js_title">Уступки права требования и перевода долга</span>
                 </h4>
                 <div class="d-flex mb-1 justify-content-between">
                     <span class="text_edit ml-5">г. Ташкент</span>
                     <div>
-                        «<span class="text_edit" contenteditable="false">26</span>»
+                        «<span class="text_edit">26</span>»
                         <select name="month1" class="js_select_data_month1 d-none">
                             <option>Январь</option>
                             <option>Февраль</option>
@@ -33,29 +36,29 @@
                             <option>декабря</option>
                         </select>
                         <span class="text_edit js_span_date_month1">декабря</span>
-                        <span class="text_edit" contenteditable="false">2020</span>г.<br/>
+                        <span class="text_edit">2020</span>г.<br/>
                     </div>
                 </div>
 
                 <div>
-                    &emsp;&emsp;&emsp;<span class="text_edit" contenteditable="false"><b>ООО «NOWADAY»</b></span>, именуемое в дальнейшем «Дебитор» в лице <span class="text_edit" contenteditable="false">Директора <b>Aхмедова Ж.А.</b></span>,
-                    действующего на основании <span class="text_edit" contenteditable="false">Устава</span> с одной стороны, <b>СП ООО «Ist Telekom»</b>, именуемое в дальнейшем «Кредитор» в лице
+                    &emsp;&emsp;&emsp;<span class="text_edit js_company_name2">ООО «NOWADAY»</span>, именуемое в дальнейшем «Дебитор» в лице <span class="text_edit">Директора Aхмедова Ж.А.</span>,
+                    действующего на основании <span class="text_edit js_ustav">Устава</span> с одной стороны, <b>СП ООО «Ist Telekom»</b>, именуемое в дальнейшем «Кредитор» в лице
                     Генерального директора <b>Lee Baek Hee</b>, действующего на основании Устава со второй стороны,
-                    <span class="text_edit" contenteditable="false"><b>ООО "FASHION CORNER"</b></span>, именуемое в дальнейшем «Принимающая сторона», в лице
-                    <span class="text_edit" contenteditable="false">Директора <b>Пулатова У.С.</b></span>,
-                    действующего на основании <span class="text_edit" contenteditable="false">Устава</span> с третьей стороны, в соответствии с Главой 23 ст.313,315,316,320,321,322,323 ГК
+                    <span class="text_edit text-bold js_company_name">ООО "FASHION CORNER"</span>, именуемое в дальнейшем «Принимающая сторона», в лице
+                    <span class="text_edit">Директора <b>Пулатова У.С.</b></span>,
+                    действующего на основании <span class="js_ustav_html">Устава</span> с третьей стороны, в соответствии с Главой 23 ст.313,315,316,320,321,322,323 ГК
                     РУз заключили настоящий договор о нижеследующем:<br/>
                     <br/>
                     1. По настоящему договору «Дебитор» уступает (передаёт) права по востребованию дебиторской задолженности по
-                    договору № <span class="text_edit" contenteditable="false">800-11418</span> от <span class="text_edit" contenteditable="false">24.08.2020</span> года в сумме
-                    <span class="text_edit" contenteditable="false"><b>3 718 386</b></span> сум РУз между «Дебитором» и «Принимающей стороной», а «Кредитор» принимает на себя права
+                    договору № <span class="text_edit">800-11418</span> от <span class="text_edit">24.08.2020</span> года в сумме
+                    <span class="text_edit"><b>3 718 386</b></span> сум РУз между «Дебитором» и «Принимающей стороной», а «Кредитор» принимает на себя права
                     истребования дебиторского долга.<br/>
                     <br/>
                     2. «Принимающая сторона» отплачивает «Кредитору» дебиторскую задолженность в сумме
-                    <span class="text_edit" contenteditable="false">
+                    <span class="text_edit">
                         <b>3 718 386,00</b>
                     </span> до
-                    «<span class="text_edit" contenteditable="false">26</span>»
+                    «<span class="text_edit">26</span>»
                     <select name="month2" class="js_select_data_month2 d-none">
                         <option>Январь</option>
                         <option>Февраль</option>
@@ -72,11 +75,11 @@
                         <option>декабря</option>
                     </select>
                     <span class="text_edit js_span_date_month2">декабря</span>
-                    <span class="text_edit" contenteditable="false">2020</span> года.<br/>
+                    <span class="text_edit">2020</span> года.<br/>
                     <br/>
 
                     3. По настоящему договору «Кредитор» получает права вместе с «Дебитором» требовать от «Принимающей стороны» исполнения следующих обязательств:
-                    - истребовать сумму долга в размере <span class="text_edit" contenteditable="false"><b>3 718 386,00</b></span> сум РУз.<br/>
+                    - истребовать сумму долга в размере <span class="text_edit"><b>3 718 386,00</b></span> сум РУз.<br/>
                     <br/>
                     4. «Дебитор» обязан с момента подписания настоящего договора известить «Принимающую сторону» о состоявшейся уступке права требования.<br/>
                     <br/>
@@ -95,19 +98,19 @@
 
                     <div class="inn js_tin_div1">
                         <p><b>Принимающая сторона:</b></p>
-                        <p><span class="text_edit js_name" contenteditable="false"><b>ООО «FASHION CORNER» 11</b></span></p>
-                        <p><span class="text_edit js_address" contenteditable="false">г.Ташкент, Юнусабадский р-н, ул. А.Кодырий, 38А. 11</span></p>
-                        <p>Р/счет: <span class="text_edit js_account" contenteditable="false">20208000300627122001  1</span></p>
-                        <p>Банк: <span class="text_edit js_bank" contenteditable="false">в Нодирбегимский ф-ле, АКБ «Узпромстройбанк» 1</span></p>
+                        <p><span class="text_edit js_name js_company_name_html text-bold">ООО «FASHION CORNER» 11</span></p>
+                        <p><span class="text_edit js_address">г.Ташкент, Юнусабадский р-н, ул. А.Кодырий, 38А. 11</span></p>
+                        <p>Р/счет: <span class="text_edit js_account">20208000300627122001  1</span></p>
+                        <p>Банк: <span class="text_edit js_bank">в Нодирбегимский ф-ле, АКБ «Узпромстройбанк» 1</span></p>
                         <p>
-                            МФО: <span class="text_edit js_mfo" contenteditable="false">00402 1</span>
-                            ИНН: <span class="text_edit js_tin" contenteditable="false">304008293 1</span>
-                            ОКЭД: <span class="text_edit js_oked" contenteditable="false">47110 1</span></p>
+                            МФО: <span class="text_edit js_mfo">00402 1</span>
+                            ИНН: <span class="text_edit js_tin">304008293 1</span>
+                            ОКЭД: <span class="text_edit js_oked">47110 1</span></p>
                         <p>РКННДС: _______________________</p>
-                        <p>Телефон: <span class="text_edit js_phone" contenteditable="false">+998951424451</span></p>
+                        <p>Телефон: <span class="text_edit js_phone">+998951424451</span></p>
 
                         <p class="mt-4"><span class="text_edit js_director">Директор</span></p>
-                        <p><span class="text_edit" contenteditable="false">Пулатов У.С.</span></p>
+                        <p><span class="text_edit">Пулатов У.С.</span></p>
                         <p>_________________________________</p>
                         <p>М.П.</p>
                     </div>
@@ -122,20 +125,20 @@
             <div class="card contract-text">
                 <div class="inn js_tin_div2 mb-5"><br/>
                     <p><b>Дебитор:</b></p>
-                    <p><span class="text_edit js_name" contenteditable="false"><b>ООО «NOWADAY»</b></span></p>
-                    <p><span class="text_edit js_address" contenteditable="false">100060, г.Ташкент, Мирабадский р-н, ул. Тарас Шевченко д.36</span></p>
-                    <p>Р/счет: <span class="text_edit js_account" contenteditable="false">20208000600302909001</span></p>
-                    <p>Банк: <span class="text_edit js_bank" contenteditable="false">в Юнусабадский ф-л, АО «Ziraat Bank Uzbekistan»</span></p>
+                    <p><span class="text_edit js_name js_company_name2_html">ООО «NOWADAY»</span></p>
+                    <p><span class="text_edit js_address">100060, г.Ташкент, Мирабадский р-н, ул. Тарас Шевченко д.36</span></p>
+                    <p>Р/счет: <span class="text_edit js_account">20208000600302909001</span></p>
+                    <p>Банк: <span class="text_edit js_bank">в Юнусабадский ф-л, АО «Ziraat Bank Uzbekistan»</span></p>
                     <p>
-                        МФО: <span class="text_edit js_mfo" contenteditable="false">01138</span>
-                        ИНН: <span class="text_edit js_tin" contenteditable="false">302888143</span>
-                        ОКЭД: <span class="text_edit js_oked" contenteditable="false">47712</span>
+                        МФО: <span class="text_edit js_mfo">01138</span>
+                        ИНН: <span class="text_edit js_tin">302888143</span>
+                        ОКЭД: <span class="text_edit js_oked">47712</span>
                     </p>
                     <p>РКННДС: _______________________</p>
-                    <p>Телефон: <span class="text_edit js_phone" contenteditable="false">+998951424451</span></p>
+                    <p>Телефон: <span class="text_edit js_phone">+998951424451</span></p>
 
-                    <p class="mt-4"><span class="text_edit js_director" contenteditable="false">Директор</span></p>
-                    <p><span class="text_edit" contenteditable="false">Ахмедов Ж.А</span></p>
+                    <p class="mt-4"><span class="text_edit js_director">Директор</span></p>
+                    <p><span class="text_edit">Ахмедов Ж.А</span></p>
                     <p>_________________________________</p>
                     <p>М.П.</p>
                 </div>
@@ -152,8 +155,8 @@
                     <p>МФО: 00842 ИНН: 204663354 ОКЭД: 61100</p>
                     <p>Регистрационный код: 326010005625</p>
 
-                    <p class="mt-4">Генеральный директор</p>
-                    <p>Lee Baek Hee</p>
+                    <p class="mt-4 text_edit">Генеральный директор</p>
+                    <p class="text_edit">Lee Baek Hee</p>
                     <p>_________________________________</p>
                     <p>М.П.</p>
 
@@ -167,7 +170,7 @@
 
 
     @include('templates.form_file_and_contract_save')
-    
+
 
 @endsection
 
@@ -187,7 +190,7 @@
                 let title   = $('.js_title3').html();
                 let data    = $('.js_data_all').html();
                 let template_number = $('.js_data_all_pdf').data('template_number')
-                
+
                 form.find('.js_hidden_number').val(number);
                 form.find('.js_hidden_title').val(title);
                 form.find('.js_hidden_data').val(data);

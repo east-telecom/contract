@@ -1,12 +1,15 @@
 @extends('layouts.app')
 
+@section('style')
+    <link rel="stylesheet" href="{{ asset('css/contract6.css?'.time()) }}">
+@endsection
 
 
 @section('content')
 
     <section class="app-user-list js_data_all js_data_all_pdf" data-template_number="6">
 
-        <div class="contract6">
+        <div class="contract6" id="forstyle">
 
             <!-- 1 - list -->
             <div class="card contract-text">
@@ -14,7 +17,7 @@
                     <span class="js_title">Дополнительное соглашение</span>
                     №<span class="text_edit js_number_n">4</span> <br/>
                     к договору №<span class="text_edit js_number">106-82</span>г от
-                    «<span class="text_edit js_date_day_title" contenteditable="false">12</span>»
+                    «<span class="text_edit js_date_day_title">12</span>»
                     <select name="month1" class="js_date_month js_select_data_month1_title d-none">
                         <option>Январь</option>
                         <option>Февраль</option>
@@ -30,14 +33,14 @@
                         <option>Ноябрь</option>
                         <option>декабря</option>
                     </select>
-                    <span class="js_span_date_month1_title">Май</span>
+                    <span class="js_span_date_month1_title js_span_date_month1_html">Май</span>
                     <span class="text_edit js_date_year1_title">2015</span>г.
                 </h4>
 
                 <div class="d-flex justify-content-between mb-1 mt-2">
                     <span>г. Ташкент</span>
                     <div>
-                        «<span class="text_edit js_date_day" contenteditable="false">04</span>»
+                        «<span class="text_edit js_date_day">04</span>»
                         <select name="month2" class="js_date_month js_select_data_month2 d-none">
                             <option>Январь</option>
                             <option>Февраль</option>
@@ -57,29 +60,39 @@
                         <span class="text_edit js_date_year">2022</span>г.
                     </div>
                 </div>
-               <div class="mt-3">
-                    &emsp;&emsp;<b>СП ООО «IST TELEKOM»,</b> именуемое в дальнейшем <b>«Арендодатель»</b>, действующее на основании  Лицензий: Серия АА №0008087 от 31.03.2020г.,
-                    Серия АА №0008088 от 31.03.2020г., Серия АА №0008089 от 31.03.2020г., Серия АА №0008090 от 31.03.2020г., в лице  Генерального директора Lee Bаеk Hee,
-                    действующего на основании <span class="text_edit">Устава</span>, с одной стороны, и
-                    <span class="text_edit text-bold">АО «Узбекская Республиканская Товарно-Сырьевая Биржа»</span>, именуемый в дальнейшем «Арендатор», в лице Председателя
-                    правления Бадриддинова З.Б., действующего на основании _____________, с другой стороны, вместе именуемые «Стороны», пришли к соглашению о нижеследующем: <br/>
+                <div class="mt-3">
+                    &emsp;&emsp;<b>СП ООО «IST TELEKOM»,</b> именуемое в дальнейшем <b>«Арендодатель»</b>, действующее
+                    на основании Лицензий: Серия АА №0008087 от 31.03.2020г.,
+                    Серия АА №0008088 от 31.03.2020г., Серия АА №0008089 от 31.03.2020г., Серия АА №0008090 от
+                    31.03.2020г., в лице Генерального директора Lee Bаеk Hee,
+                    действующего на основании <span class="text_edit js_ustav">Устава</span>, с одной стороны, и
+                    <span class="text_edit text-bold js_company_name">АО «Узбекская Республиканская Товарно-Сырьевая Биржа»</span>,
+                    именуемый в дальнейшем «Арендатор», в лице Председателя
+                    правления Бадриддинова З.Б., действующего на основании _____________, с другой стороны, вместе
+                    именуемые «Стороны», пришли к соглашению о нижеследующем: <br/>
                     <br/>
                     <br/>
                     <p class="ml-3">
                         1.&nbsp; Признать утратившим юридическую силу Приложение №1 к дополнительному соглашению №3 по
-                        договору № <span class="js_number2">106-82</span> от <span class="js_date_day_html">12</span> «<span class="js_span_date_month1_html">мая</span>» <span class="js_date_year1_span">2015</span>г.
+                        договору № <span class="js_number2">106-82</span> от <span class="js_date_day_html">12</span>
+                        «<span class="js_span_date_month1_html">мая</span>» <span class="js_date_year1_span">2015</span>г.
                     </p>
                     <p class="ml-3">
                         2.&nbsp; Принять Приложение №1 к настоящему дополнительному соглашению
-                        №<span class="text_edit">4</span> от «<span class="js_date_day_static">04</span>» <span class="js_date_month_static">апреля</span> <span class="js_date_year_static">2022</span>г. в следующей редакции (прилагается).
+                        №<span class="text_edit">4</span> от «<span class="js_date_day_static">04</span>» <span
+                                class="js_date_month_static">апреля</span> <span class="js_date_year_static">2022</span>г.
+                        в следующей редакции (прилагается).
                     </p>
                     <p class="ml-3">
                         3.&nbsp; Остальные пункты договора сохраняют свою силу в прежней редакции.
                     </p>
                     <p class="ml-3">
-                        4.&nbsp; Настоящее дополнительное соглашение №<span class="text_edit">4</span> от «<span class="js_date_day_static">04</span>» <span class="js_date_month_static">апреля</span> <span class="js_date_year_static">2022</span>г.
+                        4.&nbsp; Настоящее дополнительное соглашение №<span class="text_edit">4</span> от «<span
+                                class="js_date_day_static">04</span>» <span class="js_date_month_static">апреля</span>
+                        <span class="js_date_year_static">2022</span>г.
                         является неотъемлемой частью договора
-                        №<span class="js_number2">106-82</span> от <span class="js_date_day_html">12</span> «<span class="js_date_month_static">мая</span>»
+                        №<span class="js_number2">106-82</span> от <span class="js_date_day_html">12</span> «<span
+                                class="js_date_month_static">мая</span>»
                         <span class="js_date_year_static">2015</span>г. и вступает в силу с момента его подписания.
                     </p>
                     <br/>
@@ -88,8 +101,8 @@
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
                             <p class="text-bold mb-2">АРЕНДОДАТЕЛЬ:</p>
-                            <p class="mb-1">Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="mb-1 text_edit js_general_director_title">Генеральный директор</p>
+                            <p class="text-bold text_edit js_general_director_full_name">Lee Baek Hee</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -97,8 +110,8 @@
 
                         <div class="text-center">
                             <p class="text-bold mb-2">АРЕНДАТОР:</p>
-                            <p class="text_edit mb-1 js_director_position_dynamic">Председатель правления</p>
-                            <p class="text-bold text_edit js_director_name_dynamic">Бадриддинов З. Б.</p>
+                            <p class="text_edit mb-1 js_director_title">Председатель правления</p>
+                            <p class="text-bold text_edit js_director_full_name">Бадриддинов З. Б.</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -130,51 +143,64 @@
                     <p class="text-center text-bold mt-3 mb-0">Протокол</p>
                     <p class="text-center text-bold">согласования договорной цены арендуемых IP каналов</p>
 
-                    Мы, нижеподписавшиеся, от <b>Арендатора</b> – <span class="text_edit text-bold">АО «Узбекская Республиканская Товарно-Сырьевая Биржа»</span>,
-                    в лице ______________________________________________, действующего на основании __________________, с одной стороны,
-                    и от <b>Арендодателя – СП ООО «Ist Telekom»</b>, в лице Генерального директора <b>Lee Bаеk Hee</b>, действующего на основании
-                    <span class="text_edit">Устава</span>, с другой стороны, удостоверяем, что сторонами принят Протокол согласования договорной цены на арендуемые IP каналы:
+                    Мы, нижеподписавшиеся, от <b>Арендатора</b> – <span class="text-bold js_company_name_html">АО «Узбекская Республиканская Товарно-Сырьевая Биржа»</span>,
+                    в лице ______________________________________________, действующего на основании __________________,
+                    с одной стороны,
+                    и от <b>Арендодателя – СП ООО «Ist Telekom»</b>, в лице Генерального директора <b>Lee Bаеk Hee</b>,
+                    действующего на основании
+                    <span class="js_ustav_html">Устава</span>, с другой стороны, удостоверяем, что сторонами принят Протокол
+                    согласования договорной цены на арендуемые IP каналы:
                     <br/>
                     <br/>
 
                     <table class="table">
-                        <tr>
-                            <th>№</th>
-                            <th>кол-во</th>
-                            <th>Направление</th>
-                            <th>Скорость</th>
-                            <th>Протяженность (местная)</th>
-                            <th>Плата за перенос линии по новому адресу *</th>
-                            <th>Ежемесячная арендная плата*</th>
-                            <th>Порт обор-я Арендодателя</th>
-                        </tr>
-                        <tr>
-                            <td class="js_number">1.</td>
-                            <td class="text_edit">1</td>
-                            <td class="text_edit">от г. Коканд, ул.Навои 205, офис ЕТ  до г.Коканд, АТС 552/553.</td>
-                            <td class="text_edit">1 Мб/c</td>
-                            <td class="text_edit">местный</td>
-                            <td class="text_edit">-</td>
-                            <td class="text_edit">70 000,0</td>
-                            <td class="text_edit">Ethernet</td>
-                            <td class="position-absolute add-tr-btns d-none">
-                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_template6_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="js_number">2.</td>
-                            <td class="text_edit">1</td>
-                            <td class="text_edit">от AMTS/ATS-223 г. Навои, улица Навои 5-Д, до узла 21052 Gulshan Rano</td>
-                            <td class="text_edit">4 Мб/c</td>
-                            <td class="text_edit">местный</td>
-                            <td class="text_edit">84 000,0</td>
-                            <td class="text_edit">40 000,0</td>
-                            <td class="text_edit">Ethernet</td>
-                            <td class="position-absolute add-tr-btns d-none">
-                                <a href="javascript:void(0);" class="btn btn-danger btn-sm js_template6_icon_remove_tr" title="delete row"><i class="fas fa-trash-alt"></i></a>
-                                <a href="javascript:void(0);" class="btn btn-info btn-sm js_template6_icon_add_tr ml-1" title="add row"><i class="fas fa-plus"></i></a>
-                            </td>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>кол-во</th>
+                                <th>Направление</th>
+                                <th>Скорость</th>
+                                <th>Протяженность (местная)</th>
+                                <th>Плата за перенос линии по новому адресу *</th>
+                                <th>Ежемесячная арендная плата*</th>
+                                <th>Порт обор-я Арендодателя</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="js_number">1.</td>
+                                <td class="text_edit">1</td>
+                                <td class="text_edit">от г. Коканд, ул.Навои 205, офис ЕТ до г.Коканд, АТС 552/553.</td>
+                                <td class="text_edit">1 Мб/c</td>
+                                <td class="text_edit">местный</td>
+                                <td class="text_edit">-</td>
+                                <td class="text_edit">70 000</td>
+                                <td class="text_edit">Ethernet</td>
+                                <td class="position-absolute add-tr-btns d-none">
+                                    <a href="javascript:void(0);" class="btn btn-danger btn-sm js_template6_icon_remove_tr"
+                                       title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="js_number">2.</td>
+                                <td class="text_edit">1</td>
+                                <td class="text_edit">от AMTS/ATS-223 г. Навои, улица Навои 5-Д, до узла 21052 Gulshan
+                                    Rano
+                                </td>
+                                <td class="text_edit">4 Мб/c</td>
+                                <td class="text_edit">местный</td>
+                                <td class="text_edit">84 000</td>
+                                <td class="text_edit">40 000</td>
+                                <td class="text_edit">Ethernet</td>
+                                <td class="position-absolute add-tr-btns d-none">
+                                    <a href="javascript:void(0);" class="btn btn-danger btn-sm js_template6_icon_remove_tr"
+                                       title="delete row"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="javascript:void(0);" class="btn btn-info btn-sm js_template6_icon_add_tr ml-1"
+                                       title="add row"><i class="fas fa-plus"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+
                     </table>
 
                     <p class="mb-5">*Цены установлены в сумах с учетом НДС 15%.</p>
@@ -182,8 +208,8 @@
                     <div class="d-flex justify-content-around mt-5">
                         <div class="text-center">
                             <p class="text-bold mb-2">АРЕНДОДАТЕЛЬ:</p>
-                            <p class="mb-1">Генеральный директор</p>
-                            <p class="text-bold">Lee Baek Hee</p>
+                            <p class="mb-1 js_general_director_title_html">Генеральный директор</p>
+                            <p class="text-bold js_general_director_full_name_html">Lee Baek Hee</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -191,8 +217,8 @@
 
                         <div class="text-center">
                             <p class="text-bold mb-2">АРЕНДАТОР:</p>
-                            <p class="text_edit mb-1 js_director_position_dynamic">Председатель правления</p>
-                            <p class="text-bold text_edit js_director_name_dynamic">Бадриддинов З. Б.</p>
+                            <p class="mb-1 js_director_title_html">Председатель правления</p>
+                            <p class="text-bold js_director_full_name_html">Бадриддинов З. Б.</p>
 
                             <p class="mb-1">_________________</p>
                             <p class="text-bold">М. П.</p>
@@ -219,17 +245,17 @@
     <script>
         $(document).ready(function () {
 
-            $(document).on('submit', '.js_file_form_and_save_contract', function(e) {
+            $(document).on('submit', '.js_file_form_and_save_contract', function (e) {
                 e.preventDefault();
 
                 afer_save_add_d_none_template()
-                
-                let form    = $(this);
-                let number  = $('.js_number').html();
-                let title   = $('.js_title1').html();
-                let data    = $('.js_data_all').html();
+
+                let form = $(this);
+                let number = $('.js_number').html();
+                let title = $('.js_title1').html();
+                let data = $('.js_data_all').html();
                 let template_number = $('.js_data_all_pdf').data('template_number');
-                
+
                 form.find('.js_hidden_number').val(number);
                 form.find('.js_hidden_title').val(title);
                 form.find('.js_hidden_data').val(data);
